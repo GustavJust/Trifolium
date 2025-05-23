@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+---
+
+<Layout>
+  <Hero
+    video="/assets/imgs/video/platform_office_video.mp4"
+    title="Facilities"
+    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    descLeft="Woodspace"
+    descRight="1st Floor"
+  />
+  <section>
+    <h2>Explore our facilites</h2>
+    <nav class="hor_card">
+      <a href="/offices">
+        <p>Offices</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/workspaces">
+        <p>Workspaces</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/photostudio">
+        <p>Photo-studio</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/meetin_and_conferences">
+        <p>Meeting & Congferences</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/events">
+        <p>Events</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+    </nav>
+  </section>
+  <section>
+    <h2>
+      A professional production village for designers, developers, and builders.
+    </h2>
+    <p>
+      With workspaces, advanced tools, and workshops under one roof, you can
+      create physical or digital products from concept to launch.
+    </p>
+    <div class="map_frame">
+      <img src="" alt="" />
+    </div>
+    <p>
+      With workspaces, advanced tools, and workshops under one roof, you can
+      create physical or digital products from concept to launch.
+    </p>
+    <button class="large">Get a tour</button>
+  </section>
+</Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .hor_card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-tiny);
+    > a {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid var(--primary-color-500);
+      font-weight: 700;
+      font-size: 1.5em;
+      padding: var(--spacing-tiny);
+    }
+    > a p {
+      padding: 0;
+      margin: 0;
+    }
+    > a:hover {
+      background-color: var(--primary-color-200);
+    }
+    > a img {
+      transition: 0.05s ease-in;
+    }
+    > a:hover img {
+      rotate: 45deg;
+    }
+    > a:active {
+      background-color: var(--primary-color-500);
+      color: white;
+    }
+  }
+</style>

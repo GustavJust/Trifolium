@@ -26,6 +26,7 @@
 
     --white-color-100: #ffffff;
 
+    --spacing-section: 4em;
     --spacing-tiny: 0.5em;
     --spacing-small: 1em;
     --spacing-medium: 2em;
@@ -47,6 +48,7 @@
   h1{
     font-size: 54.9px;
     font-weight: bold;
+    margin: 0 0;
   }
   h2{
     font-size: 43.9px;
@@ -68,6 +70,10 @@
   a {
     color: var(--black-color-100);
     text-decoration: none;
+  }
+
+  section{
+    margin-bottom: var(--spacing-section);
   }
 
   button.giant {

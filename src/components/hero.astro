@@ -1,0 +1,119 @@
+---
+// Hero.astro
+export interface Props {
+  video?: string;
+  title?: string;
+  description?: string;
+  descLeft?: string;
+  descRight?: string;
+}
+
+const { video, title, description, descLeft, descRight } = Astro.props;
+import "../styles/global.css";
+---
+
+<section class="hero">
+  {
+    video && (
+      <div class="hero_video">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          class="hero-video"
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    )
+  }
+
+  {
+    (descLeft || descRight) && (
+      <div class="desc">
+        {descLeft && <p>{descLeft}</p>}
+        {descRight && <p>{descRight}</p>}
+      </div>
+    )
+  }
+
+  {
+    (title || description) && (
+      <div class="header_type">
+        <div class="header_group">
+          {title && <h1>{title}</h1>}
+          <img src="../assets/imgs/icon_arrow.svg" alt="" />
+        </div>
+        {description && <p>{description}</p>}
+      </div>
+    )
+  }
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+</section>
+
+<style>
+  section.hero {
+    > .desc {
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--text-caption);
+      padding: 0 var(--spacing-small);
+    }
+    > .desc p {
+      margin: var(--spacing-tiny) 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero_video {
+    width: 100vw;
+    height: 65vh;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .header_type {
+    margin-left: 20px;
+    margin-top: var(--spacing-small);
+    box-sizing: border-box;
+    > p {
+      max-width: calc(100vw - (2 * 20px));
+    }
+  }
+
+  .header_group {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-tiny);
+    > h1 {
+      text-transform: uppercase;
+    }
+    > img {
+      width: 15px;
+      aspect-ratio: 1/1;
+      transform: rotate(135deg);
+    }
+  }
+  .logo_divider {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: 50px;
+      margin: var(--spacing-) 0;
+    }
+  }
+</style>
