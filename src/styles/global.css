@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;700&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
 
   html {
     --primary-font: "Host Grotesk", sans-serif;
@@ -30,6 +30,10 @@
     --spacing-small: 1em;
     --spacing-medium: 2em;
     --spacing-large: 3em;
+
+    --text-caption:14.4px;
+
+    overflow-x: hidden;
   }
 
   body {
