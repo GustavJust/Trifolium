@@ -34,7 +34,7 @@
 
     --text-caption:14.4px;
 
-    overflow-x: hidden;
+    overflow-x: hidden !important;
   }
 
   body {
@@ -121,6 +121,25 @@
   button:active {
     border: 1px solid var(--primary-color-700);
     background-color: var(--primary-color-700);
+  }
+
+  button.alt{
+    background-color: var(--white-color-100);
+    color: var(--black-color-100);
+  }
+
+  button.alt:hover{
+    background-color: var(--primary-color-100);
+  }
+
+  button.alt:focus{
+    background-color: var(--white-color-100);
+    border: 3px solid var(--primary-color-500);
+  }
+
+  button.alt:active{
+    background-color: var(--primary-color-300);
+    border: 1px solid var(--primary-color-300);
   }
 
   .flex {
