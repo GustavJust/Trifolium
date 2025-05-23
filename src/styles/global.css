@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
+
+  html {
+    --primary-font: "Host Grotesk", sans-serif;
+    --secondary-font: "Figtree", sans-serif;
+
+    --primary-color-700: #c10d0d;
+    --primary-color-600: #e50000;
+    --primary-color-500: #ff0000;
+    --primary-color-400: #ff5555;
+    --primary-color-300: #ff6f6f;
+    --primary-color-200: #ff9393;
+    --primary-color-100: #ffbfbf;
+
+    --seconday-color-500:#009CFF;
+
+    --tertiary-color-800:#0A1653;
+
+    --black-color-100: #000000;
+
+    --grey-color-400: #9ea2ae;
+    --grey-color-300: #d2d5db;
+    --grey-color-200: #e5e7ea;
+    --grey-color-100: #f3f4f6;
+
+    --white-color-100: #ffffff;
+
+    --spacing-tiny: 0.5em;
+    --spacing-small: 1em;
+    --spacing-medium: 2em;
+    --spacing-large: 3em;
+  }
+
+  body {
+    font-family: var(--secondary-font);
+  }
+
+  h1,h2,h3,h4,h5 {
+    font-family: var(--primary-font);
+  }
+
+  h1{
+    font-size: 54.9px;
+    font-weight: bold;
+  }
+  h2{
+    font-size: 43.9px;
+    font-weight: bold;
+  }
+  h3{
+    font-size: 35.2px;
+    font-weight: bold;
+  }
+  h4{
+    font-size: 28.1px;
+    font-weight: bold;
+  }
+  h5{
+    font-size: 22.5px;
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--black-color-100);
+    text-decoration: none;
+  }
+
+  button.giant {
+    background-color: var(--primary-color-500);
+    color: var(--white-color-100);
+    border: 1px solid var(--primary-color-500);
+    padding: 11px 35px;
+    border-radius: 4px;
+  }
+  button.large {
+    background-color: var(--primary-color-500);
+    color: var(--white-color-100);
+    border: 1px solid var(--primary-color-500);
+    padding: 9px 30px;
+    border-radius: 4px;
+  }
+  button.medium {
+    background-color: var(--primary-color-500);
+    color: var(--white-color-100);
+    border: 1px solid var(--primary-color-500);
+    padding: 8px 25px;
+    border-radius: 4px;
+  }
+  button.small {
+    background-color: var(--primary-color-500);
+    color: var(--white-color-100);
+    border: 1px solid var(--primary-color-500);
+    padding: 6px 20px;
+    border-radius: 4px;
+  }
+  button.tiny {
+    background-color: var(--primary-color-500);
+    color: var(--white-color-100);
+    border: 1px solid var(--primary-color-500);
+    padding: 5px 15px;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: var(--primary-color-300);
+    border: 1px solid var(--primary-color-300);
+  }
+  button:focus {
+    border: 3px solid var(--primary-color-300);
+  }
+  button:active {
+    border: 1px solid var(--primary-color-700);
+    background-color: var(--primary-color-700);
+  }
+
+  .flex {
+    display: flex;
+  }

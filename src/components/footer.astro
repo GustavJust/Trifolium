@@ -1,0 +1,133 @@
+---
+import "../styles/global.css";
+---
+
+<footer>
+  <div class="logo_container">
+    <a href="">
+      <img src="../assets/imgs/logo_wide_blue.svg" alt="Logo" />
+    </a>
+  </div>
+  <div class="options">
+    <div class="info_container">
+      <h5>Info</h5>
+      <ul>
+        <li><a href="">Got something else on your mind?</a></li>
+        <li><a href="">About Trifolium</a></li>
+        <li><a href="">Membership</a></li>
+      </ul>
+    </div>
+    <div class="contact_container">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="">+ 45 5455 1515</a></li>
+        <li><a href="mailto:info@trifo.dk">info@trifo.dk</a></li>
+        <li><a href="">Bådehavnsgade 42 K, 2450 København SV</a></li>
+        <li>Opening Hours (adm.)</li>
+        <li>Mon - Fri, 09:00-16:00</li>
+      </ul>
+    </div>
+    <div class="newsletter_container">
+      <h5>Newsletter</h5>
+      <ul>
+        <li>Get updated on the latest news and events:</li>
+        <li class="input_newsletter">
+          <div>
+            <input type="text" placeholder="E-mail" /><img
+              src="../assets/imgs/mail_icon.svg"
+              alt=""
+            />
+          </div>
+          <div><hr /></div>
+        </li>
+      </ul>
+      <div class="socials">
+        <img src="../assets/imgs/insta_icon.svg" alt="" />
+        <img src="../assets/imgs/face_icon.svg" alt="" />
+        <img src="../assets/imgs/linked_icon.svg" alt="" />
+      </div>
+    </div>
+  </div>
+  <div><p>© Trifolium ApS, All rights reserved 2025</p></div>
+</footer>
+
+<style>
+  footer {
+    box-sizing: border-box;
+    padding: var(--spacing-large);
+    background-color: var(--tertiary-color-800);
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  a,
+  h5,
+  li,
+  p {
+    color: white;
+    list-style: none;
+  }
+  li,
+  ul {
+    padding: 0;
+  }
+
+  /* Inputs */
+
+  input[type="text"] {
+    background-color: transparent;
+    border: none;
+    outline-color: transparent;
+    color: var(--white-color-100);
+    width: 100%;
+  }
+  input::placeholder {
+    color: var(--white-color-100);
+  }
+  input[type="text"]:focus {
+    outline: none;
+  }
+
+  /* Containers */
+
+  .logo_container {
+    width: 300px;
+  }
+
+  .logo_container a img {
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo_container,
+  .info_container,
+  .contact_container,
+  .newsletter_container {
+    max-width: 400px;
+  }
+
+  .newsletter_container {
+    > ul {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .socials {
+    display: flex;
+    gap: var(--spacing-small);
+  }
+  .input_newsletter {
+    > div {
+      display: flex;
+      width: 100%;
+    }
+  }
+  hr {
+    width: 100%;
+    margin: 0 0 var(--spacing-large) 0;
+  }
+</style>

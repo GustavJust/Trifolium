@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+---
+
+<div class="flex header">
+  <div class="left-group">
+    <a href="">
+      <img src="../assets/imgs/logo_wide.svg" alt="Logo" />
+    </a>
+  </div>
+  <div class="right-group">
+    <nav>
+      <a href="">Facilities</a>
+      <a href="">Membership</a>
+      <a href="">Photo-studio</a>
+      <a href="">Design & Production</a>
+      <a href="">About Trifolium</a>
+    </nav>
+    <button class="burger_icon">
+      <img src="../assets/imgs/burger_icon.svg" alt="" />
+    </button>
+    <a href=""><button class="medium">Signup for a tour</button></a>
+  </div>
+</div>
+
+<style>
+  .header {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-tiny) var(--spacing-small);
+    border: 1px solid var(--black-color-100);
+
+    > .left-group {
+      width: 15vw;
+      align-items: center;
+    }
+    > .left-group a img {
+      width: 100%;
+    }
+    > .right-group {
+      display: flex;
+      height: 100%;
+      justify-content: right;
+      align-items: center;
+      gap: var(--spacing-small);
+    }
+    > .right-group nav {
+      display: flex;
+      gap: var(--spacing-small);
+    }
+  }
+
+  .burger_icon {
+    display: none;
+    background-color: transparent;
+    border: transparent;
+    width: 40px;
+    > img {
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+</style>
