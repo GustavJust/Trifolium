@@ -6,13 +6,15 @@ import "../styles/global.css";
   <div class="nav_menu_mobile_container">
     <img src="../assets/imgs/close_icon_white.svg" alt="" />
     <nav class="nav_menu_mobile">
-      <a href="">Facilities</a>
-      <a href="">Membership</a>
-      <a href="">Photo-studio</a>
-      <a href="">Design & Production</a>
-      <a href="">About Trifolium</a>
+      <a href="/facilities">Facilities</a>
+      <a href="/membership">Membership</a>
+      <a href="/photostudio">Photo-studio</a>
+      <a href="/dandp">Design & Production</a>
+      <a href="/about">About Trifolium</a>
     </nav>
-    <img src="../assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
+    <a href="/">
+      <img src="../assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
+    </a>
   </div>
   <div class="left-group">
     <a href="">
@@ -21,11 +23,11 @@ import "../styles/global.css";
   </div>
   <div class="right-group">
     <nav class="nav_web">
-      <a href="">Facilities</a>
-      <a href="">Membership</a>
-      <a href="">Photo-studio</a>
-      <a href="">Design & Production</a>
-      <a href="">About Trifolium</a>
+      <a href="/facilites">Facilities</a>
+      <a href="/membership">Membership</a>
+      <a href="/photostudio">Photo-studio</a>
+      <a href="/dandp">Design & Production</a>
+      <a href="/about">About Trifolium</a>
     </nav>
     <button class="burger_icon">
       <img src="../assets/imgs/burger_icon.svg" alt="" />
@@ -134,6 +136,7 @@ import "../styles/global.css";
     .nav_menu_mobile_container.show {
       left: -1px;
       transition: left 0.3s ease-in-out;
+      z-index: 999;
     }
   }
 </style>
@@ -142,14 +145,16 @@ import "../styles/global.css";
   document.addEventListener("DOMContentLoaded", () => {
     const menu = document.querySelector(".nav_menu_mobile_container");
     const burger = document.querySelector(".burger_icon");
-    const close = menu.querySelector("img");
+    const close = menu.querySelector("img:not(.logo_icon)");
 
-    burger.addEventListener("click", () => {
-      menu.classList.add("show");
-    });
+    if (burger && menu && close) {
+      burger.addEventListener("click", () => {
+        menu.classList.add("show");
+      });
 
-    close.addEventListener("click", () => {
-      menu.classList.remove("show");
-    });
+      close.addEventListener("click", () => {
+        menu.classList.remove("show");
+      });
+    }
   });
 </script>
