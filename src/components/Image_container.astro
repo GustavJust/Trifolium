@@ -1,0 +1,57 @@
+---
+// ImageFrame.astro
+export interface Props {
+  src: string;
+  alt: string;
+  labelLeft?: string;
+  labelRight?: string;
+}
+
+const { src, alt, labelLeft, labelRight } = Astro.props;
+---
+
+<div class="image_container">
+  <div class="image_frame">
+    <img src={src} alt={alt} />
+  </div>
+  {
+    (labelLeft || labelRight) && (
+      <div class="text_frame">
+        <p>{labelLeft}</p>
+        <p>{labelRight}</p>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .image_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image_frame {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .image_frame img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .text_frame {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-caption);
+  }
+
+  .text_frame p {
+    margin: var(--spacing-tiny) 0;
+    text-transform: uppercase;
+  }
+</style>
