@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
+import Image_container from "../components/Image_container.astro";
 ---
 
 <Layout>
@@ -11,4 +12,93 @@ import Hero from "../components/hero.astro";
     descLeft=""
     descRight=""
   />
+  <section>
+    <h2>Space to Create. Freedom to Grow.</h2>
+    <p>
+      Trifolium is a professional production village designed for companies and
+      creatives who value freedom within structure. We offer a flexible,
+      membership-based workspace that combines fully equipped workshops, modern
+      offices, and shared learning in one cohesive environment. Spanning over
+      5,000 m², our space includes seven high-spec workshops, event and meeting
+      rooms, private studios, a photo facility, and even a mobile container
+      workshop. It’s a place to build, grow, and collaborate — surrounded by
+      skilled peers who value quality, independence, and shared ambition.
+    </p>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Metalworkshop"
+      labelLeft="Metalworkshop"
+      labelRight="1st Floor"
+    />
+  </section>
+  <section>
+    <nav class="hor_card">
+      <a href="/members">
+        <p>Members</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/staff">
+        <p>Staff</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/available_positions">
+        <p>Available positions</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="/contact">
+        <p>Contact</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+    </nav>
+  </section>
+  <section>
+    <h2>Location: Industrial by Nature, Connected by Design</h2>
+    <Image_container
+    src="/assets/imgs/placeholder.png"
+    alt="Map of Trifolium"
+    labelLeft="bådehavnsgade 42"
+    labelRight="2450 Sydhavnen"
+  />
+    <p>
+        Trifolium is located in Copenhagen’s Sydhavn — an industrial pocket with a raw edge and a long tradition of housing small companies, startups, and niche craft businesses.
+        Here, you’re close to everything. One way leads you straight into the heart of the city. The other puts you on the highway or at the airport in minutes.
+        We’ve got space to breathe, sky above, water nearby, and a creative undercurrent that runs through the entire area. There’s a spirit of curiosity here. Of building. Of doing. And it’s catching.
+    </p>
+  </section>
 </Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .hor_card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-tiny);
+    > a {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid var(--primary-color-500);
+      font-weight: 700;
+      font-size: 1.5em;
+      padding: var(--spacing-tiny);
+    }
+    > a p {
+      padding: 0;
+      margin: 0;
+    }
+    > a:hover {
+      background-color: var(--primary-color-200);
+    }
+    > a img {
+      transition: 0.05s ease-in;
+    }
+    > a:hover img {
+      rotate: 45deg;
+    }
+    > a:active {
+      background-color: var(--primary-color-500);
+      color: white;
+    }
+</style>
