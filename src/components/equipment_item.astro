@@ -1,0 +1,48 @@
+---
+const { ImgSrc, AltTxt, Name, Amount } = Astro.props;
+---
+
+<div class="equipment_item_container">
+  <div class="equipment_image_container">
+    <img src={ImgSrc} alt={AltTxt} />
+  </div>
+  <div class="equipment_desc_container">
+    <p class="equipment_type">{Name}</p>
+    <p class="equipment_amount">{Amount}</p>
+  </div>
+</div>
+
+<style>
+  .equipment_item_container {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    > .equipment_image_container {
+      width: 360px;
+      height: 300px;
+      border: 1px solid var(--black-color-100);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+    > .equipment_image_container img {
+      object-fit: cover;
+      height: auto;
+    }
+    > .equipment_desc_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .equipment_desc_container .equipment_amount {
+      text-align: right;
+    }
+    .equipment_desc_container .equipment_type,
+    .equipment_desc_container .equipment_amount {
+      border: 1px solid black;
+      padding: var(--spacing-tiny);
+      margin: 0;
+    }
+  }
+</style>

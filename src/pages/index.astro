@@ -1,17 +1,165 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Image_container from "../components/Image_container.astro";
+import NavCard from "../components/nav_card.astro";
 ---
 
 <Layout>
-  <h1>Header1</h1>
-  <h2>Header2</h2>
-  <a href="">link</a>
-  <ul>
-    <li>list item</li>
-    <li>list item</li>
-  </ul>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut saepe non
-    possimus repudiandae provident ipsum culpa laborum eum eveniet consequuntur.
-  </p>
+  <section class="hero">
+    <div class="hero_img_container">
+      <video autoplay muted loop playsinline preload="none" class="hero-video">
+        <source src="../assets/imgs/video/index_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero_text">
+        <h2 class="left_hero_text">For <br />those</h2>
+        <h2 class="right_hero_text">who <br />create</h2>
+      </div>
+      <div class="arrow_container">
+        <img src="../assets/imgs/arrow_icon_white.svg" alt="" />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1>
+      A professional production village for designers, developers, and builders.
+    </h1>
+    <p>
+      With workspaces, advanced tools, and workshops under one roof, you can
+      create physical or digital products from concept to launch.
+    </p>
+    <button class="large">Get a Tour</button>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Map of Trifolium"
+    />
+    <div class="logo_divider">
+      <img src="../assets/imgs/logo_icon.svg" alt="" />
+    </div>
+  </section>
+  <section>
+    <h2>Explore the house</h2>
+    <nav class="nav_card_container">
+      <NavCard
+        href="/facilities"
+        title="Facilities"
+        imgSrc="/assets/imgs/placeholder.png"
+        alt="Preview of the office space"
+      />
+      <NavCard
+        href="/membership"
+        title="Membership"
+        imgSrc="/assets/imgs/placeholder.png"
+        alt="Preview of the office space"
+      />
+      <NavCard
+        href="/photostudio"
+        title="Photo-studio"
+        imgSrc="/assets/imgs/placeholder.png"
+        alt="Preview of the office space"
+      />
+      <NavCard
+        href="/dandp"
+        title="Design & Production"
+        imgSrc="/assets/imgs/placeholder.png"
+        alt="Preview of the office space"
+      />
+      <NavCard
+        href="/about"
+        title="About Trifolium"
+        imgSrc="/assets/imgs/placeholder.png"
+        alt="Preview of the office space"
+      />
+    </nav>
+  </section>
+  <section>
+    <h1>Where Innovation Meets Community</h1>
+    <p>
+      At Trifolium, we offer state-of-the-art facilities designed to inspire
+      creativity, collaboration, and growth. Our vibrant culture is built on
+      openness, curiosity, and a shared commitment to making a positive impact
+      together. Whether you’re here to work, learn, or connect, you’ll find a
+      welcoming space that supports your journey.
+    </p>
+    <button class="medium">Get a Tour</button>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Map of Trifolium"
+      labelLeft="bådehavnsgade 42"
+      labelRight="2450 Sydhavnen"
+    />
+  </section>
+  <section>
+    <h2>
+      Cant find what you are looking for? Don’t be afraid to reach out to us!
+    </h2>
+    <button class="large"> Contact Trifolium</button>
+  </section>
 </Layout>
+
+<style>
+  section:not(.hero) {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .hero_img_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 90vh;
+    overflow: hidden;
+    > .hero_text,
+    video,
+    div {
+      grid-area: 1/1/2/2;
+    }
+    > .hero_text {
+      margin: 0 var(--spacing-small);
+    }
+    > .hero_text .right_hero_text {
+      text-align: right;
+    }
+    > .hero_text h2 {
+      color: var(--white-color-100);
+      font-family: var(--primary-font);
+      text-transform: uppercase;
+      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+      font-size: 5em;
+      font-weight: 500;
+      margin: 0;
+    }
+    > video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    > .arrow_container {
+      width: 10px;
+      aspect-ratio: 1/1;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: rotate(135deg);
+    }
+  }
+  button {
+    margin-bottom: var(--spacing-large);
+  }
+  .logo_divider {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-large);
+    > img {
+      width: 50px;
+      margin: var(--spacing-) 0;
+    }
+  }
+  .nav_card_container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-tiny);
+  }
+</style>

@@ -1,12 +1,262 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
+import Image_container from "../components/Image_container.astro";
+import Gallery from "../components/image_gallery.astro";
+
+const galleryImages = [
+  { src: "/assets/imgs/placeholder.png", alt: "Image 1" },
+  { src: "/assets/imgs/placeholder.png", alt: "Image 2" },
+  { src: "/assets/imgs/placeholder.png", alt: "Image 3" },
+  { src: "/assets/imgs/placeholder.png", alt: "Image 4" },
+  { src: "/assets/imgs/placeholder.png", alt: "Image 5" },
+];
 ---
 
 <Layout>
   <Hero
     video="/assets/imgs/video/design_and_production_video.mp4"
     title="Design & Production"
-    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    description="The team works across materials with a focus on digital fabrication, handling everything from sketches to finished results. While mainly serving external clients, they also collaborate with members when it fits. It’s not on-demand. It’s purpose-built."
   />
+  <section>
+    <h2>Bringing ideas into form</h2>
+    <p>
+      Design & Production is Trifolium’s in-house design and fabrication unit.
+      It’s a compact, experienced team that works across disciplines to turn
+      ideas into real, functional results, whether for businesses, institutions,
+      or fellow members.
+      <br /><br />
+      Their work lives at the intersection of creativity and precision. With deep
+      knowledge of materials, processes, and production methods, they handle tasks
+      from early concept to final execution. The team shares their daily workspace
+      with the wider Trifolium community. While their main focus is external projects,
+      collaboration with members happens often and naturally.
+      <br /><br />
+      This isn’t a studio for mass production. It’s a project-based partner for unique
+      builds, one-offs, and ambitious solutions.
+    </p>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Map of Trifolium"
+      labelLeft="bådehavnsgade 42"
+      labelRight="2450 Sydhavnen"
+    />
+  </section>
+  <section>
+    <h2>From sketch to setup</h2>
+    <p>
+      Design & Production takes on a wide range of one-off and short-run
+      projects, often starting from just an idea or a rough drawing. They
+      specialize in digital fabrication, including CNC routing, laser cutting,
+      and metalwork, but are equally comfortable working across wood, plastics,
+      and more experimental materials.
+      <br /><br />
+      Their strength lies in being hands-on and close to the process. From quick
+      prototypes to polished presentation pieces, they approach each job with care,
+      curiosity, and the technical insight to make it work.
+      <br /><br />
+      They’re not a bookable service. Their work is ad hoc, shaped by timing, scope,
+      and fit. But when the match is right, they’re a highly capable and committed
+      team that delivers sharp results with flexibility and speed.
+    </p>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Map of Trifolium"
+      labelLeft="bådehavnsgade 42"
+      labelRight="2450 Sydhavnen"
+    />
+  </section>
+  <section>
+    <h2>Proven in practice</h2>
+    <p>
+      Design & Production has contributed to everything from large-scale
+      exhibition pieces and custom interiors to prototypes, test rigs, and
+      product demos. They’ve worked with institutions, architects, startups, and
+      artists, and often lend their skills to projects happening within the
+      Trifolium community.
+    </p>
+    <Image_container
+      src="/assets/imgs/placeholder.png"
+      alt="Map of Trifolium"
+      labelLeft="bådehavnsgade 42"
+      labelRight="2450 Sydhavnen"
+    />
+  </section>
+  <section>
+    <h5>Title</h5>
+    <Gallery
+      id="gallery1"
+      images={[
+        { src: "/assets/imgs/placeholder.png", alt: "Project 1" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 2" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 3" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 4" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 5" },
+      ]}
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+      perspiciatis, praesentium reprehenderit porro harum iusto aliquid
+      reiciendis in dolorum fugit possimus odio mollitia! Similique, nemo.
+    </p>
+    <h5>Title</h5>
+    <Gallery
+      id="gallery2"
+      images={[
+        { src: "/assets/imgs/placeholder.png", alt: "Project 1" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 2" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 3" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 4" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 5" },
+      ]}
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+      perspiciatis, praesentium reprehenderit porro harum iusto aliquid
+      reiciendis in dolorum fugit possimus odio mollitia! Similique, nemo.
+    </p>
+    <h5>Title</h5>
+    <Gallery
+      id="gallery3"
+      images={[
+        { src: "/assets/imgs/placeholder.png", alt: "Project 1" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 2" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 3" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 4" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 5" },
+      ]}
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+      perspiciatis, praesentium reprehenderit porro harum iusto aliquid
+      reiciendis in dolorum fugit possimus odio mollitia! Similique, nemo.
+    </p>
+    <h5>Title</h5>
+    <Gallery
+      id="gallery4"
+      images={[
+        { src: "/assets/imgs/placeholder.png", alt: "Project 1" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 2" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 3" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 4" },
+        { src: "/assets/imgs/placeholder.png", alt: "Project 5" },
+      ]}
+    />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+      perspiciatis, praesentium reprehenderit porro harum iusto aliquid
+      reiciendis in dolorum fugit possimus odio mollitia! Similique, nemo.
+    </p>
+  </section>
+  <section>
+    <h2>Partners</h2>
+    <div class="partners_container">
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+      <div><img src="../assets/imgs/placeholder.png" alt="" /></div>
+    </div>
+  </section>
+  <section>
+    <h5>Get in contact</h5>
+    <p>
+      Have a project or idea you’d like to explore? Reach out to our Design &
+      Production team and let’s talk possibilities. We’re always open to the
+      right fit.
+    </p>
+    <button class="large">Contact Trifolium</button>
+  </section>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const galleries = document.querySelectorAll(".gallery_parent_container");
+
+      galleries.forEach((gallery) => {
+        const frame = gallery.querySelector(".gallery_frame");
+        const slides = gallery.querySelectorAll(".gallery_img");
+        const dots = gallery.querySelectorAll(".pagination-dot");
+        const prevBtn = gallery.querySelector(".prevBtn");
+        const nextBtn = gallery.querySelector(".nextBtn");
+
+        let currentIndex = 0;
+        const slideCount = slides.length;
+
+        function updateActiveDot(index) {
+          dots.forEach((dot) => (dot.style.backgroundColor = "white"));
+          if (dots[index]) {
+            dots[index].style.backgroundColor = getComputedStyle(
+              dots[index]
+            ).borderColor;
+          }
+        }
+
+        function scrollToSlide(index) {
+          const slideWidth = frame.clientWidth;
+          frame.scrollTo({ left: index * slideWidth, behavior: "smooth" });
+          currentIndex = index;
+          updateActiveDot(index);
+        }
+
+        prevBtn.addEventListener("click", () => {
+          scrollToSlide((currentIndex - 1 + slideCount) % slideCount);
+        });
+
+        nextBtn.addEventListener("click", () => {
+          scrollToSlide((currentIndex + 1) % slideCount);
+        });
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            scrollToSlide(index);
+          });
+        });
+
+        frame.addEventListener("scroll", () => {
+          const index = Math.round(frame.scrollLeft / frame.clientWidth);
+          if (index !== currentIndex) {
+            currentIndex = index;
+            updateActiveDot(index);
+          }
+        });
+
+        updateActiveDot(0);
+      });
+    });
+  </script>
 </Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .partners_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-small);
+  }
+  .partners_container > div {
+    max-width: 80px;
+    height: auto;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 999px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    > img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+</style>
