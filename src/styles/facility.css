@@ -1,0 +1,12 @@
+.equipment_scroll {
+    display: flex;
+    overflow-x: scroll;
+    gap: var(--spacing-tiny);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    box-sizing: border-box;
+    max-width: 90vw;
+  }

@@ -1,0 +1,33 @@
+---
+const { images = [], id } = Astro.props;
+---
+
+<div class="gallery_parent_container" data-gallery-id={id}>
+  <div class="gallery_container">
+    <button aria-label="Previous slide" class="prevBtn">
+      <img src="/assets/imgs/icon_arrow.svg" alt="" class="left" />
+    </button>
+    <div class="gallery_frame">
+      {
+        images.map((img) => (
+          <img
+            src={img.src}
+            alt={img.alt || ""}
+            class="gallery_img"
+            loading="lazy"
+          />
+        ))
+      }
+    </div>
+    <button aria-label="Next slide" class="nextBtn">
+      <img src="/assets/imgs/icon_arrow.svg" alt="" class="right" />
+    </button>
+  </div>
+  <div class="gallery_pagination">
+    {
+      images.map((_, index) => (
+        <div class="pagination-dot" data-index={index} />
+      ))
+    }
+  </div>
+</div>
