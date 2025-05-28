@@ -7,8 +7,16 @@ import NavCard from "../components/nav_card.astro";
 <Layout>
   <section class="hero">
     <div class="hero_img_container">
-      <video autoplay muted loop playsinline preload="none" class="hero-video">
-        <source src="../assets/imgs/video/index_video.mp4" type="video/mp4" />
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="/assets/imgs/lazyload/index_lazyload.webp"
+        class="hero-video"
+      >
+        <source src="/assets/imgs/video/index_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div class="hero_text">
@@ -28,9 +36,11 @@ import NavCard from "../components/nav_card.astro";
       With workspaces, advanced tools, and workshops under one roof, you can
       create physical or digital products from concept to launch.
     </p>
-    <button class="large">Get a Tour</button>
+    <a href="/contact">
+      <button class="large">Get a Tour</button>
+    </a>
     <Image_container
-      src="/assets/imgs/placeholder.png"
+      src="/assets/imgs/index_bluearea.webp"
       alt="Map of Trifolium"
     />
     <div class="logo_divider">
@@ -43,32 +53,37 @@ import NavCard from "../components/nav_card.astro";
       <NavCard
         href="/facilities"
         title="Facilities"
-        imgSrc="/assets/imgs/placeholder.png"
-        alt="Preview of the office space"
+        imgSrc="/assets/imgs/lazyload/facilities_lazyload.webp"
+        alt="image did not load"
+        aria-hidden="true"
       />
       <NavCard
         href="/membership"
         title="Membership"
-        imgSrc="/assets/imgs/placeholder.png"
-        alt="Preview of the office space"
+        imgSrc="/assets/imgs/lazyload/membership_lazyload.webp"
+        alt="image did not load"
+        aria-hidden="true"
       />
       <NavCard
         href="/photostudio"
         title="Photo-studio"
-        imgSrc="/assets/imgs/placeholder.png"
-        alt="Preview of the office space"
+        imgSrc="/assets/imgs/lazyload/photostudio_lazyload.webp"
+        alt="image did not load"
+        aria-hidden="true"
       />
       <NavCard
         href="/dandp"
         title="Design & Production"
-        imgSrc="/assets/imgs/placeholder.png"
-        alt="Preview of the office space"
+        imgSrc="/assets/imgs/lazyload/design_and_production_lazyload.webp"
+        alt="image did not load"
+        aria-hidden="true"
       />
       <NavCard
         href="/about"
         title="About Trifolium"
-        imgSrc="/assets/imgs/placeholder.png"
-        alt="Preview of the office space"
+        imgSrc="/assets/imgs/lazyload/about_lazyload.webp"
+        alt="image did not load"
+        aria-hidden="true"
       />
     </nav>
   </section>
@@ -81,19 +96,20 @@ import NavCard from "../components/nav_card.astro";
       together. Whether you’re here to work, learn, or connect, you’ll find a
       welcoming space that supports your journey.
     </p>
-    <button class="medium">Get a Tour</button>
+    <a href="/contact"> <button class="medium">Get a Tour</button></a>
+
     <Image_container
-      src="/assets/imgs/placeholder.png"
+      src="/assets/imgs/index_kort.webp"
       alt="Map of Trifolium"
-      labelLeft="bådehavnsgade 42"
+      labelLeft="bådehavnsgade 42K"
       labelRight="2450 Sydhavnen"
     />
   </section>
   <section>
-    <h2>
+    <h5>
       Cant find what you are looking for? Don’t be afraid to reach out to us!
-    </h2>
-    <button class="large"> Contact Trifolium</button>
+    </h5>
+    <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
   </section>
 </Layout>
 

@@ -124,6 +124,7 @@
   }
 
   button.alt{
+    font-weight: 700;
     background-color: var(--white-color-100);
     color: var(--black-color-100);
   }
@@ -211,5 +212,20 @@
     border: 1px solid var(--primary-color-500);
     background-color: white;
     transition: background-color 0.3s;
+  }
+
+  .image_scroll_facilities{
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex ;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: var(--spacing-tiny);
+    > img{
+        height: 100%;
+        max-width: 100vw;
+        max-height: 250px;
+    }
   }
   

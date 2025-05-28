@@ -3,6 +3,17 @@
     overflow-x: scroll;
     gap: var(--spacing-tiny);
   }
+  .image_scroll_facilities {
+    display: flex;
+    overflow-x: scroll;
+    gap: var(--spacing-tiny);
+  }
+  .image_scroll_facilities img {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
   ul {
     display: flex;
     flex-direction: column;

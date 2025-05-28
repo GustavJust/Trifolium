@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="hero">
+    <img src="../assets/imgs/lazyload/positions_lazyload.webp" alt="" />
+  </section>
+  <section class="formula">
+    <h1>Contact</h1>
+    <div class="header_container">
+      <h4>Let's Talk</h4>
+      <div class="arrow_container">
+        <img src="../assets/imgs/icon_arrow.svg" alt="" />
+      </div>
+    </div>
+    <div class="input_container">
+      <div class="input_wrapper">
+        <label for="message">Your Name</label>
+        <input type="text" placeholder="Your Name" />
+      </div>
+      <div class="input_wrapper">
+        <label for="message">Company Name</label>
+        <input type="text" placeholder="Company Name" />
+      </div>
+      <div class="input_wrapper">
+        <label for="message">CVR-Number</label>
+        <input type="text" placeholder="CVR-Number" />
+      </div>
+      <div class="input_wrapper">
+        <label for="message">E-mail</label>
+        <input type="text" placeholder="E-mail" />
+      </div>
+      <div class="input_wrapper">
+        <label for="message">Phone number</label>
+        <input type="text" placeholder="Phone number" />
+      </div>
+      <div class="input_wrapper">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          placeholder="Briefly describe the reason for your message..."
+        ></textarea>
+      </div>
+    </div>
+    <a href="/form_sent" class="send_form"
+      ><button class="large alt">Send</button></a
+    >
+    <p>
+      Inset your contact information above, and we will get back to you as soon
+      as possible.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  section:not(.hero) {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+  .formula {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+  }
+  .purpose {
+    display: flex;
+    height: fit-content;
+    text-wrap: wrap;
+  }
+  .hero {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-bottom: var(--spacing-small);
+    > img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin: 0;
+    }
+  }
+  .header_container {
+    display: flex;
+    align-items: center;
+    > .arrow_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      overflow: hidden;
+      margin-left: var(--spacing-small);
+    }
+    > .arrow_container img {
+      width: 100%;
+      height: auto;
+      transform: rotate(90deg);
+    }
+  }
+  .input_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    > .input_wrapper {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: var(--spacing-medium);
+    }
+    > .input_wrapper label {
+      font-weight: 800;
+      font-size: large;
+    }
+    > .input_wrapper input {
+      width: 100%;
+      padding: 0.75em 1em 0.75em 0;
+
+      font-size: large;
+
+      background-color: var(--color-white-100, #fff);
+      border: 1px solid var(--white-color-100);
+      border-bottom: 2px solid var(--black-color-100);
+
+      outline: none;
+      box-sizing: border-box;
+    }
+    > .input_wrapper textarea {
+      margin-top: var(--spacing-tiny);
+      width: 100%;
+      padding: 0.75em 0.5em 0.75em 0.5em;
+
+      font-size: large;
+
+      background-color: var(--color-white-100, #fff);
+      border: 1px solid var(--white-color-100);
+      border: 2px solid var(--black-color-100);
+
+      outline: none;
+      box-sizing: border-box;
+    }
+    > .input_wrapper input::placeholder,
+    .input_wrapper textarea::placeholder {
+      color: var(--color-gray-400, #999);
+      font-family: var(--secondary-font);
+    }
+  }
+  .send_form {
+    width: fit-content;
+    height: fit-content;
+  }
+</style>

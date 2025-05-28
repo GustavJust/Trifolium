@@ -10,6 +10,7 @@ import Hero from "../components/hero.astro";
     description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
     descLeft="Woodspace"
     descRight="1st Floor"
+    poster="/assets/imgs/lazyload/facilities_lazyload.webp"
   />
 
   <section>
@@ -18,26 +19,23 @@ import Hero from "../components/hero.astro";
       <a href="/offices"
         ><p>Offices</p><img src="../assets/imgs/arrow_icon_red.svg" alt="" /></a
       >
-      <a href="/workspaces"
-        ><p>Workspaces</p><img
-          src="../assets/imgs/arrow_icon_red.svg"
-          alt=""
-        /></a
+      <a href="/workshops"
+        ><p>Workshops</p><img src="/assets/imgs/arrow_icon_red.svg" alt="" /></a
       >
       <a href="/photostudio"
         ><p>Photo-studio</p><img
-          src="../assets/imgs/arrow_icon_red.svg"
+          src="/assets/imgs/arrow_icon_red.svg"
           alt=""
         /></a
       >
-      <a href="/meetin_and_conferences"
-        ><p>Meeting & Congferences</p><img
-          src="../assets/imgs/arrow_icon_red.svg"
+      <a href="/page_not_found"
+        ><p>Meeting & Conferences</p><img
+          src="/assets/imgs/arrow_icon_red.svg"
           alt=""
         /></a
       >
-      <a href="/events"
-        ><p>Events</p><img src="../assets/imgs/arrow_icon_red.svg" alt="" /></a
+      <a href="/page_not_found"
+        ><p>Events</p><img src="/assets/imgs/arrow_icon_red.svg" alt="" /></a
       >
     </nav>
   </section>
@@ -60,17 +58,17 @@ import Hero from "../components/hero.astro";
       </div>
       <div class="map_frame" id="mapFrame">
         <img
-          src="../assets/imgs/floor_one_map.svg"
+          src="/assets/imgs/floor_one_map.svg"
           alt="Floor 1"
           class="floor_img"
         />
         <img
-          src="../assets/imgs/floor_two_map.svg"
+          src="/assets/imgs/floor_two_map.svg"
           alt="Floor 2"
           class="floor_img"
         />
         <img
-          src="../assets/imgs/floor_three_map.svg"
+          src="/assets/imgs/floor_three_map.svg"
           alt="Floor 3"
           class="floor_img"
         />
@@ -79,7 +77,7 @@ import Hero from "../components/hero.astro";
       <div class="explanation">
         <div class="thumbnail">
           <h4>NAME</h4>
-          <img src="../assets/imgs/placeholder.png" alt="" />
+          <img src="/assets/imgs/placeholder.png" alt="" />
         </div>
         <div class="card_contents">
           <div class="caption">
@@ -93,7 +91,7 @@ import Hero from "../components/hero.astro";
               ullam aspernatur deleniti pariatur fugit, laborum provident itaque
               odio natus illo harum.
             </p>
-            <a href="">Read more</a>
+            <a href="/">Read more</a>
 
             <div class="gallery_parent_container">
               <div class="gallery_container">
@@ -148,7 +146,9 @@ import Hero from "../components/hero.astro";
       With workspaces, advanced tools, and workshops under one roof, you can
       create physical or digital products from concept to launch.
     </p>
-    <button class="large">Get a tour</button>
+    <a href="/contact">
+      <button class="large">Get a tour</button>
+    </a>
   </section>
 
   <script>

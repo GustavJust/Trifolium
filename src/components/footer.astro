@@ -42,14 +42,16 @@ import "../styles/global.css";
         </li>
       </ul>
       <div class="socials">
-        <a href="">
-          <img src="../assets/imgs/insta_icon.svg" alt="" />
+        <a href="https://www.instagram.com/trifolium_cph/">
+          <img src="../assets/imgs/insta_icon.svg" alt="Instagram link" />
         </a>
-        <a href="">
-          <img src="../assets/imgs/face_icon.svg" alt="" />
+        <a href="https://www.facebook.com/TrifoliumCPH">
+          <img src="../assets/imgs/face_icon.svg" alt="Facebook link" />
         </a>
-        <a href="">
-          <img src="../assets/imgs/linked_icon.svg" alt="" />
+        <a
+          href="https://www.linkedin.com/company/82045530/admin/page-posts/published/"
+        >
+          <img src="../assets/imgs/linked_icon.svg" alt="linkedin link" />
         </a>
       </div>
     </div>
@@ -73,12 +75,18 @@ import "../styles/global.css";
     color: white;
     list-style: none;
   }
+  h5 {
+    margin: 0 0 var(--spacing-small) 0;
+  }
   li,
   ul {
     padding: 0;
   }
-
-  /* Inputs */
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-tiny);
+  }
 
   input[type="text"] {
     background-color: transparent;
@@ -94,10 +102,9 @@ import "../styles/global.css";
     outline: none;
   }
 
-  /* Containers */
-
   .logo_container {
     width: 300px;
+    margin-bottom: var(--spacing-large);
   }
 
   .logo_container a img {

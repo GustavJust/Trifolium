@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
+import Image_container from "../components/Image_container.astro";
 ---
 
 <Layout>
@@ -10,9 +11,13 @@ import Hero from "../components/hero.astro";
     description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
     descLeft=""
     descRight=""
+    poster="/assets/imgs/lazyload/membership_lazyload.webp"
   />
   <section>
-    <img src="../assets/imgs/placeholder.png" alt="" />
+    <Image_container
+      src="/assets/imgs/membership_intro.webp"
+      alt="Augusto sanding his chair"
+    />
     <p>
       At Trifolium, we understand that starting a business comes with plenty of
       uncertainty. Your workspace shouldn’t be one of them. That’s why our
@@ -44,7 +49,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/facilities"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -67,7 +73,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/offices#studio_village"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -90,7 +97,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/offices#closed_offices"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -115,7 +123,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/workshops"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -140,7 +149,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/workshops"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -160,7 +170,8 @@ import Hero from "../components/hero.astro";
           <li>Floor storage 3-10 sq. m.</li>
         </ul>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/workshops#storage"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -184,8 +195,8 @@ import Hero from "../components/hero.astro";
         </ul>
         <a href="/photostudio">Read more</a>
         <div class="button_container">
-          <a><button class="giant">Signup for a tour</button></a><a
-            href="/photostudio"
+          <a href="/contact"><button class="giant">Signup for a tour</button></a
+          ><a href="/photostudio" href="/photostudio"
             ><button class="giant alt">See Facilities</button>
           </a>
         </div>
@@ -198,7 +209,9 @@ import Hero from "../components/hero.astro";
       With workspaces, advanced tools, and workshops under one roof, you can
       create physical or digital products from concept to launch.
     </p>
-    <button class="large"> Explore facilities</button>
+    <a href="/facilities">
+      <button class="large"> Explore facilities</button>
+    </a>
   </section>
 </Layout>
 
