@@ -2,13 +2,14 @@
 // Hero.astro
 export interface Props {
   video?: string;
+  poster?: string;
   title?: string;
   description?: string;
   descLeft?: string;
   descRight?: string;
 }
 
-const { video, title, description, descLeft, descRight } = Astro.props;
+const { video, title, description, descLeft, descRight, poster } = Astro.props;
 import "../styles/global.css";
 ---
 
@@ -23,6 +24,7 @@ import "../styles/global.css";
           playsinline
           preload="none"
           class="hero-video"
+          poster={poster}
         >
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.

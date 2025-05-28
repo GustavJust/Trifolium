@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="img_frame">
+    <img src="../assets/imgs/404_image.svg" alt="404 page not found" />
+  </div>
+  <section>
+    <h1>404</h1>
+    <p>Sorry page not found..? Let's take you back!</p>
+    <a href="javascript:history.back()"
+      ><button class="large">Back to where you came from</button></a
+    >
+  </section>
+</Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    align-items: center;
+  }
+  .img_frame {
+    width: 100%;
+    height: fit-content;
+    padding: var(--spacing-large);
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .img_frame {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+</style>

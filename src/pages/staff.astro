@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+import StaffMember from "../components/staff_member.astro";
+---
+
+<Layout>
+  <Hero
+    video="/assets/imgs/video/platform_office_video.mp4"
+    title="Staff"
+    poster="/assets/imgs/lazyload/staff_lazyload.webp"
+  />
+  <section>
+    <div class="staff_list">
+      <StaffMember
+        Name="Anne Katrine Heje Larsen"
+        ImgSrc="/assets/imgs/staff_ak.webp"
+        Title="Head of Impact & Partnerships"
+      />
+      <StaffMember
+        Name="Artemis Antonopoulou"
+        ImgSrc="/assets/imgs/staff_artemis.webp"
+        Title="Workshop Manager"
+      />
+      <StaffMember
+        Name="Simone Sandahl"
+        ImgSrc="/assets/imgs/staff_simone.webp"
+        Title="Community Manager"
+      />
+      <StaffMember
+        Name="Gustav Just Jensen"
+        ImgSrc="/assets/imgs/staff_gustav.webp"
+        Title="Visual Designer & SoMe Manager"
+      />
+      <StaffMember
+        Name="Josefine Aagaard Jørgensen"
+        ImgSrc="/assets/imgs/staff_josefine.webp"
+        Title="Events & Communications Coordinator"
+      />
+      <StaffMember
+        Name="Lau Gotthard Christensen"
+        ImgSrc="/assets/imgs/staff_lau.webp"
+        Title="CEO & Co-Founder"
+      />
+      <StaffMember
+        Name="Oliver Hougaard"
+        ImgSrc="/assets/imgs/staff_oliver.webp"
+        Title="Business Manager"
+      />
+      <StaffMember
+        Name="Per Fogt"
+        ImgSrc="/assets/imgs/staff_per.webp"
+        Title="Workshop Technical Coordinator"
+      />
+      <StaffMember
+        Name="Rayana"
+        ImgSrc="/assets/imgs/staff_rayana.webp"
+        Title="Community Assistant"
+      />
+      <StaffMember
+        Name="Søren Nielsen"
+        ImgSrc="/assets/imgs/staff_søren.webp"
+        Title="Owner"
+      />
+    </div>
+  </section>
+  <section>
+    <h3>Not sure who to contact?</h3>
+    <p>
+      write us a message through the form, and we will direct you to the right
+      match.
+    </p>
+    <a href="/contact">
+      <button class="medium">Contact Trifolium</button>
+    </a>
+  </section>
+</Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+</style>

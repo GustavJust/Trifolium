@@ -1,0 +1,490 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+import Image_container from "../components/Image_container.astro";
+import Included from "../components/included.astro";
+import EquipmentItem from "../components/equipment_item.astro";
+import "../styles/facility.css";
+---
+
+<Layout>
+  <Hero
+    video="/assets/imgs/video/wood_workshop_video.mp4"
+    title="Workshops"
+    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    poster="/assets/imgs/lazyload/workshops_lazyload.webp"
+  />
+
+  <section>
+    <h2>Workshops That Support Real Work</h2>
+    <p>
+      Trifolium’s workshops are designed for professionals who build things that
+      matter. Whether you work in interiors, architecture, prototyping, or
+      fabrication, we aim to cover your full production needs.
+      <br /><br />
+      With dedicated spaces for wood, metal, textiles, electronics, and model-making,
+      plus access to digital tools and training, everything you need is right here—under
+      one roof.
+    </p>
+    <Image_container
+      src="/assets/imgs/wrk_realwork.webp"
+      alt="alex working on a table"
+      labelLeft="assembly area"
+      labelRight="1st Floor"
+    />
+  </section>
+  <section>
+    <h2>Wood Workshop</h2>
+    <Image_container
+      src="/assets/imgs/wrk_wood_thumbnail.webp"
+      alt="wood workshop"
+      labelLeft="wood workshop"
+      labelRight="1st Floor"
+    />
+    <p>
+      Our wood workshop is one of the central hubs of Trifolium. It’s set up to
+      support everything from precision joinery and furniture to fast
+      prototyping and custom installations.
+    </p>
+    <div class="image_scroll_facilities">
+      <img src="/assets/imgs/wrk_wood1.webp" alt="wood workshop preview" />
+      <img src="/assets/imgs/wrk_wood2.webp" alt="wood workshop preview" />
+      <img src="/assets/imgs/wrk_wood3.webp" alt="wood workshop preview" />
+      <img src="/assets/imgs/wrk_wood4.webp" alt="wood workshop preview" />
+      <img src="/assets/imgs/wrk_wood5.webp" alt="wood workshop preview" />
+    </div>
+    <p>
+      The space is laid out to keep things flowing—whether you're running a solo
+      build or coordinating with a team. Workbenches, industrial machinery, and
+      open layout make it easy to focus and execute at a professional level.
+      <br /><br />
+      It’s the go-to workshop for carpenters, designers, set builders, and anyone
+      working seriously with timber and wood-based materials. Whether you work in
+      rough cuts or refined details, you’ll find the tools and room to do it right.
+    </p>
+    <h5>Equipment</h5>
+    <div class="equipment_container">
+      <div class="equipment_scroll">
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Metal Workshop</h2>
+    <Image_container
+      src="/assets/imgs/wrk_metal_thumbnail.webp"
+      alt="Map of Trifolium"
+      labelLeft="Metal workshop"
+      labelRight="1st Floor"
+    />
+    <p>
+      The metal workshop is where structure, function, and fire come together.
+      This space supports welding, cutting, bending, and light-to-medium
+      fabrication work across various metals.
+    </p>
+    <div class="image_scroll_facilities">
+      <img src="/assets/imgs/wrk_metal1.webp" alt="metal workshop preview" />
+      <img src="/assets/imgs/wrk_metal2.webp" alt="metal workshop preview" />
+      <img src="/assets/imgs/wrk_metal3.webp" alt="metal workshop preview" />
+      <img src="/assets/imgs/wrk_metal4.webp" alt="metal workshop preview" />
+      <img src="/assets/imgs/wrk_metal5.webp" alt="metal workshop preview" />
+    </div>
+    <p>
+      It’s a versatile environment for people working in furniture, installation
+      design, mechanical structures, or prototyping that calls for more strength
+      and precision.
+      <br /><br />
+      The layout makes it easy to move between tasks without friction. If your work
+      involves steel, aluminum, or similar materials, this is where your build starts
+      to take shape.
+    </p>
+    <h5>Equipment</h5>
+    <div class="equipment_container">
+      <div class="equipment_scroll">
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Model Workshop</h2>
+    <Image_container
+      src="/assets/imgs/wrk_model_thumbnail.webp"
+      alt="Map of Trifolium"
+      labelLeft="model workshop"
+      labelRight="mezzanine"
+    />
+    <p>
+      The model workshop is where ideas get tested, scaled, and shaped by hand.
+      It’s set up for architectural models, material mockups, detailed
+      prototypes, or anything in between.
+    </p>
+    <div class="image_scroll_facilities">
+      <img src="/assets/imgs/wrk_model1.webp" alt="model workshop preview" />
+      <img src="/assets/imgs/wrk_model2.webp" alt="model workshop preview" />
+      <img src="/assets/imgs/wrk_model3.webp" alt="model workshop preview" />
+      <img src="/assets/imgs/wrk_model4.webp" alt="model workshop preview" />
+      <img src="/assets/imgs/wrk_model5.webp" alt="model workshop preview" />
+    </div>
+    <p>
+      This is a quieter, more controlled space for professionals who work at
+      smaller scales or need a clean environment for delicate processes.
+      <br /><br />
+      Architects, product designers, and concept developers use this workshop to
+      bridge the gap between screen and object. It’s a space made for focus, detail,
+      and experimentation.
+    </p>
+    <h5>Equipment</h5>
+    <div class="equipment_container">
+      <div class="equipment_scroll">
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Textile Workshop</h2>
+    <Image_container
+      src="/assets/imgs/wrk_textile_thumbnail.webp"
+      alt="Map of Trifolium"
+      labelLeft="textile workshop"
+      labelRight="Mezzanine"
+    />
+    <p>
+      The textile workshop supports everything from upholstery and fashion to
+      soft goods, accessories, and material tests.
+    </p>
+    <div class="image_scroll_facilities">
+      <img
+        src="/assets/imgs/wrk_textile1.webp"
+        alt="textile workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_textile2.webp"
+        alt="textile workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_textile3.webp"
+        alt="textile workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_textile4.webp"
+        alt="textile workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_textile5.webp"
+        alt="textile workshop preview"
+      />
+    </div>
+    <p>
+      It’s a flexible, open space for professionals working with fabric and
+      fibers in both creative and technical ways. Whether you're working with
+      sewing machines or combining textile work with digital production or
+      electronics, the space gives you the room and setup to take your project
+      from first stitch to finished product.
+    </p>
+    <h5>Equipment</h5>
+    <div class="equipment_container">
+      <div class="equipment_scroll">
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Electronics Workshop</h2>
+    <Image_container
+      src="/assets/imgs/wrk_electronic_thumbnail.webp"
+      alt="Map of Trifolium"
+      labelLeft="assembly area"
+      labelRight="1st Floor"
+    />
+    <p>
+      The electronics workshop is where hardware and circuits come to life. It’s
+      geared toward prototyping, light assembly, and testing of electronics and
+      embedded systems.
+    </p>
+    <div class="image_scroll_facilities">
+      <img
+        src="/assets/imgs/wrk_electronic1.webp"
+        alt="electronic workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_electronic2.webp"
+        alt="electronic workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_electronic3.webp"
+        alt="electronic workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_electronic4.webp"
+        alt="electronic workshop preview"
+      />
+      <img
+        src="/assets/imgs/wrk_electronic5.webp"
+        alt="electronic workshop preview"
+      />
+    </div>
+    <p>
+      Whether you’re building devices, modifying existing tech, or integrating
+      electronics into physical products, this space offers the workbench and
+      tools to get hands-on with your builds.
+      <br /><br />
+      Perfect for startups, engineers, or creatives working with sensors, IoT, robotics,
+      or sound. It’s where physical meets digital—and where prototypes start proving
+      themselves.
+    </p>
+    <h5>Equipment</h5>
+    <div class="equipment_container">
+      <div class="equipment_scroll">
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+        <EquipmentItem
+          ImgSrc="../assets/imgs/placeholder.png"
+          AltTxt="desc"
+          Name="Name"
+          Amount="1x"
+        />
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>What's included?</h2>
+    <Included
+      number="01"
+      header="24/7 Building Access"
+      desc={`With a personal key-fob for full-time members.`}
+    />
+    <Included
+      number="02"
+      header="Flexible Memberships"
+      desc={`Choose full-time or part-time access based on your schedule.`}
+    />
+    <Included
+      number="03"
+      header="Use of All Workshops"
+      desc={`Wood, metal, textile, model, and electronics.`}
+    />
+    <Included
+      number="04"
+      header="Community & Networking"
+      desc={`Be part of a professional, supportive environment.`}
+    />
+    <Included
+      number="05"
+      header="Training & Intro Courses"
+      desc={`Get Trifo-certified on key machines like CNC and laser cutters.`}
+    />
+    <Included
+      number="06"
+      header="Storage Options"
+      desc={`Rent shelf or floor space to store tools and materials.`}
+    />
+    <Included
+      number="07"
+      header="Access to the Würth Shop"
+      desc={`Buy materials and fasteners right on site.`}
+    />
+    <Included
+      number="08"
+      header="Meeting Rooms & Shared Facilities"
+      desc={`Bookable spaces, kitchen, and common areas.`}
+    />
+    <Included
+      number="09"
+      header="On-site Support"
+      desc={`A team ready to help with questions and safety guidance.`}
+    />
+  </section>
+  <section id="storage">
+    <h2>Storage Options</h2>
+    <p>
+      Need space to store your materials or ongoing work? We offer shelf storage
+      and floor space at monthly rates, priced by the square meter. Whether you
+      need a small spot or a bigger footprint, you can keep your tools and
+      projects close by and ready to go.
+    </p>
+    <Image_container
+      src="/assets/imgs/wrk_storage.webp"
+      alt="image of storage cells"
+    />
+  </section>
+  <section>
+    <h2>Digital Fabrication & Learning Access</h2>
+    <p>
+      Digital fabrication is a core part of what we do at Trifolium. From CNC
+      milling and laser cutting to digital model workflows, we support both
+      self-driven professionals and those learning new tools.
+      <br /><br />
+      Our Design & Production team is specialized in digital fabrication and helps
+      push what’s possible across projects and materials.
+      <br /><br />
+      To ensure everyone works safely and efficiently, certain machines require an
+      introduction course before use. We offer training for all our key machines,
+      so you can level up while you work.
+    </p>
+    <Image_container
+      src="/assets/imgs/wrk_digfab.webp"
+      alt="CNC-machine wood-router"
+    />
+  </section>
+  <section>
+    <h2>Built on Collaboration</h2>
+    <p>
+      Trifolium is a shared space full of professionals with different skills,
+      tools, and approaches. That’s a strength.
+      <br /><br />
+      People here talk shop, trade knowledge, help each other, and build smarter
+      through community. Whether you work solo or in a team, you’ll feel the benefit
+      of being surrounded by others who get what it takes to bring real projects
+      to life.
+    </p>
+    <Image_container
+      src="/assets/imgs/wrk_collab.webp"
+      alt="Image of members working together"
+    />
+  </section>
+  <section>
+    <h2>The Mobile Production Unit (MPU)</h2>
+    <p>
+      Sometimes the job happens off-site. The Mobile Production Unit is a
+      compact, high-spec workshop container you can book when you need
+      production on location—or just need access to tools without a full
+      membership.
+      <br /><br />
+      It’s perfect for temporary builds, short-term access to digital tools like
+      CNC machines, or site-specific setups. If you're working remote but still want
+      professional-grade capabilities, the MPU rolls up ready to go.
+    </p>
+    <Image_container
+      src="/assets/imgs/wrk_mpu.webp"
+      alt="image of Trifoliums mobile production unit"
+    />
+  </section>
+  <section>
+    <h2>Join the Community</h2>
+    <p>
+      Whether you're looking for a full-time base or flexible access on evenings
+      and weekends, we’d love to hear from you.
+      <br /><br />
+      Get in touch and let’s find the right setup for your work:
+    </p>
+    <a href="/membership"> <button class="medium">Prices</button></a>
+    <a href="/contact">
+      <button class="medium alt">Contact Trifolium</button></a
+    >
+  </section>
+</Layout>
+
+<style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+</style>
