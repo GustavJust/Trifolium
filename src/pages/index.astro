@@ -20,8 +20,9 @@ import NavCard from "../components/nav_card.astro";
         Your browser does not support the video tag.
       </video>
       <div class="hero_text">
-        <h2 class="left_hero_text">For <br />those</h2>
-        <h2 class="right_hero_text">who <br />create</h2>
+        <h2 class="left_hero_text">
+          A Professinoal <br /> Production <br /> Village
+        </h2>
       </div>
       <div class="arrow_container">
         <img src="../assets/imgs/arrow_icon_white.svg" alt="" />
@@ -83,7 +84,7 @@ import NavCard from "../components/nav_card.astro";
       <NavCard
         href="/venues"
         title="Venues"
-        imgSrc="/assets/imgs/...webp"
+        imgSrc="/assets/imgs/lazyload/venues_lazyload.webp"
         alt="image did not load"
         aria-hidden="true"
       />
@@ -142,14 +143,14 @@ import NavCard from "../components/nav_card.astro";
       Cant find what you are looking for? Don’t be afraid to reach out to us!
     </h5>
     <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
-    <div class="logo_divider">
-      <img src="/assets/imgs/logo_icon.svg" alt="" />
-    </div>
   </section>
+  <div class="logo_divider">
+    <img src="/assets/imgs/logo_icon.svg" alt="" />
+  </div>
 </Layout>
 
 <style>
-  section:not(.hero) {
+  section {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
   }
@@ -171,13 +172,15 @@ import NavCard from "../components/nav_card.astro";
       text-align: right;
     }
     > .hero_text h2 {
-      color: var(--white-color-100);
+      color: var(--primary-color-500);
       font-family: var(--primary-font);
       text-transform: uppercase;
-      text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-      font-size: 5em;
+      /* text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.862); */
+      /* mix-blend-mode: difference; */
+      font-size: 10.5vw;
       font-weight: 500;
-      margin: 0;
+      margin: 0.4em 0 0 0;
+      text-wrap: nowrap;
     }
     > video {
       width: 100%;
@@ -216,6 +219,14 @@ import NavCard from "../components/nav_card.astro";
   @media (width > 800px) {
     .nav_card_container {
       flex-direction: row;
+    }
+    .hero_text h2 {
+      line-height: 1;
+      font-size: 6vw;
+      margin-top: 0.2em;
+    }
+    .arrow_container {
+      top: 76% !important;
     }
   }
 </style>
