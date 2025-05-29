@@ -248,6 +248,7 @@
   section.img_w_txt{
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-small);
 
   > .txt_box{
     box-sizing: border-box;
