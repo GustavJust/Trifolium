@@ -6,14 +6,16 @@ import Layout from "../layouts/Layout.astro";
   <section class="hero">
     <img src="../assets/imgs/lazyload/positions_lazyload.webp" alt="" />
   </section>
-  <section class="formula">
+  <section>
     <h1>Contact</h1>
     <div class="header_container">
       <h4>Let's Talk</h4>
       <div class="arrow_container">
-        <img src="../assets/imgs/icon_arrow.svg" alt="" />
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
       </div>
     </div>
+  </section>
+  <section class="formula">
     <div class="input_container">
       <div class="input_wrapper">
         <label for="message">Your Name</label>
@@ -45,18 +47,18 @@ import Layout from "../layouts/Layout.astro";
         ></textarea>
       </div>
     </div>
+    <p>
+      Fill in the form above, and press send. We will get back to you as soon as
+      possible.
+    </p>
     <a href="/form_sent" class="send_form"
       ><button class="large alt">Send</button></a
     >
-    <p>
-      Inset your contact information above, and we will get back to you as soon
-      as possible.
-    </p>
   </section>
 </Layout>
 
 <style>
-  section:not(.hero) {
+  section {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
   }
@@ -71,33 +73,40 @@ import Layout from "../layouts/Layout.astro";
     text-wrap: wrap;
   }
   .hero {
-    width: 100%;
+    width: calc(100% - 32px);
+    box-sizing: border-box;
     height: fit-content;
     display: flex;
     margin-bottom: var(--spacing-small);
+    max-height: 500px;
     > img {
       width: 100%;
       height: auto;
       object-fit: cover;
       margin: 0;
+      box-sizing: border-box;
     }
   }
   .header_container {
+    margin-top: var(--spacing-tiny);
     display: flex;
     align-items: center;
     > .arrow_container {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       overflow: hidden;
       margin-left: var(--spacing-small);
     }
     > .arrow_container img {
       width: 100%;
       height: auto;
-      transform: rotate(90deg);
+      transform: scale(1.2) rotate(90deg);
+    }
+    h4 {
+      margin: 0;
     }
   }
   .input_container {
@@ -150,5 +159,18 @@ import Layout from "../layouts/Layout.astro";
   .send_form {
     width: fit-content;
     height: fit-content;
+  }
+
+  @media (min-width: 800px) and (max-width: 900px) {
+    .formula {
+      max-width: 753px;
+      justify-self: right;
+    }
+  }
+  @media (width > 900px) {
+    .formula {
+      max-width: 60vw;
+      justify-self: center;
+    }
   }
 </style>

@@ -43,7 +43,7 @@ import "../styles/global.css";
 
 <style>
   .header {
-    width: calc(100% - 16px);
+    width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +101,9 @@ import "../styles/global.css";
   }
 
   @media (width > 990px) {
+    .header {
+      width: calc(100% - 16px);
+    }
     .nav_menu_mobile_container {
       display: none;
     }
