@@ -120,14 +120,34 @@ import "../styles/facility.css";
   </div>
 
   <section>
-    <h2>Nice to know:</h2>
-    <ul>
-      <li>Operating hours: 08:00 – 18:00</li>
-      <li>Located at Bådehavnsgade 42P, 2450 Copenhagen SV</li>
-      <li>Easily accessible via public transport: Bus lines 7A and 18, Metro line M4 (Sluseholmen station), and Harbour Bus line 992</li>
-      <li>Assistance available for arranging equipment transportation through trusted freight partners</li>
-      <li>Membership options offer additional benefits, including discounts on studio rentals, dedicated workspace, secure equipment storage, and access to a network of creative professionals</li>
-    </ul>
+    <h2>Nice to know</h2>
+    <div class="included_grid">
+      <Included number="01" header="Lounge area with production overview" desc={`Our lounge is elevated, giving you a full overview of the entire photo studio. A perfect spot to relax, observe, and get inspired.`} />
+      <Included
+        number="02"
+        header="200 m² studio with daylight and high ceilings"
+        desc={`A bright and spacious 200 m² studio with high ceilings and beautiful natural daylight. Designed to spark creativity, the open layout offers plenty of room to build, shoot, and explore ideas from every angle.`}
+      />
+      <Included
+        number="03"
+        header="Large freight elevator for gear transport"
+        desc={`A spacious freight elevator ensures smooth and efficient transport of equipment, making it easy to move gear in and out of the studio. Ideal for professional productions of any scale.`}
+      />
+      <Included
+        number="04"
+        header="Private makeup room and restroom"
+        desc={`The studio includes a private makeup room and restroom, providing comfort and convenience for talent and crew—ideal for professional shoots and seamless preparation on set.`}
+      />
+      <Included number="05" header="High-speed WiFi and power access" desc={`Equipped with high-speed WiFi and multiple power access points, the studio supports a seamless workflow for both creative and technical teams.`} />
+      <Included number="06" header="Kitchenette with coffee and tea included" desc={`A fully equipped kitchenette with complimentary coffee and tea offers a comfortable break space for clients and crew throughout the day.`} />
+      <Included number="07" header="Free parking & EV charging" desc={`Complimentary parking and EV charging facilities are available on-site, ensuring convenient and sustainable access for all visitors.`} />
+      <Included number="08" header="Professional equipment rental available" desc={`On-site professional equipment rental offers a wide range of high-quality gear to enhance and streamline your production.`} />
+      <Included
+        number="09"
+        header="Custom set design on request"
+        desc={`Custom set design services are available upon request thanks to Trifolium’s extensive on-site facilities. With various companies working here, you can easily connect with experts who can build and assist with tailored solutions for your project.`}
+      />
+    </div>
   </section>
 
   <div class="logo_divider">
@@ -153,12 +173,15 @@ import "../styles/facility.css";
       margin-right: var(--spacing-small);
     }
 
+    .included_grid {
+      gap: 4rem;
+      margin-top: 2rem;
+    }
+
     @media (width > 800px) {
       .included_grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem; /* space between columns and rows */
-        margin-top: 2rem;
       }
 
       .gallery_grid {
