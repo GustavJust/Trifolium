@@ -35,7 +35,11 @@ const galleryImages = [
     </div>
   </section>
 
-  <section class="img_w_txt">
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="img_w_txt left">
     <Image_container src="/assets/imgs/d&p_ida.webp" alt="Map of Trifolium" labelLeft="bådehavnsgade 42" labelRight="2450 Sydhavnen" />
     <div class="txt_box">
       <h2>From sketch to setup</h2>
@@ -50,6 +54,10 @@ const galleryImages = [
     </div>
   </section>
 
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section class="img_w_txt">
     <Image_container src="/assets/imgs/d&p_thomas.webp" alt="Map of Trifolium" labelLeft="bådehavnsgade 42" labelRight="2450 Sydhavnen" />
     <div class="txt_box">
@@ -61,10 +69,14 @@ const galleryImages = [
     </div>
   </section>
 
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section>
     <h5>Bloom bar for Bloom festival 2024</h5>
     <div class="image_scroll_facilities">
-      <img src="/assets/imgs/d&p_bloom1.webp" alt="Bloom project" />
+      <img src="/assets/imgs/d&p_bloom1.webp" alt="Bloom project"  />
       <img src="/assets/imgs/d&p_bloom2.webp" alt="Bloom project" />
       <img src="/assets/imgs/d&p_bloom3.webp" alt="Bloom project" />
     </div>
@@ -212,6 +224,26 @@ const galleryImages = [
       height: auto;
       width: 100%;
       object-fit: cover;
+    }
+  }
+
+  @media (width > 800px){
+    .image_scroll_facilities{
+    height: 700px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex ;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: var(--spacing-tiny);
+    > img{
+        height: 100%;
+        max-width: 100vw;
+        max-height: 700px;
+    }
+    > .image_container{
+        height: 100%;
+        width: 100vw;
     }
   }
 </style>
