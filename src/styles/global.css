@@ -5,15 +5,21 @@
     --primary-font: "Host Grotesk", sans-serif;
     --secondary-font: "Figtree", sans-serif;
 
-    --primary-color-700: #c10d0d;
-    --primary-color-600: #e50000;
-    --primary-color-500: #ff0000;
-    --primary-color-400: #ff5555;
-    --primary-color-300: #ff6f6f;
-    --primary-color-200: #ff9393;
-    --primary-color-100: #ffbfbf;
+    --primary-color-700:#006AB5;
+    --primary-color-600:#0088E8;
+    --primary-color-500:#009CFF;
+    --primary-color-400:#33AAFF;
+    --primary-color-300:#54B8FF;
+    --primary-color-200:#8ACEFF;
+    --primary-color-100:#B0DEFF;
 
-    --seconday-color-500:#009CFF;
+    --secondary-color-700: #c10d0d;
+    --secondary-color-600: #e50000;
+    --secondary-color-500: #ff0000;
+    --secondary-color-400: #ff5555;
+    --secondary-color-300: #ff6f6f;
+    --secondary-color-200: #ff9393;
+    --secondary-color-100: #ffbfbf;
 
     --tertiary-color-800:#0A1653;
 
@@ -114,6 +120,7 @@
   button:hover {
     background-color: var(--primary-color-300);
     border: 1px solid var(--primary-color-300);
+    cursor: url('/assets/imgs/fav_icon_white.svg') 16 7, pointer ;
   }
   button:focus {
     border: 3px solid var(--primary-color-300);
@@ -226,6 +233,10 @@
         height: 100%;
         max-width: 100vw;
         max-height: 250px;
+    }
+    > .image_container{
+        height: 100%;
+        width: 100vw;
     }
   }
   
