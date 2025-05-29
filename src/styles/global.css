@@ -310,13 +310,15 @@
     }
     section.bottom_cta {
         display: flex;
+        gap: var(--spacing-medium);
         flex-direction: column;
         justify-content: center;
         box-sizing: border-box;
-        > h5, a{
+        > h5, h3, p, a{
             display: flex;
             width: 100%;
             justify-content: center;
+            margin: 0;
         }
       }
   }

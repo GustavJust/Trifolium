@@ -64,21 +64,37 @@ import StaffMember from "../components/staff_member.astro";
       />
     </div>
   </section>
-  <section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+  <section class="bottom_cta">
     <h3>Not sure who to contact?</h3>
     <p>
-      write us a message through the form, and we will direct you to the right
+      Write us a message through the form, and we will direct you to the right
       match.
     </p>
     <a href="/contact">
       <button class="medium">Contact Trifolium</button>
     </a>
   </section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
 </Layout>
 
 <style>
   section {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
+  }
+
+  @media (width > 800px) {
+    .staff_list {
+      display: grid;
+      gap: var(--spacing-small); /* space between cards */
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      /* max-width: 80vw;
+      justify-self: center; */
+    }
   }
 </style>
