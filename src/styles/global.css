@@ -239,4 +239,38 @@
         width: 100vw;
     }
   }
+  section.img_w_txt{
+    display: flex;
+    flex-direction: column;
+
+  > .txt_box{
+    box-sizing: border-box;
+            padding: var(--spacing-small);
+            border: 1px solid var(--black-color-100);
+  }
+}
   
+  @media (width > 800px) {
+    section.img_w_txt{
+        overflow: hidden;
+        flex-direction: row;
+        gap: var(--spacing-small);
+        max-height: 70vh;
+        > .txt_box{
+            order: -1;
+        }
+        > .txt_box h2{
+            margin-top: 0;
+        }
+        > .img_frame{
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+    section.img_w_txt.left{
+        > .txt_box{
+            order: 1;
+        }
+    }
+  }
