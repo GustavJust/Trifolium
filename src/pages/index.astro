@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Image_container from "../components/Image_container.astro";
-import ImageContainerFacilities from "../components/Image_container_facilities.astro";
 import NavCard from "../components/nav_card.astro";
 ---
 
@@ -28,29 +27,34 @@ import NavCard from "../components/nav_card.astro";
         <img src="../assets/imgs/arrow_icon_white.svg" alt="" />
       </div>
     </div>
-    <div class="logo_divider">
-      <img src="../assets/imgs/logo_icon.svg" alt="" />
-    </div>
   </section>
-  <section>
-    <h1>
-      A professional production village for designers, developers, and builders.
-    </h1>
-    <p>
-      With workspaces, advanced tools, and workshops under one roof, you can
-      create physical or digital products from concept to launch.
-    </p>
-    <a href="/contact">
-      <button class="large">Get a Tour</button>
-    </a>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+  <section class="img_w_txt">
+    <div class="txt_box">
+      <h1>
+        A professional production village for designers, developers, and
+        builders.
+      </h1>
+      <p>
+        With workspaces, advanced tools, and workshops under one roof, you can
+        create physical or digital products from concept to launch.
+      </p>
+      <a href="/contact">
+        <button class="large">Get a Tour</button>
+      </a>
+    </div>
     <Image_container
       src="/assets/imgs/index_bluearea.webp"
       alt="Map of Trifolium"
+      labelLeft="Blue area"
+      labelRight="1st floor"
     />
-    <div class="logo_divider">
-      <img src="../assets/imgs/logo_icon.svg" alt="" />
-    </div>
   </section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
   <section>
     <h2>Explore our facilities</h2>
     <nav class="nav_card_container">
@@ -84,34 +88,13 @@ import NavCard from "../components/nav_card.astro";
         aria-hidden="true"
       />
     </nav>
-    <div class="logo_divider">
-      <img src="../assets/imgs/logo_icon.svg" alt="" />
-    </div>
   </section>
-  <section>
-    <h1>Where Innovation Meets Community</h1>
-    <p>
-      At Trifolium, we offer state-of-the-art facilities designed to inspire
-      creativity, collaboration, and growth. Our vibrant culture is built on
-      openness, curiosity, and a shared commitment to making a positive impact
-      together. Whether you’re here to work, learn, or connect, you’ll find a
-      welcoming space that supports your journey.
-    </p>
-    <a href="/contact"> <button class="medium">Get a Tour</button></a>
-
-    <Image_container
-      src="/assets/imgs/index_kort.webp"
-      alt="Map of Trifolium"
-      labelLeft="bådehavnsgade 42K"
-      labelRight="2450 Sydhavnen"
-    />
-    <div class="logo_divider">
-      <img src="../assets/imgs/logo_icon.svg" alt="" />
-    </div>
-  </section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
   <section class="img_w_txt">
     <div class="img_frame">
-      <ImageContainerFacilities
+      <Image_container
         src="/assets/imgs/d&p_intro.webp"
         alt="D&P Thumbnail"
         labelLeft="Material library"
@@ -129,13 +112,38 @@ import NavCard from "../components/nav_card.astro";
       <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
     </div>
   </section>
-  <section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+  <section class="img_w_txt left">
+    <div class="txt_box">
+      <h2>Where Innovation Meets Community</h2>
+      <p>
+        At Trifolium, we offer state-of-the-art facilities designed to inspire
+        creativity, collaboration, and growth. Our vibrant culture is built on
+        openness, curiosity, and a shared commitment to making a positive impact
+        together. Whether you’re here to work, learn, or connect, you’ll find a
+        welcoming space that supports your journey.
+      </p>
+      <a href="/contact"> <button class="medium">Get a Tour</button></a>
+    </div>
+    <Image_container
+      src="/assets/imgs/index_kort.webp"
+      alt="Map of Trifolium"
+      labelLeft="bådehavnsgade 42K"
+      labelRight="2450 Sydhavnen"
+    />
+  </section>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+  <section class="bottom_cta">
     <h5>
       Cant find what you are looking for? Don’t be afraid to reach out to us!
     </h5>
     <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
     <div class="logo_divider">
-      <img src="../assets/imgs/logo_icon.svg" alt="" />
+      <img src="/assets/imgs/logo_icon.svg" alt="" />
     </div>
   </section>
 </Layout>
@@ -204,5 +212,10 @@ import NavCard from "../components/nav_card.astro";
     display: flex;
     flex-direction: column;
     gap: var(--spacing-tiny);
+  }
+  @media (width > 800px) {
+    .nav_card_container {
+      flex-direction: row;
+    }
   }
 </style>
