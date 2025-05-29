@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Image_container from "../components/Image_container.astro";
+import ImageContainerFacilities from "../components/Image_container_facilities.astro";
 import NavCard from "../components/nav_card.astro";
 ---
 
@@ -27,6 +28,9 @@ import NavCard from "../components/nav_card.astro";
         <img src="../assets/imgs/arrow_icon_white.svg" alt="" />
       </div>
     </div>
+    <div class="logo_divider">
+      <img src="../assets/imgs/logo_icon.svg" alt="" />
+    </div>
   </section>
   <section>
     <h1>
@@ -48,19 +52,12 @@ import NavCard from "../components/nav_card.astro";
     </div>
   </section>
   <section>
-    <h2>Explore the house</h2>
+    <h2>Explore our facilities</h2>
     <nav class="nav_card_container">
       <NavCard
-        href="/facilities"
-        title="Facilities"
-        imgSrc="/assets/imgs/lazyload/facilities_lazyload.webp"
-        alt="image did not load"
-        aria-hidden="true"
-      />
-      <NavCard
-        href="/membership"
-        title="Membership"
-        imgSrc="/assets/imgs/lazyload/membership_lazyload.webp"
+        href="/offices"
+        title="Offices"
+        imgSrc="/assets/imgs/offices_intro.webp"
         alt="image did not load"
         aria-hidden="true"
       />
@@ -72,20 +69,24 @@ import NavCard from "../components/nav_card.astro";
         aria-hidden="true"
       />
       <NavCard
-        href="/dandp"
-        title="Design & Production"
-        imgSrc="/assets/imgs/lazyload/design_and_production_lazyload.webp"
+        href="/workshops"
+        title="Workshops"
+        imgSrc="/assets/imgs/wrk_realwork.webp"
         alt="image did not load"
         aria-hidden="true"
       />
+
       <NavCard
-        href="/about"
-        title="About Trifolium"
-        imgSrc="/assets/imgs/lazyload/about_lazyload.webp"
+        href="/venues"
+        title="Venues"
+        imgSrc="/assets/imgs/...webp"
         alt="image did not load"
         aria-hidden="true"
       />
     </nav>
+    <div class="logo_divider">
+      <img src="../assets/imgs/logo_icon.svg" alt="" />
+    </div>
   </section>
   <section>
     <h1>Where Innovation Meets Community</h1>
@@ -104,12 +105,38 @@ import NavCard from "../components/nav_card.astro";
       labelLeft="bådehavnsgade 42K"
       labelRight="2450 Sydhavnen"
     />
+    <div class="logo_divider">
+      <img src="../assets/imgs/logo_icon.svg" alt="" />
+    </div>
+  </section>
+  <section class="img_w_txt">
+    <div class="img_frame">
+      <ImageContainerFacilities
+        src="/assets/imgs/d&p_intro.webp"
+        alt="D&P Thumbnail"
+        labelLeft="Material library"
+        labelRight="D&P office"
+      />
+    </div>
+    <div class="txt_box">
+      <h2>Design & Production</h2>
+      <p>
+        At Trifolium, we understand that starting a business comes with plenty
+        of uncertainty. Your workspace shouldn’t be one of them. That’s why our
+        memberships are modular and based on how many people in your team need
+        access. You only pay for what you need.
+      </p>
+      <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
+    </div>
   </section>
   <section>
     <h5>
       Cant find what you are looking for? Don’t be afraid to reach out to us!
     </h5>
     <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
+    <div class="logo_divider">
+      <img src="../assets/imgs/logo_icon.svg" alt="" />
+    </div>
   </section>
 </Layout>
 
