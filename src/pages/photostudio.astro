@@ -20,196 +20,153 @@ import "../styles/facility.css";
   <section>
     <h2>Spacious Daylight Studio for Focused, High-Quality Visual Work</h2>
     <p>
-      Nestled in our creative and professional community, Trifolium's 200 m²
-      photo studio offers a spacious, daylight-filled environment tailored for
-      photographers, videographers, and creative professionals. With high
-      ceilings and expansive windows, it provides the perfect setting for
-      everything from product shoots to editorial sessions.
+      Nestled in our creative and professional community, Trifolium's 200 m² photo studio offers a spacious, daylight-filled environment tailored for photographers, videographers, and creative professionals. With high ceilings and expansive windows,
+      it provides the perfect setting for everything from product shoots to editorial sessions.
     </p>
-    <Image_container
-      src="/assets/imgs/photostudio_intro.webp"
-      alt="Photostudio preview"
-      labelLeft="Photostudio"
-      labelRight="2nd Floor"
-    />
   </section>
+
+  <section>
+    <div class="gallery_grid">
+      <Image_container src="/assets/imgs/lazyload/photostudio_lazyload.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+      <Image_container src="/assets/imgs/photostudio_backview.webp" alt="backroom" labelLeft="Behind the scene" labelRight="Photostudio" />
+      <Image_container src="/assets/imgs/photostudio_kitchen.webp" alt="kitchen" labelLeft="Kitchen" labelRight="Photostudio" />
+      <Image_container src="/assets/imgs/photostudio_makeup.webp" alt="makeup room" labelLeft="Makeup room" labelRight="Photostudio" />
+      <Image_container src="/assets/imgs/photostudio_lounge.webp" alt="lounge" labelLeft="Lounge" labelRight="Photostudio" />
+      <Image_container src="/assets/imgs/photostudio_outside.webp" alt="outside terrace" labelLeft="Terrace" labelRight="Photostudio" />
+    </div>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section>
     <h2>What's included?</h2>
-    <Included
-      number="01"
-      header="Lounge area with production overview"
-      desc={`Our lounge is elevated, giving you a full overview of the entire photo studio. A perfect spot to relax, observe, and get inspired.`}
-    />
-    <Included
-      number="02"
-      header="200 m² studio with daylight and high ceilings"
-      desc={`A bright and spacious 200 m² studio with high ceilings and beautiful natural daylight. Designed to spark creativity, the open layout offers plenty of room to build, shoot, and explore ideas from every angle.`}
-    />
-    <Included
-      number="03"
-      header="Large freight elevator for gear transport"
-      desc={`A spacious freight elevator ensures smooth and efficient transport of equipment, making it easy to move gear in and out of the studio.
-Ideal for professional productions of any scale.`}
-    />
-    <Included
-      number="04"
-      header="Private makeup room and restroom"
-      desc={`The studio includes a private makeup room and restroom, providing comfort and convenience for talent and crew—ideal for professional shoots and seamless preparation on set.`}
-    />
-    <Included
-      number="05"
-      header="High-speed WiFi and power access"
-      desc={`Equipped with high-speed WiFi and multiple power access points, the studio supports a seamless workflow for both creative and technical teams.`}
-    />
-    <Included
-      number="06"
-      header="Kitchenette with coffee and tea included"
-      desc={`A fully equipped kitchenette with complimentary coffee and tea offers a comfortable break space for clients and crew throughout the day.`}
-    />
-    <Included
-      number="07"
-      header="Free parking & EV charging"
-      desc={`Complimentary parking and EV charging facilities are available on-site, ensuring convenient and sustainable access for all visitors.`}
-    />
-    <Included
-      number="08"
-      header="Professional equipment rental available"
-      desc={`On-site professional equipment rental offers a wide range of high-quality gear to enhance and streamline your production.`}
-    />
-    <Included
-      number="09"
-      header="Custom set design on request"
-      desc={`Custom set design services are available upon request thanks to Trifolium’s extensive on-site facilities. With various companies working here, you can easily connect with experts who can build and assist with tailored solutions for your project.`}
-    />
+    <div class="included_grid">
+      <Included number="01" header="Lounge area with production overview" desc={`Our lounge is elevated, giving you a full overview of the entire photo studio. A perfect spot to relax, observe, and get inspired.`} />
+      <Included
+        number="02"
+        header="200 m² studio with daylight and high ceilings"
+        desc={`A bright and spacious 200 m² studio with high ceilings and beautiful natural daylight. Designed to spark creativity, the open layout offers plenty of room to build, shoot, and explore ideas from every angle.`}
+      />
+      <Included
+        number="03"
+        header="Large freight elevator for gear transport"
+        desc={`A spacious freight elevator ensures smooth and efficient transport of equipment, making it easy to move gear in and out of the studio. Ideal for professional productions of any scale.`}
+      />
+      <Included
+        number="04"
+        header="Private makeup room and restroom"
+        desc={`The studio includes a private makeup room and restroom, providing comfort and convenience for talent and crew—ideal for professional shoots and seamless preparation on set.`}
+      />
+      <Included number="05" header="High-speed WiFi and power access" desc={`Equipped with high-speed WiFi and multiple power access points, the studio supports a seamless workflow for both creative and technical teams.`} />
+      <Included number="06" header="Kitchenette with coffee and tea included" desc={`A fully equipped kitchenette with complimentary coffee and tea offers a comfortable break space for clients and crew throughout the day.`} />
+      <Included number="07" header="Free parking & EV charging" desc={`Complimentary parking and EV charging facilities are available on-site, ensuring convenient and sustainable access for all visitors.`} />
+      <Included number="08" header="Professional equipment rental available" desc={`On-site professional equipment rental offers a wide range of high-quality gear to enhance and streamline your production.`} />
+      <Included
+        number="09"
+        header="Custom set design on request"
+        desc={`Custom set design services are available upon request thanks to Trifolium’s extensive on-site facilities. With various companies working here, you can easily connect with experts who can build and assist with tailored solutions for your project.`}
+      />
+    </div>
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section>
     <h2>Equipment</h2>
     <div class="equipment_container">
       <div class="equipment_scroll">
-        <EquipmentItem
-          ImgSrc="../assets/imgs/placeholder.png"
-          AltTxt="desc"
-          Name="Name"
-          Amount="1x"
-        />
-        <EquipmentItem
-          ImgSrc="../assets/imgs/placeholder.png"
-          AltTxt="desc"
-          Name="Name"
-          Amount="1x"
-        />
-        <EquipmentItem
-          ImgSrc="../assets/imgs/placeholder.png"
-          AltTxt="desc"
-          Name="Name"
-          Amount="1x"
-        />
-        <EquipmentItem
-          ImgSrc="../assets/imgs/placeholder.png"
-          AltTxt="desc"
-          Name="Name"
-          Amount="1x"
-        />
+        <EquipmentItem ImgSrc="../assets/imgs/placeholder.png" AltTxt="desc" Name="Name" Amount="1x" />
+        <EquipmentItem ImgSrc="../assets/imgs/placeholder.png" AltTxt="desc" Name="Name" Amount="1x" />
+        <EquipmentItem ImgSrc="../assets/imgs/placeholder.png" AltTxt="desc" Name="Name" Amount="1x" />
+        <EquipmentItem ImgSrc="../assets/imgs/placeholder.png" AltTxt="desc" Name="Name" Amount="1x" />
       </div>
     </div>
   </section>
-  <section>
-    <h2>Floor plan</h2>
-    <Image_container
-      src="/assets/imgs/photostudio_floorplan.svg"
-      alt="floor plan of the photo studio"
-    />
-  </section>
-  <section>
-    <h3>Interested in booking the photostudio on a day-basis?</h3>
-    <p>
-      Our studio is open for dayrent from 8am - 18pm, at a daily price of 3900
-      DDK ex. VAT, and 2500 DDK ex. VAT for half a day. Call us on our main line
-      +45 5455 1515, or contact us via the form below.
-    </p>
-    <a href="/contact">
-      <button class="medium">Contact Trifolium</button>
-    </a>
-  </section>
-  <section>
-    <h2>Gallery</h2>
-    <Image_container
-      src="/assets/imgs/lazyload/photostudio_lazyload.webp"
-      alt="photo wall"
-      labelLeft="Photo wall"
-      labelRight="Photostudio"
-    />
-    <Image_container
-      src="/assets/imgs/photostudio_backview.webp"
-      alt="backroom"
-      labelLeft="Behind the scene"
-      labelRight="Photostudio"
-    />
-    <Image_container
-      src="/assets/imgs/photostudio_kitchen.webp"
-      alt="kitchen"
-      labelLeft="Kitchen"
-      labelRight="Photostudio"
-    />
-    <Image_container
-      src="/assets/imgs/photostudio_makeup.webp"
-      alt="makeup room"
-      labelLeft="Makeup room"
-      labelRight="Photostudio"
-    />
-    <Image_container
-      src="/assets/imgs/photostudio_lounge.webp"
-      alt="lounge"
-      labelLeft="Lounge"
-      labelRight="Photostudio"
-    />
 
-    <Image_container
-      src="/assets/imgs/photostudio_outside.webp"
-      alt="outside terrace"
-      labelLeft="Terrace"
-      labelRight="Photostudio"
-    />
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="img_w_txt">
+    <Image_container src="/assets/imgs/photostudio_floorplan.svg" alt="floor plan of the photo studio" />
+    <div class="txt_box">
+      <h2>Floor plan</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem culpa minima itaque dolore officia vitae cumque, consequatur maiores mollitia molestiae dicta inventore nulla alias?</p>
+      <a href="/membership"> <button class="giant">Book a tour</button></a>
+    </div>
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="img_w_txt left">
+    <Image_container src="/assets/imgs/photostudio_intro.webp" alt="Photostudio preview" labelLeft="Photostudio" labelRight="2nd Floor" />
+    <div class="txt_box">
+      <h3>Interested in booking the photostudio on a day-basis?</h3>
+      <p>Our studio is open for dayrent from 8am - 18pm, at a daily price of 3900 DDK ex. VAT, and 2500 DDK ex. VAT for half a day. Call us on our main line +45 5455 1515, or contact us via the form below.</p>
+      <a href="/contact">
+        <button class="medium">Contact Trifolium</button>
+      </a>
+    </div>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section>
     <h2>Nice to know:</h2>
     <ul>
       <li>Operating hours: 08:00 – 18:00</li>
       <li>Located at Bådehavnsgade 42P, 2450 Copenhagen SV</li>
-      <li>
-        Easily accessible via public transport: Bus lines 7A and 18, Metro line
-        M4 (Sluseholmen station), and Harbour Bus line 992
-      </li>
-      <li>
-        Assistance available for arranging equipment transportation through
-        trusted freight partners
-      </li>
-      <li>
-        Membership options offer additional benefits, including discounts on
-        studio rentals, dedicated workspace, secure equipment storage, and
-        access to a network of creative professionals
-      </li>
+      <li>Easily accessible via public transport: Bus lines 7A and 18, Metro line M4 (Sluseholmen station), and Harbour Bus line 992</li>
+      <li>Assistance available for arranging equipment transportation through trusted freight partners</li>
+      <li>Membership options offer additional benefits, including discounts on studio rentals, dedicated workspace, secure equipment storage, and access to a network of creative professionals</li>
     </ul>
-    <Image_container
-      src="/assets/imgs/lazyload/about_lazyload.webp"
-      alt="floor plan of the photo studio"
-    />
   </section>
-  <section>
-    <h2>Want to become a part of a vibrant and creative community?</h2>
-    <p>
-      Our photo community offers special advantages regarding bookings and use
-      of the photostudio, as well as access to a office spot in our professional
-      photo community. Read more about memberships at Trifolum, or get in touch
-      for a tour:
-    </p>
-    <a href="/membership"> <button class="medium">Memberships</button></a>
-  </section>
-</Layout>
 
-<style>
-  section {
-    margin-left: var(--spacing-small);
-    margin-right: var(--spacing-small);
-  }
-</style>
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="img_w_txt">
+    <Image_container src="/assets/imgs/lazyload/about_lazyload.webp" alt="floor plan of the photo studio" />
+    <div class="txt_box">
+      <h2>Want to become a part of a vibrant and creative community?</h2>
+      <p>Our photo community offers special advantages regarding bookings and use of the photostudio, as well as access to a office spot in our professional photo community. Read more about memberships at Trifolum, or get in touch for a tour:</p>
+      <a href="/membership"> <button class="giant">Memberships</button></a>
+    </div>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <style>
+    section {
+      margin-left: var(--spacing-small);
+      margin-right: var(--spacing-small);
+    }
+
+    @media (width > 800px) {
+      .included_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem; /* space between columns and rows */
+        margin-top: 2rem;
+      }
+
+      .gallery_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 1fr; /* ensures equal row height */
+        gap: 1rem;
+      }
+    }
+  </style>
+</Layout>
