@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
+import ImageContainerFacility from "../components/Image_container_facilities.astro";
 ---
 
 <Layout>
@@ -14,10 +15,10 @@ import Hero from "../components/hero.astro";
   />
 
   <section>
-    <h2>Explore our facilites</h2>
+    <h2>Explore our facilities</h2>
     <nav class="hor_card">
       <a href="/offices"
-        ><p>Offices</p><img src="../assets/imgs/arrow_icon_red.svg" alt="" /></a
+        ><p>Offices</p><img src="/assets/imgs/arrow_icon_red.svg" alt="" /></a
       >
       <a href="/workshops"
         ><p>Workshops</p><img src="/assets/imgs/arrow_icon_red.svg" alt="" /></a
@@ -56,85 +57,61 @@ import Hero from "../components/hero.astro";
         <button class="floor_btn" data-floor="1">2</button>
         <button class="floor_btn" data-floor="2">3</button>
       </div>
+
       <div class="map_frame" id="mapFrame">
-        <img
-          src="/assets/imgs/floor_one_map.svg"
-          alt="Floor 1"
-          class="floor_img"
-        />
-        <img
-          src="/assets/imgs/floor_two_map.svg"
-          alt="Floor 2"
-          class="floor_img"
-        />
-        <img
-          src="/assets/imgs/floor_three_map.svg"
-          alt="Floor 3"
-          class="floor_img"
-        />
+        <div class="floor_wrapper">
+          <img
+            src="/assets/imgs/floor_one_map.svg"
+            alt="Floor 1"
+            class="floor_img"
+          />
+          <button class="map_area_btn" data-section="0">Wood workshop</button>
+        </div>
+        <div class="floor_wrapper">
+          <img
+            src="/assets/imgs/floor_two_map.svg"
+            alt="Floor 2"
+            class="floor_img"
+          />
+        </div>
+        <div class="floor_wrapper">
+          <img
+            src="/assets/imgs/floor_three_map.svg"
+            alt="Floor 3"
+            class="floor_img"
+          />
+        </div>
       </div>
 
       <div class="explanation">
-        <div class="thumbnail">
-          <h4>NAME</h4>
-          <img src="/assets/imgs/placeholder.png" alt="" />
-        </div>
-        <div class="card_contents">
-          <div class="caption">
-            <p>floor</p>
-            <p>Type</p>
+        <div class="explanation-section" data-section="0">
+          <div class="thumbnail">
+            <h4>AREA A</h4>
+            <img src="/assets/imgs/placeholder.png" alt="" />
           </div>
-          <div class="card_desc">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-              aliquam non delectus at sapiente tempore veniam, esse molestias
-              ullam aspernatur deleniti pariatur fugit, laborum provident itaque
-              odio natus illo harum.
-            </p>
-            <a href="/">Read more</a>
-
-            <div class="gallery_parent_container">
-              <div class="gallery_container">
-                <button id="prevBtn" aria-label="Previous slide">
-                  <img src="/assets/imgs/icon_arrow.svg" alt="" class="left" />
-                </button>
-                <div class="gallery_frame" id="galleryFrame">
-                  <img
+          <div class="card_contents">
+            <div class="caption">
+              <p>Floor</p>
+              <p>Type</p>
+            </div>
+            <div class="card_desc">
+              <p>This is content for Area A.</p>
+              <a href="/">Read more</a>
+              <div class="image_scroll_facilities">
+                <div class="image_container">
+                  <ImageContainerFacility
                     src="/assets/imgs/placeholder.png"
-                    alt=""
-                    class="gallery_img"
-                  />
-                  <img
-                    src="/assets/imgs/placeholder.png"
-                    alt=""
-                    class="gallery_img"
-                  />
-                  <img
-                    src="/assets/imgs/placeholder.png"
-                    alt=""
-                    class="gallery_img"
-                  />
-                  <img
-                    src="/assets/imgs/placeholder.png"
-                    alt=""
-                    class="gallery_img"
-                  />
-                  <img
-                    src="/assets/imgs/placeholder.png"
-                    alt=""
-                    class="gallery_img"
+                    alt="Map of Trifolium"
+                    labelLeft="street view"
                   />
                 </div>
-                <button id="nextBtn" aria-label="Next slide">
-                  <img src="/assets/imgs/icon_arrow.svg" alt="" class="right" />
-                </button>
-              </div>
-              <div class="gallery_pagination" id="galleryPagination">
-                <div class="pagination-dot" data-index="0"></div>
-                <div class="pagination-dot" data-index="1"></div>
-                <div class="pagination-dot" data-index="2"></div>
-                <div class="pagination-dot" data-index="3"></div>
-                <div class="pagination-dot" data-index="4"></div>
+                <div class="image_container">
+                  <ImageContainerFacility
+                    src="/assets/imgs/placeholder.png"
+                    alt="Map of Trifolium"
+                    labelLeft="street view"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -151,257 +128,160 @@ import Hero from "../components/hero.astro";
     </a>
   </section>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      // Gallery logic
-      const frame = document.getElementById("galleryFrame");
-      const slides = frame.querySelectorAll(".gallery_img");
-      const dots = document.querySelectorAll(".pagination-dot");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-
-      let currentIndex = 0;
-      const slideCount = slides.length;
-
-      function updateActiveDot(index) {
-        dots.forEach((dot) => (dot.style.backgroundColor = "white"));
-        dots[index].style.backgroundColor = getComputedStyle(
-          dots[index]
-        ).borderColor;
-      }
-
-      function scrollToSlide(index) {
-        const slideWidth = frame.clientWidth;
-        frame.scrollTo({ left: index * slideWidth, behavior: "smooth" });
-        currentIndex = index;
-        updateActiveDot(index);
-      }
-
-      prevBtn.addEventListener("click", () => {
-        scrollToSlide((currentIndex - 1 + slideCount) % slideCount);
-      });
-
-      nextBtn.addEventListener("click", () => {
-        scrollToSlide((currentIndex + 1) % slideCount);
-      });
-
-      dots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          scrollToSlide(index);
-        });
-      });
-
-      frame.addEventListener("scroll", () => {
-        const scrollLeft = frame.scrollLeft;
-        const slideWidth = frame.clientWidth;
-        const index = Math.round(scrollLeft / slideWidth);
-        if (index !== currentIndex) {
-          currentIndex = index;
-          updateActiveDot(index);
-        }
-      });
-
-      updateActiveDot(0);
-
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
       // Floor switching logic
       const floorButtons = document.querySelectorAll(".floor_btn");
-      const floorImages = document.querySelectorAll(".map_frame .floor_img");
+      const floorWrappers = document.querySelectorAll(".floor_wrapper");
 
       function setActiveFloor(index) {
-        floorImages.forEach((img, i) =>
-          img.classList.toggle("active", i === index)
-        );
+        floorWrappers.forEach((wrapper, i) => {
+          wrapper.style.display = i === index ? "block" : "none";
+        });
       }
 
       floorButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
           const index = parseInt(btn.getAttribute("data-floor"), 10);
-          setActiveFloor(index);
+          if (!isNaN(index)) setActiveFloor(index);
         });
       });
 
-      setActiveFloor(0); // Show floor 1 by default
+      // Set initial floor to 0
+      setActiveFloor(0);
+
+      // Explanation section toggle logic
+      const sectionButtons = document.querySelectorAll(".map_area_btn");
+      const sections = document.querySelectorAll(".explanation-section");
+
+      function showSection(sectionId) {
+        sections.forEach((section) => {
+          section.style.display =
+            section.dataset.section === sectionId ? "block" : "none";
+        });
+      }
+
+      sectionButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sectionId = btn.dataset.section;
+          if (sectionId) showSection(sectionId);
+        });
+      });
+
+      // Set default section visible
+      showSection("0");
     });
   </script>
+
+  <style>
+    section:not(.hero) {
+      margin-left: var(--spacing-small);
+      margin-right: var(--spacing-small);
+    }
+    .map_container {
+      margin-top: var(--spacing-medium);
+    }
+    .floor_select {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-small);
+      margin-bottom: var(--spacing-small);
+    }
+    .floor_btn {
+      background-color: var(--color-white-100);
+      border: 1px solid var(--primary-color-500);
+      border-radius: 999px;
+      width: 40px;
+      height: 40px;
+      font-weight: 700;
+      font-size: 1.5em;
+      cursor: pointer;
+      z-index: 999;
+    }
+    .floor_btn:hover {
+      background-color: var(--primary-color-300);
+    }
+    .floor_btn:active {
+      background-color: var(--primary-color-500);
+      color: white;
+    }
+    .map_frame {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      position: relative;
+    }
+    .floor_wrapper {
+      position: relative;
+      display: none;
+    }
+    .floor_img {
+      width: 100%;
+      display: block;
+      transform: scale(1.2);
+    }
+    .map_area_btn {
+      position: absolute;
+      top: 14%;
+      left: 20.5%;
+      z-index: 10;
+      padding: 1.3em 0.1em;
+      font-size: 1rem;
+      border: 1px solid var(--primary-color-500);
+      background: var(--color-white-100);
+      cursor: pointer;
+    }
+    .explanation {
+      margin-top: var(--spacing-medium);
+    }
+    .explanation-section.hidden {
+      display: none;
+    }
+    .thumbnail {
+      width: 100%;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+    .caption {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      margin-top: var(--spacing-tiny);
+    }
+    .caption p {
+      margin: 0;
+    }
+    .card_desc a {
+      text-decoration: underline;
+    }
+    .hor_card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-tiny);
+    }
+    .hor_card > a {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid var(--primary-color-500);
+      font-weight: 700;
+      font-size: 1.5em;
+      padding: var(--spacing-tiny);
+    }
+    .hor_card > a:hover {
+      background-color: var(--primary-color-200);
+    }
+    .hor_card > a:active {
+      background-color: var(--primary-color-500);
+      color: white;
+    }
+    .hor_card > a img {
+      transition: 0.05s ease-in;
+    }
+    .hor_card > a:hover img {
+      rotate: 45deg;
+    }
+  </style>
 </Layout>
-
-<style>
-  section {
-    margin-left: var(--spacing-small);
-    margin-right: var(--spacing-small);
-  }
-
-  .map_frame {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    overflow: hidden;
-  }
-
-  .floor_img {
-    display: none;
-    width: 100%;
-    grid-area: 1/1/2/2;
-    transform: scale(1.2);
-  }
-
-  .floor_img.active {
-    display: block;
-  }
-
-  .floor_select {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-small);
-  }
-
-  .floor_btn {
-    background-color: var(--color-white-100);
-    border: 1px solid var(--primary-color-500);
-    border-radius: 999px;
-    width: 40px;
-    height: 40px;
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-
-  .floor_btn:hover {
-    background-color: var(--primary-color-300);
-  }
-
-  .floor_btn:active {
-    background-color: var(--primary-color-500);
-    color: white;
-  }
-
-  .explanation .thumbnail {
-    width: 100%;
-  }
-
-  .explanation .thumbnail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .explanation .thumbnail h4 {
-    margin: var(--spacing-tiny) 0;
-  }
-
-  .caption {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-  }
-
-  .caption p {
-    margin: var(--spacing-tiny) 0;
-  }
-
-  .card_contents .card_desc a {
-    text-decoration: underline;
-  }
-
-  .gallery_container {
-    display: flex;
-    align-items: center;
-    height: 300px;
-    gap: var(--spacing-tiny);
-  }
-
-  .gallery_frame {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    aspect-ratio: 1/1;
-    flex: 3;
-  }
-
-  .gallery_img {
-    flex: 0 0 100%;
-    scroll-snap-align: start;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-  }
-
-  .gallery_container button {
-    height: 40px;
-    width: 40px;
-    border-radius: 999px;
-    border: 1px solid var(--primary-color-500);
-    background-color: var(--color-white-100);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-  }
-
-  .gallery_container button:hover {
-    background-color: var(--primary-color-200);
-  }
-
-  .gallery_container button img.left {
-    transform: scale(0.7) rotate(-135deg);
-  }
-
-  .gallery_container button img.right {
-    transform: scale(0.7) rotate(45deg);
-  }
-
-  .gallery_pagination {
-    margin: var(--spacing-tiny) 0;
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-small);
-  }
-
-  .pagination-dot {
-    width: 10px;
-    aspect-ratio: 1/1;
-    border-radius: 999px;
-    border: 1px solid var(--primary-color-500);
-    background-color: white;
-    transition: background-color 0.3s;
-  }
-
-  .hor_card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-tiny);
-  }
-
-  .hor_card > a {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--primary-color-500);
-    font-weight: 700;
-    font-size: 1.5em;
-    padding: var(--spacing-tiny);
-  }
-
-  .hor_card > a p {
-    margin: 0;
-  }
-
-  .hor_card > a:hover {
-    background-color: var(--primary-color-200);
-  }
-
-  .hor_card > a img {
-    transition: 0.05s ease-in;
-  }
-
-  .hor_card > a:hover img {
-    rotate: 45deg;
-  }
-
-  .hor_card > a:active {
-    background-color: var(--primary-color-500);
-    color: white;
-  }
-</style>
