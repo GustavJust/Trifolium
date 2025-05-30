@@ -1,0 +1,85 @@
+---
+export interface Props {
+  imgSrc: string;
+  alt: string;
+  day: string;
+  date: string;
+  desc: string;
+}
+
+const { imgSrc, alt, date, day, desc } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-text">
+    <h3 class="card-date">{date}</h3>
+    <p class="card-day">{day}</p>
+    <p class="card-description">{desc}</p>
+    <a href=""> <button class="medium">Go to event</button></a>
+  </div>
+  <div class="card-image">
+    <img src={imgSrc} alt={alt} />
+  </div>
+</div>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacked on mobile */
+    gap: 1rem;
+    border: 1px solid black;
+    padding: 1em;
+  }
+
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-self: flex-start;
+  }
+
+  .card-date {
+    color: var(--black-color-100);
+    margin: 0;
+    font-size: 20vw;
+    line-height: 1;
+  }
+
+  .card-day {
+    color: var(--black-color-100);
+    margin: 0;
+  }
+
+  .card-description {
+    color: var(--black-color-100);
+    margin-top: 1em;
+  }
+
+  .card-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .card-image img {
+    max-height: 600px;
+    max-width: 100%;
+    height: auto;
+    width: auto; /* Important: don’t stretch */
+    object-fit: contain;
+    display: block;
+    border: 1px solid black;
+  }
+
+  /* Responsive breakpoint — two-column layout for larger screens */
+  @media (min-width: 768px) {
+    .card {
+      grid-template-columns: 2fr 3fr; /* Left: text, Right: image */
+      align-items: center;
+    }
+
+    .card-date {
+      font-size: 7vw;
+    }
+  }
+</style>
