@@ -6,17 +6,13 @@ import "../styles/global.css";
   <div class="nav_menu_mobile_container">
     <img src="/assets/imgs/close_icon_white.svg" alt="" />
     <nav class="nav_menu_mobile">
-      <a href="/">
-        <img src="/assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
-      </a>
       <a href="/facilities">Facilities</a>
       <a href="/membership">Membership</a>
       <a href="/photostudio">Photo-studio</a>
       <a href="/dandp">Design & Production</a>
-      <a href="/about">About Trifolium</a>
-      <a href="/contact" class="cta_mobile"
-        ><button class="giant">Signup for a tour</button></a
-      >
+      <a href="/about">About</a>
+      <a href="/contact" class="cta_mobile"><button class="giant">Signup for a tour</button></a>
+      <img src="/assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
     </nav>
   </div>
   <div class="left-group">
@@ -35,9 +31,7 @@ import "../styles/global.css";
     <button class="burger_icon">
       <img src="/assets/imgs/burger_icon.svg" alt="" />
     </button>
-    <a href="/contact" class="cta_web"
-      ><button class="medium">Signup for a tour</button></a
-    >
+    <a href="/contact" class="cta_web"><button class="medium_header">Signup for a tour</button></a>
   </div>
 </div>
 
@@ -48,8 +42,7 @@ import "../styles/global.css";
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-tiny) var(--spacing-small);
-    /* border: 1px solid var(--black-color-100); */
-    position: relative;
+    /* position: relative; */
     background-color: var(--white-color-100);
     > .left-group {
       width: 200px;
@@ -95,15 +88,12 @@ import "../styles/global.css";
 
   .nav_menu_mobile a {
     width: 100%;
-    margin-left: var(--spacing-large);
+    margin-left: var(--spacing-tiny);
     display: flex;
     text-align: left;
   }
 
   @media (width > 990px) {
-    .header {
-      width: calc(100% - 16px);
-    }
     .nav_menu_mobile_container {
       display: none;
     }
@@ -116,6 +106,13 @@ import "../styles/global.css";
     .header {
       position: relative;
     }
+
+    .logo_icon {
+      margin: 1rem;
+      margin-top: auto;
+      margin-bottom: 4rem;
+    }
+
     .burger_icon {
       display: block;
     }
@@ -153,12 +150,12 @@ import "../styles/global.css";
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 1.5em;
-        width: 100%;
+        gap: 1em;
+        /* width: 100%; */
         height: 100%;
-        font-size: 2em;
+        font-size: 2.5em;
         font-weight: 600;
+        margin-top: 3rem;
       }
     }
     .nav_menu_mobile_container.show {

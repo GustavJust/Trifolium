@@ -120,6 +120,11 @@ const galleryImages = [
       Design, craft and photos by Christian&Jade
     </p>
   </section>
+
+<div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section>
     <h2>Partners</h2>
     <div class="partners_container">
@@ -135,13 +140,23 @@ const galleryImages = [
       <div><img src="/assets/imgs/d&p_soundboks.webp" alt="Partner" /></div>
     </div>
   </section>
-  <section>
-    <h5>Get in contact</h5>
-    <p>Have a project or idea you’d like to explore? Reach out to our Design & Production team and let’s talk possibilities. We’re always open to the right fit.</p>
-    <a href="/contact">
-      <button class="large">Contact Trifolium</button>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="bottom_cta">
+    <h2>Explore our facilities</h2>
+    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
+    <a href="/facilities">
+      <button class="large"> Explore facilities</button>
     </a>
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <script>
     window.addEventListener("DOMContentLoaded", function () {
       const galleries = document.querySelectorAll(".gallery_parent_container");
@@ -229,7 +244,7 @@ const galleryImages = [
 
   @media (width > 800px){
     .image_scroll_facilities{
-    height: 700px;
+    height: 600px;
     width: 100%;
     box-sizing: border-box;
     display: flex ;
@@ -239,7 +254,7 @@ const galleryImages = [
     > img{
         height: 100%;
         max-width: 100vw;
-        max-height: 700px;
+        max-height: 600px;
     }
     > .image_container{
         height: 100%;
