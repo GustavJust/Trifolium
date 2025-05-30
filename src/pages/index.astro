@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Image_container from "../components/Image_container.astro";
 import NavCard from "../components/nav_card.astro";
+import EventCard from "../components/event_card.astro";
 ---
 
 <Layout>
@@ -77,6 +78,20 @@ import NavCard from "../components/nav_card.astro";
     </div>
     <Image_container src="/assets/imgs/index_kort.webp" alt="Map of Trifolium" labelLeft="bådehavnsgade 42K" labelRight="2450 Sydhavnen" />
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section>
+    <h2>Upcoming Events</h2>
+    <div class="events">
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_june.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="okeook deokeokd deokdeokde odkeodke odkeodke" />
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_july.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="okeook deokeokd deokdeokde odkeodke odkeodke" />
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_august.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="This Fridaybar is w. Hakami - You wouldnt want to miss this!" />
+    </div>
+  </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
@@ -150,6 +165,11 @@ import NavCard from "../components/nav_card.astro";
     flex-direction: column;
     gap: var(--spacing-tiny);
   }
+
+  .events {
+    display: grid;
+    gap: 1em;
+  }
   @media (width > 800px) {
     .nav_card_container {
       flex-direction: row;
@@ -161,6 +181,12 @@ import NavCard from "../components/nav_card.astro";
     }
     .arrow_container {
       top: 76% !important;
+    }
+
+    .events {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1em;
     }
   }
 </style>
