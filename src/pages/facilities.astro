@@ -43,7 +43,9 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
       With workspaces, advanced tools, and workshops under one roof, you can
       create physical or digital products from concept to launch.
     </p>
+  </section>
 
+  <section class="img_w_txt_map">
     <div class="map_container">
       <div class="floor_select">
         <p>Floor</p>
@@ -122,7 +124,7 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
       </div>
     </div>
 
-    <div class="explanation">
+    <div class="explanation txt_box">
       <div class="explanation-section" data-section="0">
         <div class="thumbnail">
           <h4>Wood workshop</h4>
@@ -444,7 +446,6 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
-    // Floor switching logic
     const floorButtons = document.querySelectorAll(".floor_btn");
     const floorWrappers = document.querySelectorAll(".floor_wrapper");
 
@@ -461,10 +462,8 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
       });
     });
 
-    // Set initial floor to 0
     setActiveFloor(0);
 
-    // Explanation section toggle logic
     const sectionButtons = document.querySelectorAll(".map_area_btn");
     const sections = document.querySelectorAll(".explanation-section");
 
@@ -482,8 +481,8 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
       });
     });
 
-    // Set default section visible
-    showSection("0");
+    const first = sections[0];
+    if (first) showSection(first.dataset.section);
   });
 </script>
 
@@ -727,5 +726,8 @@ import ImageContainerFacility from "../components/Image_container_facilities.ast
         font-size: 0.8em;
       }
     }
+  }
+
+  @media (width > 800px) {
   }
 </style>
