@@ -17,6 +17,35 @@ const theme = "facilities";
     poster="/assets/imgs/lazyload/workshops_lazyload.webp"
   />
 
+  <section>
+    <nav class="hor_card">
+      <a href="wood">
+        <p>Wood</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="#metal">
+        <p>Metal</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="#model">
+        <p>Model</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="#textile">
+        <p>Textile</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+      <a href="#electronics">
+        <p>Electronics</p>
+        <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+      </a>
+    </nav>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
   <section class="img_w_txt">
     <div class="txt_box">
       <h2>Workshops That Support Real Work</h2>
@@ -33,7 +62,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <div class="workshop_intro">
+  <div class="workshop_intro" id="wood">
     <h2>Wood Workshop</h2>
     <Image_container src="/assets/imgs/wrk_wood_thumbnail.webp" alt="Map of Trifolium" labelLeft="Metal workshop" labelRight="1st Floor" />
   </div>
@@ -56,7 +85,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <div class="workshop_intro">
+  <div class="workshop_intro" id="metal">
     <h2>Metal Workshop</h2>
     <Image_container src="/assets/imgs/wrk_metal_thumbnail.webp" alt="Map of Trifolium" labelLeft="Metal workshop" labelRight="1st Floor" />
   </div>
@@ -81,7 +110,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <div class="workshop_intro">
+  <div class="workshop_intro" id="model">
     <h2>Model Workshop</h2>
     <Image_container src="/assets/imgs/wrk_model_thumbnail.webp" alt="Map of Trifolium" labelLeft="model workshop" labelRight="mezzanine" />
   </div>
@@ -107,7 +136,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <div class="workshop_intro">
+  <div class="workshop_intro" id="textile">
     <h2>Textile Workshop</h2>
     <Image_container src="/assets/imgs/wrk_textile_thumbnail.webp" alt="Map of Trifolium" labelLeft="textile workshop" labelRight="Mezzanine" />
   </div>
@@ -131,7 +160,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <div class="workshop_intro">
+  <div class="workshop_intro" id="electronics">
     <h2>Electronics Workshop</h2>
     <Image_container src="/assets/imgs/wrk_electronic_thumbnail.webp" alt="Map of Trifolium" labelLeft="assembly area" labelRight="1st Floor" />
   </div>
@@ -159,15 +188,17 @@ const theme = "facilities";
 
   <section>
     <h2>What's included?</h2>
-    <Included number="01" header="24/7 Building Access" desc={`With a personal key-fob for full-time members.`} />
-    <Included number="02" header="Flexible Memberships" desc={`Choose full-time or part-time access based on your schedule.`} />
-    <Included number="03" header="Use of All Workshops" desc={`Wood, metal, textile, model, and electronics.`} />
-    <Included number="04" header="Community & Networking" desc={`Be part of a professional, supportive environment.`} />
-    <Included number="05" header="Training & Intro Courses" desc={`Get Trifo-certified on key machines like CNC and laser cutters.`} />
-    <Included number="06" header="Storage Options" desc={`Rent shelf or floor space to store tools and materials.`} />
-    <Included number="07" header="Access to the Würth Shop" desc={`Buy materials and fasteners right on site.`} />
-    <Included number="08" header="Meeting Rooms & Shared Facilities" desc={`Bookable spaces, kitchen, and common areas.`} />
-    <Included number="09" header="On-site Support" desc={`A team ready to help with questions and safety guidance.`} />
+    <div class="included_grid">
+      <Included number="01" header="24/7 Building Access" desc={`With a personal key-fob for full-time members.`} />
+      <Included number="02" header="Flexible Memberships" desc={`Choose full-time or part-time access based on your schedule.`} />
+      <Included number="03" header="Use of All Workshops" desc={`Wood, metal, textile, model, and electronics.`} />
+      <Included number="04" header="Community & Networking" desc={`Be part of a professional, supportive environment.`} />
+      <Included number="05" header="Training & Intro Courses" desc={`Get Trifo-certified on key machines like CNC and laser cutters.`} />
+      <Included number="06" header="Storage Options" desc={`Rent shelf or floor space to store tools and materials.`} />
+      <Included number="07" header="Access to the Würth Shop" desc={`Buy materials and fasteners right on site.`} />
+      <Included number="08" header="Meeting Rooms & Shared Facilities" desc={`Bookable spaces, kitchen, and common areas.`} />
+      <Included number="09" header="On-site Support" desc={`A team ready to help with questions and safety guidance.`} />
+    </div>
   </section>
 
   <section id="storage" class="img_w_txt">
@@ -185,7 +216,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <section class="img_w_txt">
+  <section class="img_w_txt left">
     <Image_container src="/assets/imgs/wrk_digfab.webp" alt="CNC-machine wood-router" />
     <div class="txt_box">
       <h2>Digital Fabrication & Learning Access</h2>
@@ -219,7 +250,7 @@ const theme = "facilities";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <section class="img_w_txt">
+  <section class="img_w_txt left">
     <Image_container src="/assets/imgs/wrk_mpu.webp" alt="image of Trifoliums mobile production unit" />
     <div class="txt_box">
       <h2>The Mobile Production Unit (MPU)</h2>
@@ -260,6 +291,52 @@ const theme = "facilities";
       margin-left: var(--spacing-small);
       margin-right: var(--spacing-small);
       margin-bottom: var(--spacing-small);
+    }
+
+    .hor_card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-tiny);
+      > a {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid var(--primary-color-500);
+        font-weight: 700;
+        font-size: 1.5em;
+        padding: var(--spacing-tiny);
+      }
+      > a p {
+        padding: 0;
+        margin: 0;
+      }
+      > a:hover {
+        background-color: var(--primary-color-200);
+      }
+      > a img {
+        transition: 0.05s ease-in;
+      }
+      > a:hover img {
+        rotate: 45deg;
+      }
+      > a:active {
+        background-color: var(--primary-color-500);
+        color: white;
+      }
+    }
+
+    @media (width > 800px) {
+      .included_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hor_card {
+        flex-direction: row;
+        width: 100%;
+        a {
+          width: 100%;
+        }
+      }
     }
   </style>
 </Layout>

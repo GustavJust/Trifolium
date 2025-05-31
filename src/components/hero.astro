@@ -17,15 +17,7 @@ import "../styles/global.css";
   {
     video && (
       <div class="hero_video">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="none"
-          class="hero-video"
-          poster={poster}
-        >
+        <video autoplay muted loop playsinline preload="none" class="hero-video" poster={poster}>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -68,7 +60,6 @@ import "../styles/global.css";
       display: flex;
       justify-content: space-between;
       font-size: var(--text-caption);
-      padding: 0 var(--spacing-small);
     }
     > .desc p {
       margin: var(--spacing-tiny) 0;
