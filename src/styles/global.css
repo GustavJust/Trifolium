@@ -384,7 +384,17 @@ section.img_w_txt_map {
   color: var(--color-gray-600);
 }
 
+.nav_card_container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-tiny);
+}
+
 @media (width > 800px) {
+
+  .nav_card_container {
+    flex-direction: row;
+  }
   section.img_w_txt {
     overflow: hidden;
     flex-direction: row;
@@ -477,10 +487,13 @@ section.img_w_txt_map {
     }
   }
   section.txt_only{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid var(--black-color-100);
+    padding: var(--spacing-small);
+    gap: var(--spacing-tiny);
     > h1, h2, h3, h4, h5{
       margin: 0;
-      max-width: 50%;
     }
   }
 }
