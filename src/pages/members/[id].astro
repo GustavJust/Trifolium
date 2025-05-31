@@ -28,8 +28,13 @@ const { member } = Astro.props;
   <main class="member_detail">
     <img src={member.picture} alt={member.name} />
     <h1>{member.name}</h1>
+    <h5>{member.h1Title}</h5>
     <p>{member.description}</p>
-    <p>{member.contactinfo}</p>
+    {member.contactEmail && <p>Email: {member.contactEmail}</p>}
+    {member.contactWebsite && <p>Website: {member.contactWebsite}</p>}
+    {member.contactLinkedin && <p>LinkedIn: {member.contactLinkedin}</p>}
+    {member.contactNumber && <p>Phone: {member.contactNumber}</p>}
+    {member.contactSoMe && <p>SoMe: {member.contactSoMe}</p>}
   </main>
 </Layout>
 
