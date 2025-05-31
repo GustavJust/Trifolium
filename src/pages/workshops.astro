@@ -5,9 +5,11 @@ import Image_container from "../components/Image_container.astro";
 import Included from "../components/included.astro";
 import EquipmentItem from "../components/equipment_item.astro";
 import "../styles/facility.css";
+
+const theme = "facilities";
 ---
 
-<Layout>
+<Layout theme={theme}>
   <Hero
     video="/assets/imgs/video/wood_workshop_video.mp4"
     title="Workshops"

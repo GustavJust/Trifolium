@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
 import StaffMember from "../components/staff_member.astro";
+
+const theme = "about";
 ---
 
-<Layout>
+<Layout theme={theme}>
   <Hero
     video="/assets/imgs/video/platform_office_video.mp4"
     title="Staff"

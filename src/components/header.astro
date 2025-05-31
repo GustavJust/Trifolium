@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+const { activeTheme } = Astro.props;
 ---
 
 <div class="flex header">
@@ -11,7 +12,9 @@ import "../styles/global.css";
       <a href="/photostudio">Photo-studio</a>
       <a href="/dandp">Design & Production</a>
       <a href="/about">About</a>
-      <a href="/contact" class="cta_mobile"><button class="giant">Signup for a tour</button></a>
+      <a href="/contact" class="cta_mobile"
+        ><button class="giant">Signup for a tour</button></a
+      >
       <img src="/assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
     </nav>
   </div>
@@ -22,16 +25,29 @@ import "../styles/global.css";
   </div>
   <div class="right-group">
     <nav class="nav_web">
-      <a href="/facilities">Facilities</a>
-      <a href="/membership">Membership</a>
-      <a href="/photostudio">Photo-studio</a>
-      <a href="/dandp">Design & Production</a>
-      <a href="/about">About Trifolium</a>
+      <a href="/facilities" class={activeTheme === "facilities" ? "active" : ""}
+        >Facilities</a
+      >
+      <a href="/membership" class={activeTheme === "membership" ? "active" : ""}
+        >Membership</a
+      >
+      <a
+        href="/photostudio"
+        class={activeTheme === "photostudio" ? "active" : ""}>Photo-studio</a
+      >
+      <a href="/dandp" class={activeTheme === "dandp" ? "active" : ""}
+        >Design & Production</a
+      >
+      <a href="/about" class={activeTheme === "about" ? "active" : ""}
+        >About Trifolium</a
+      >
     </nav>
     <button class="burger_icon">
       <img src="/assets/imgs/burger_icon.svg" alt="" />
     </button>
-    <a href="/contact" class="cta_web"><button class="medium_header">Signup for a tour</button></a>
+    <a href="/contact" class="cta_web"
+      ><button class="medium_header">Signup for a tour</button></a
+    >
   </div>
 </div>
 

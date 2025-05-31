@@ -127,6 +127,10 @@ section {
   }
 }
 
+.nav_web a.active {
+  color: var(--primary-color-500);
+}
+
 button.giant {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
