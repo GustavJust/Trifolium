@@ -312,6 +312,7 @@ section.img_w_txt {
 
 .logo_divider {
   margin-bottom: var(--spacing-section);
+  margin-top: var(--spacing-section);
 }
 
 header {
@@ -333,61 +334,87 @@ section.img_w_txt_map {
 }
 
 /* DETTE ER SUPABASE */
-
 .member_list_container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .member_card {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 2;
-  gap: var(--spacing-tiny);
+  gap: 0;
   margin: var(--spacing-small);
+  border: 1px solid var(--black-color-100);
+  overflow: hidden;
 
-  > .member_image_container {
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--radius-rounded, 8px);
-    background-color: #f0f0f0;
-    border: 1px solid var(--color-gray-300);
-    border-radius: 999px;
-  }
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+.member_card > .member_image_container {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-rounded, 0px); 
+  background-color: #f0f0f0;
+  border: 1px solid var(--color-gray-300);
 }
+
+.member_image_container {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0; 
+}
+}
+
 .member_image_container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .member_info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: var(--spacing-tiny);
 }
-.member_info h5 {
-  margin: 0;
-  font-size: 1rem;
+
+.member_info h4 {
+  font-size: 2em;
   font-weight: 600;
+  margin: var(--spacing-tiny) 0;
+  line-height: 1em;
+  text-transform: uppercase;
 }
 
 .member_info p {
-  margin: 0;
   font-size: 0.875rem;
+  margin: 0 20px;
   color: var(--color-gray-600);
+  line-height: 1.4;
 }
 
 .nav_card_container {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-tiny);
+}
+
+@media (min-width: 800px) {
+  .member_list_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* superbase slut */
+
+@media (width < 800px) {
+  .member_info h4 {
+    font-size: 1em;
+  }
+  
 }
 
 @media (width > 800px) {
