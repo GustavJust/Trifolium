@@ -25,6 +25,12 @@ const { member } = Astro.props;
 ---
 
 <Layout>
+  <section class="hero">
+    <div class="hero_img_container">
+      <img src={member.picture} alt={member.name} />
+    </div>
+  </section>
+
   <main class="member_detail">
     <img src={member.picture} alt={member.name} />
     <h1>{member.name}</h1>
@@ -39,6 +45,27 @@ const { member } = Astro.props;
 </Layout>
 
 <style>
+  .hero {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+    box-sizing: border-box;
+    width: calc(100% - 2 * var(--spacing-small));
+  }
+
+  .hero_img_container {
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .hero_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .member_detail {
     padding: 2rem;
     max-width: 600px;
