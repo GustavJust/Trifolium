@@ -26,14 +26,14 @@ import Layout from "../../layouts/Layout.astro";
         const markup = data
           .map(
             (member) => `
-            <div class="member_card">
-              <div class="member_image_container">
-                <img src="${member.picture}" alt="${member.navn}" />
-              </div>
-              <div class="member_info">
-                <h5>${member.name}</h5>
-              </div>
-            </div>
+      <a href="/members/${member.id}" class="member_card">
+  <div class="member_image_container">
+    <img src="${member.picture}" alt="${member.name}" />
+  </div>
+  <div class="member_info">
+    <h5>${member.name}</h5>
+  </div>
+</a>
           `
           )
           .join("");

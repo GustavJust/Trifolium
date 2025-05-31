@@ -6,132 +6,46 @@ const theme = "about";
 ---
 
 <Layout theme={theme}>
-  <Hero
-    video="/assets/imgs/video/design_and_production_video.mp4"
-    title="Members"
-    description="Explore our current 37 members at Trifolium"
-    poster="/assets/imgs/lazyload/member_lazyload.webp"
-  />
-  <section>
-    <div class="member_list_container">
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
+  <Hero video="/assets/imgs/video/design_and_production_video.mp4" title="Members" description="Explore our current 37 members at Trifolium" poster="/assets/imgs/lazyload/member_lazyload.webp" />
+
+  <div class="member_list_container">
+    <!-- <div class="member_card">
+      <div class="member_image_container">
+        <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
       </div>
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
+      <div class="member_info">
+        <h5>Name</h5>
       </div>
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
-      </div>
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
-      </div>
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
-      </div>
-      <div class="member_card">
-        <div class="member_image_container">
-          <img src="../assets/imgs/placeholder.png" alt="Profile photo" />
-        </div>
-        <div class="member_info">
-          <h5>Name</h5>
-          <p>Company type</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h5>Explore Trifolium</h5>
-    <p>
-      With workspaces, advanced tools, and workshops under one roof, you can
-      create physical or digital products from concept to launch.
-    </p>
-    <a href="/"><button class="large">Back to home page</button></a>
-  </section>
+    </div> -->
+  </div>
+  <script>
+    fetch("https://pujfiitptpbiyxhpgbuj.supabase.co/rest/v1/medlemmer", {
+      method: "GET",
+      headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1amZpaXRwdHBiaXl4aHBnYnVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1OTI2NDAsImV4cCI6MjA2NDE2ODY0MH0.dEwk5AGjOpOIK5j0GD9ZZT8SxquwZen5IX_s4pfLwBE",
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1amZpaXRwdHBiaXl4aHBnYnVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1OTI2NDAsImV4cCI6MjA2NDE2ODY0MH0.dEwk5AGjOpOIK5j0GD9ZZT8SxquwZen5IX_s4pfLwBE",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const markup = data
+          .map(
+            (member) => `
+      <a href="/members/${member.id}" class="member_card">
+  <div class="member_image_container">
+    <img src="${member.picture}" alt="${member.name}" />
+  </div>
+  <div class="member_info">
+    <h5>${member.name}</h5>
+  </div>
+</a>
+          `
+          )
+          .join("");
+
+        document.querySelector(".member_list_container").innerHTML = markup;
+      })
+      .catch((err) => console.error("API-fejl:", err));
+  </script>
+  <style></style>
 </Layout>
-
-<style>
-  section {
-    margin-left: var(--spacing-small);
-    margin-right: var(--spacing-small);
-  }
-  .member_list_container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .member_card {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 2;
-    gap: var(--spacing-tiny);
-    margin: var(--spacing-small);
-
-    > .member_image_container {
-      aspect-ratio: 1 / 1;
-      width: 100%;
-      overflow: hidden;
-      border-radius: var(--radius-rounded, 8px);
-      background-color: #f0f0f0;
-      border: 1px solid var(--color-gray-300);
-      border-radius: 999px;
-    }
-    > img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
-  .member_image_container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .member_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .member_info h5 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  .member_info p {
-    margin: 0;
-    font-size: 0.875rem;
-    color: var(--color-gray-600);
-  }
-</style>

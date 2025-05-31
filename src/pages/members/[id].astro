@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+  const res = await fetch("https://pujfiitptpbiyxhpgbuj.supabase.co/rest/v1/medlemmer", {
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1amZpaXRwdHBiaXl4aHBnYnVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1OTI2NDAsImV4cCI6MjA2NDE2ODY0MH0.dEwk5AGjOpOIK5j0GD9ZZT8SxquwZen5IX_s4pfLwBE",
+      Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1amZpaXRwdHBiaXl4aHBnYnVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1OTI2NDAsImV4cCI6MjA2NDE2ODY0MH0.dEwk5AGjOpOIK5j0GD9ZZT8SxquwZen5IX_s4pfLwBE",
+    },
+  });
+
+  const data = await res.json();
+  console.log("Supabase members:", data); // Add this to check
+
+  if (!Array.isArray(data)) {
+    throw new Error("Expected an array but got: " + JSON.stringify(data));
+  }
+
+  return data.map((member) => ({
+    params: { id: member.id.toString() },
+    props: { member },
+  }));
+}
+
+const { member } = Astro.props;
+---
+
+<Layout>
+  <main class="member_detail">
+    <img src={member.picture} alt={member.name} />
+    <h1>{member.name}</h1>
+    <p>{member.description}</p>
+    <p>{member.contactinfo}</p>
+  </main>
+</Layout>
+
+<style>
+  .member_detail {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .member_detail img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+</style>
