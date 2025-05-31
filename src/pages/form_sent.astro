@@ -14,11 +14,11 @@ import ImageContainer from "../components/Image_container.astro";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
   <section>
-    <h1>Form has been sent</h1>
+    <h1>Form has been sent!</h1>
     <p>
       Thanks for getting in contact! We will get to you as soon as possible.
     </p>
-    <p>Open hours: <br /> Mon - Fri, 09:00-16:00</p>
+    <p><span class="bold">Open hours:</span> <br /> Mon - Fri, 09:00-16:00</p>
     <p class="obs">
       OBS: This is a student project, Trifolium ApS hasen't really recieved your
       information. Please visit <a href="https://trifo.dk/">Trifo.dk</a>.
@@ -42,13 +42,13 @@ import ImageContainer from "../components/Image_container.astro";
     margin-right: var(--spacing-small);
     max-width: 100%;
     justify-self: center;
-    display: flex;
-    flex-direction: column;
-    > * {
-      max-width: 30vw;
-      justify-self: center;
-      text-align: center;
-    }
+  }
+  h1 {
+    width: 100%;
+    max-width: fit-content;
+  }
+  .bold {
+    font-weight: 700;
   }
   .obs {
     color: red;
@@ -72,5 +72,14 @@ import ImageContainer from "../components/Image_container.astro";
   .form_cta {
     display: flex;
     justify-content: center;
+  }
+  @media (width > 800px) {
+    section {
+      max-width: 515px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
   }
 </style>
