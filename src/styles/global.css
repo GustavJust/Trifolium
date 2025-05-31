@@ -39,7 +39,7 @@ html {
 
   --white-color-100: #ffffff;
 
-  --spacing-section: 4em;
+  --spacing-section: 6em;
   --spacing-tiny: 0.5em;
   --spacing-small: 1em;
   --spacing-medium: 2em;
@@ -416,6 +416,13 @@ section.img_w_txt_map {
     > .image_container {
       height: 100%;
       width: 100vw;
+    }
+  }
+  section.txt_only{
+    display: flex;
+    > h1, h2, h3, h4, h5{
+      margin: 0;
+      max-width: 50%;
     }
   }
 }
