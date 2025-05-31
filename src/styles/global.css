@@ -1,3 +1,5 @@
+
+
 @import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
 
@@ -324,6 +326,58 @@ section.img_w_txt_map {
     padding: var(--spacing-small);
     border: 1px solid var(--black-color-100);
   }
+}
+
+/* DETTE ER SUPABASE */
+
+.member_list_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.member_card {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: var(--spacing-tiny);
+  margin: var(--spacing-small);
+
+  > .member_image_container {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-rounded, 8px);
+    background-color: #f0f0f0;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 999px;
+  }
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+.member_image_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.member_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member_info h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.member_info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
 }
 
 @media (width > 800px) {
