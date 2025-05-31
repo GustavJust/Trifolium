@@ -158,61 +158,6 @@ const theme = "dandp";
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
-
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      const galleries = document.querySelectorAll(".gallery_parent_container");
-
-      galleries.forEach((gallery) => {
-        const frame = gallery.querySelector(".gallery_frame");
-        const slides = gallery.querySelectorAll(".gallery_img");
-        const dots = gallery.querySelectorAll(".pagination-dot");
-        const prevBtn = gallery.querySelector(".prevBtn");
-        const nextBtn = gallery.querySelector(".nextBtn");
-
-        let currentIndex = 0;
-        const slideCount = slides.length;
-
-        function updateActiveDot(index) {
-          dots.forEach((dot) => (dot.style.backgroundColor = "white"));
-          if (dots[index]) {
-            dots[index].style.backgroundColor = getComputedStyle(dots[index]).borderColor;
-          }
-        }
-
-        function scrollToSlide(index) {
-          const slideWidth = frame.clientWidth;
-          frame.scrollTo({ left: index * slideWidth, behavior: "smooth" });
-          currentIndex = index;
-          updateActiveDot(index);
-        }
-
-        prevBtn.addEventListener("click", () => {
-          scrollToSlide((currentIndex - 1 + slideCount) % slideCount);
-        });
-
-        nextBtn.addEventListener("click", () => {
-          scrollToSlide((currentIndex + 1) % slideCount);
-        });
-
-        dots.forEach((dot, index) => {
-          dot.addEventListener("click", () => {
-            scrollToSlide(index);
-          });
-        });
-
-        frame.addEventListener("scroll", () => {
-          const index = Math.round(frame.scrollLeft / frame.clientWidth);
-          if (index !== currentIndex) {
-            currentIndex = index;
-            updateActiveDot(index);
-          }
-        });
-
-        updateActiveDot(0);
-      });
-    });
-  </script>
 </Layout>
 
 <style>
