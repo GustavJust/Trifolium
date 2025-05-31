@@ -22,33 +22,6 @@ const theme = "membership";
       collaboration, innovation, and community across all activities and events.
     </p>
   </section>
-  <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="" />
-  </div>
-  <section class="img_w_txt left">
-    <Image_container
-      src="/assets/imgs/membership_intro.webp"
-      alt="Augusto sanding his chair"
-    />
-    <div class="txt_box">
-      <h2>Placeholder</h2>
-      <p>
-        At Trifolium, we understand that starting a business comes with plenty
-        of uncertainty. Your workspace shouldn’t be one of them. That’s why our
-        memberships are modular and based on how many people in your team need
-        access. You only pay for what you need.
-      </p>
-      <p>
-        If things slow down, you can downgrade with just two months’ notice. And
-        when business picks up, it’s easy to scale up again. Simple, flexible,
-        and built to support your growth.
-      </p>
-    </div>
-  </section>
-
-  <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="" />
-  </div>
 
   <section>
     <div class="membership_cards_container">
@@ -230,22 +203,20 @@ const theme = "membership";
   </div>
 
   <section class="img_w_txt">
-    <Image_container
-      src="/assets/imgs/membership_intro.webp"
-      alt="Augusto sanding his chair"
-    />
+    <div class="img_block">
+      <img src="/assets/imgs/membership_block.svg" alt="" />
+    </div>
     <div class="txt_box">
-      <h2>Placeholder</h2>
+      <h2>How does it work?</h2>
       <p>
         At Trifolium, we understand that starting a business comes with plenty
         of uncertainty. Your workspace shouldn’t be one of them. That’s why our
         memberships are modular and based on how many people in your team need
         access. You only pay for what you need.
-      </p>
-      <p>
+        <br /><br />
         If things slow down, you can downgrade with just two months’ notice. And
-        when business picks up, it’s easy to scale up again. Simple, flexible,
-        and built to support your growth.
+        when business picks up, it’s easy to scale up again. Simple, flexible, and
+        built to support your growth.
       </p>
     </div>
   </section>
@@ -331,6 +302,13 @@ const theme = "membership";
     }
   }
 
+  .img_block {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    max-height: 40vh;
+  }
+
   @media (width > 800px) {
     .membership_cards_container {
       display: grid;
@@ -342,6 +320,13 @@ const theme = "membership";
       display: grid;
       grid-template-rows: subgrid;
       grid-row: span 6;
+    }
+
+    .img_block {
+      display: flex;
+      justify-content: right;
+      width: 50%;
+      max-height: 60vh;
     }
   }
 </style>
