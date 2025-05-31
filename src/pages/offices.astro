@@ -4,9 +4,11 @@ import Hero from "../components/hero.astro";
 import Image_container from "../components/Image_container.astro";
 import Included from "../components/included.astro";
 import "../styles/facility.css";
+
+const theme = "facilities";
 ---
 
-<Layout>
+<Layout theme={theme}>
   <Hero
     video="/assets/imgs/video/office_hallway_video.mp4"
     title="Offices"

@@ -2,9 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
 import ExplanationSection from "../components/map_explanation.astro";
+
+const theme = "facilities";
 ---
 
-<Layout>
+<Layout theme={theme}>
   <Hero
     video="/assets/imgs/video/platform_office_video.mp4"
     title="Facilities"
