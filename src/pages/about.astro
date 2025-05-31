@@ -204,6 +204,14 @@ const theme = "about";
     }
   }
 
+  @media (min-width: 800px) and (max-width: 1150px) {
+    .hor_card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-tiny) 2em;
+    }
+  }
+
   @media (width > 800px) {
     .hor_card {
       flex-direction: row;

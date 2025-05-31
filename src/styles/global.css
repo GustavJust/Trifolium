@@ -417,6 +417,13 @@ section.img_w_txt_map {
   
 }
 
+@media (min-width: 800px) and (max-width: 1150px) {
+  .nav_card_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (width > 800px) {
 
   .nav_card_container {
