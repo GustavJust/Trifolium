@@ -18,6 +18,22 @@ const theme = "about";
       </div>
     </div> -->
   </div>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="bottom_cta">
+    <h2>Explore our facilities</h2>
+    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
+    <a href="/facilities">
+      <button class="large"> Explore facilities</button>
+    </a>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
   <script>
     fetch("https://pujfiitptpbiyxhpgbuj.supabase.co/rest/v1/medlemmer", {
       method: "GET",
@@ -47,5 +63,10 @@ const theme = "about";
       })
       .catch((err) => console.error("API-fejl:", err));
   </script>
-  <style></style>
+  <style>
+    section {
+      margin-left: var(--spacing-small);
+      margin-right: var(--spacing-small);
+    }
+  </style>
 </Layout>

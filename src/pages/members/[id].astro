@@ -31,20 +31,76 @@ const { member } = Astro.props;
     </div>
   </section>
 
-  <main class="member_detail">
-    <img src={member.picture} alt={member.name} />
+  <div class="header_group">
     <h1>{member.name}</h1>
-    <h5>{member.h1Title}</h5>
-    <p>{member.description}</p>
-    {member.contactEmail && <p>Email: {member.contactEmail}</p>}
-    {member.contactWebsite && <p>Website: {member.contactWebsite}</p>}
-    {member.contactLinkedin && <p>LinkedIn: {member.contactLinkedin}</p>}
-    {member.contactNumber && <p>Phone: {member.contactNumber}</p>}
-    {member.contactSoMe && <p>SoMe: {member.contactSoMe}</p>}
-  </main>
+    <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+  </div>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  {
+    member.h1Title && (
+      <section class="img_w_txt">
+        <div class="txt_box">
+          <h5>{member.h1Title}</h5>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="img_w_txt">
+    <div class="txt_box">
+      <p>{member.description}</p>
+      {member.contactEmail && <p>Email: {member.contactEmail}</p>}
+      {member.contactWebsite && <p>Website: {member.contactWebsite}</p>}
+      {member.contactLinkedin && <p>LinkedIn: {member.contactLinkedin}</p>}
+      {member.contactNumber && <p>Phone: {member.contactNumber}</p>}
+      {member.contactSoMe && <p>SoMe: {member.contactSoMe}</p>}
+    </div>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
+
+  <section class="bottom_cta">
+    <h2>Explore our facilities</h2>
+    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
+    <a href="/facilities">
+      <button class="large"> Explore facilities</button>
+    </a>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="" />
+  </div>
 </Layout>
 
 <style>
+  section {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+  }
+
+  .header_group {
+    display: flex;
+    padding: var(--spacing-small);
+    gap: var(--spacing-tiny);
+    > h1 {
+      text-transform: uppercase;
+    }
+    > img {
+      width: 15px;
+      aspect-ratio: 1/1;
+      transform: rotate(135deg);
+    }
+  }
+  section.hero {
+    margin-bottom: 0;
+  }
+
   .hero {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
