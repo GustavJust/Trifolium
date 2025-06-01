@@ -1,0 +1,12 @@
+---
+// AOSInit.astro
+import "aos/dist/aos.css";
+
+if (typeof window !== "undefined") {
+  const AOS = await import("aos");
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+}
+---
