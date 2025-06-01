@@ -103,6 +103,7 @@ h5 {
 
 p {
   max-width: 70ch !important;
+  font-size: 18px;
 }
 
 a {
@@ -139,12 +140,17 @@ section {
   display: inline-block;
 }
 
+button {
+  font-weight: 500;
+}
+
 button.giant {
   background-color: var(--primary-color-500);
-  color: var(--black-color-100);
+  color: var(--white-color-100);
   border: 1px solid var(--primary-color-500);
   padding: 11px 35px;
   border-radius: 4px;
+  font-size: 18px;
 }
 
 button.large {
@@ -153,6 +159,7 @@ button.large {
   border: 1px solid var(--primary-color-500);
   padding: 9px 30px;
   border-radius: 4px;
+  font-size: 16px;
 }
 button.medium {
   background-color: var(--primary-color-500);
@@ -160,6 +167,7 @@ button.medium {
   border: 1px solid var(--primary-color-500);
   padding: 8px 25px;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 button.medium_header {
@@ -176,6 +184,7 @@ button.small {
   border: 1px solid var(--primary-color-500);
   padding: 6px 20px;
   border-radius: 4px;
+  font-size: 12px;
 }
 button.tiny {
   background-color: var(--primary-color-500);
@@ -183,6 +192,7 @@ button.tiny {
   border: 1px solid var(--primary-color-500);
   padding: 5px 15px;
   border-radius: 4px;
+  font-size: 10px;
 }
 button:hover {
   background-color: var(--primary-color-300);
@@ -448,6 +458,47 @@ section.txt_only {
 }
 
 @media (width > 800px) {
+  h1 {
+    font-size: 73px;
+  }
+  h2 {
+    font-size: 59px;
+  }
+  h3 {
+    font-size: 47px;
+  }
+  h4 {
+    font-size: 37.5px;
+  }
+  h5 {
+    font-size: 30px;
+  }
+
+  p {
+    max-width: 70ch !important;
+    font-size: 24px;
+  }
+
+  button.giant {
+    font-size: 24px;
+  }
+
+  button.large {
+    font-size: 22px;
+  }
+
+  button.medium {
+    font-size: 20px;
+  }
+
+  button.small {
+    font-size: 18px;
+  }
+
+  button.tiny {
+    font-size: 16px;
+  }
+
   .nav_card_container {
     flex-direction: row;
   }
