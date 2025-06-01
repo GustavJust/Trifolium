@@ -27,8 +27,9 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
     display: grid;
     grid-template-columns: 1fr; /* Stacked on mobile */
     gap: 1rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 1em;
+    background-color: var(--tertiary-color-800);
   }
 
   .card-text {
@@ -39,19 +40,19 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
   }
 
   .card-date {
-    color: var(--black-color-100);
+    color: white;
     margin: 0;
     font-size: 20vw;
     line-height: 1;
   }
 
   .card-day {
-    color: var(--black-color-100);
+    color: white;
     margin: 0;
   }
 
   .card-description {
-    color: var(--black-color-100);
+    color: white;
     margin-top: 1em;
   }
 
