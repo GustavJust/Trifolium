@@ -9,7 +9,7 @@ export async function getStaticPaths() {
   });
 
   const data = await res.json();
-  console.log("Supabase members:", data); // Add this to check
+  console.log("Supabase members:", data);
 
   if (!Array.isArray(data)) {
     throw new Error("Expected an array but got: " + JSON.stringify(data));
@@ -25,39 +25,39 @@ const { member } = Astro.props;
 ---
 
 <Layout>
-  <section class="hero">
+  <section class="hero_section">
     <div class="hero_img_container">
       <img src={member.picture} alt={member.name} />
     </div>
-  </section>
 
-  <div class="header_group">
-    <h1>{member.name}</h1>
-    <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
-  </div>
+    <div class="header_group1">
+      <h1>{member.name}</h1>
+      <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
+    </div>
+  </section>
 
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  {
-    member.h1Title && (
-      <section class="img_w_txt">
+  <section class="img_w_txt">
+    {
+      member.h1Title && (
         <div class="txt_box">
           <h5>{member.h1Title}</h5>
         </div>
-      </section>
-    )
-  }
+      )
+    }
 
-  <section class="img_w_txt">
     <div class="txt_box">
       <p>{member.description}</p>
-      {member.contactEmail && <p>Email: {member.contactEmail}</p>}
-      {member.contactWebsite && <p>Website: {member.contactWebsite}</p>}
-      {member.contactLinkedin && <p>LinkedIn: {member.contactLinkedin}</p>}
-      {member.contactNumber && <p>Phone: {member.contactNumber}</p>}
-      {member.contactSoMe && <p>SoMe: {member.contactSoMe}</p>}
+      <div class="contact_info">
+        {member.contactEmail && <p>Email: {member.contactEmail}</p>}
+        {member.contactWebsite && <p>Website: {member.contactWebsite}</p>}
+        {member.contactLinkedin && <p>LinkedIn: {member.contactLinkedin}</p>}
+        {member.contactNumber && <p>Phone: {member.contactNumber}</p>}
+        {member.contactSoMe && <p>SoMe: {member.contactSoMe}</p>}
+      </div>
     </div>
   </section>
 
@@ -84,10 +84,13 @@ const { member } = Astro.props;
     margin-right: var(--spacing-small);
   }
 
-  .header_group {
+  .header_group1 {
     display: flex;
-    padding: var(--spacing-small);
+    padding-top: var(--spacing-small);
+    padding-bottom: var(--spacing-small);
     gap: var(--spacing-tiny);
+    flex-direction: row;
+    align-items: baseline;
     > h1 {
       text-transform: uppercase;
     }
@@ -110,9 +113,8 @@ const { member } = Astro.props;
 
   .hero_img_container {
     width: 100%;
-    height: 75vh;
+    height: auto;
     overflow: hidden;
-    box-sizing: border-box;
   }
 
   .hero_img_container img {
@@ -122,18 +124,79 @@ const { member } = Astro.props;
     display: block;
   }
 
-  .member_detail {
-    padding: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+  .hero_section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    margin: 0 var(--spacing-small);
   }
 
-  .member_detail img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  .hero_img_container img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .header_group {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-tiny);
+    padding: 0 var(--spacing-small);
+  }
+
+  .header_group h1 {
+    text-transform: uppercase;
+  }
+
+  .header_group img {
+    width: 15px;
+    aspect-ratio: 1/1;
+    transform: rotate(135deg);
+  }
+
+  @media (min-width: 768px) {
+    .hero_section {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .hero_img_container {
+      width: 50%;
+    }
+
+    .header_group {
+      width: 50%;
+      padding: 0 var(--spacing-small);
+    }
+
+    .header_group h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
+
+    .contact_info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      > p {
+        font-size: 14px;
+      }
+    }
+
+    .img_w_txt {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .img_w_txt > .txt_box {
+      width: 48%;
+    }
+
+    .img_w_txt > .txt_box:only-child {
+      margin: 0 auto;
+      width: 60%;
+    }
   }
 </style>
