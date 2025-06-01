@@ -470,7 +470,27 @@ section.txt_only {
   border: 1px solid var(--color-gray-300);
 }
 
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
 
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
 
 .member_info {
   display: flex;
@@ -488,7 +508,6 @@ section.txt_only {
   text-transform: uppercase;
   transition: color 0.2s ease;
 }
-
 
 /* ---- */
 

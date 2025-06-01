@@ -23,11 +23,11 @@ const { activeTheme } = Astro.props;
   </div>
   <div class="right-group">
     <nav class="nav_web">
-      <a href="/facilities" class={activeTheme === "facilities" ? "active" : ""}>Facilities</a>
-      <a href="/membership" class={activeTheme === "membership" ? "active" : ""}>Membership</a>
-      <a href="/photostudio" class={activeTheme === "photostudio" ? "active" : ""}>Photo-studio</a>
-      <a href="/dandp" class={activeTheme === "dandp" ? "active" : ""}>Design & Production</a>
-      <a href="/about" class={activeTheme === "about" ? "active" : ""}>About Trifolium</a>
+      <a href="/facilities" class={`underline-hover ${activeTheme === "facilities" ? "active" : ""}`}>Facilities</a>
+      <a href="/membership" class={`underline-hover ${activeTheme === "membership" ? "active" : ""}`}>Membership</a>
+      <a href="/photostudio" class={`underline-hover ${activeTheme === "photostudio" ? "active" : ""}`}>Photo-studio</a>
+      <a href="/dandp" class={`underline-hover ${activeTheme === "dandp" ? "active" : ""}`}>Design & Production</a>
+      <a href="/about" class={`underline-hover ${activeTheme === "about" ? "active" : ""}`}>About Trifolium</a>
     </nav>
     <button class="burger_icon">
       <img src="/assets/imgs/burger_icon.svg" alt="" />
