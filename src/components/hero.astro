@@ -7,9 +7,10 @@ export interface Props {
   description?: string;
   descLeft?: string;
   descRight?: string;
+  priceText?: string;
 }
 
-const { video, title, description, descLeft, descRight, poster } = Astro.props;
+const { video, title, description, descLeft, descRight, poster, priceText } = Astro.props;
 import "../styles/global.css";
 ---
 
@@ -17,15 +18,7 @@ import "../styles/global.css";
   {
     video && (
       <div class="hero_video">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="none"
-          class="hero-video"
-          poster={poster}
-        >
+        <video autoplay muted loop playsinline preload="none" class="hero-video" poster={poster}>
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -49,7 +42,10 @@ import "../styles/global.css";
           {title && <h1>{title}</h1>}
           <img src="../assets/imgs/arrow_icon_red.svg" alt="" />
         </div>
-        {description && <p>{description}</p>}
+        <div class="description_row">
+          {description && <p>{description}</p>}
+          {priceText && <span class="priceText_border">{priceText}</span>}
+        </div>
       </div>
     )
   }
@@ -68,7 +64,6 @@ import "../styles/global.css";
       display: flex;
       justify-content: space-between;
       font-size: var(--text-caption);
-      padding: 0 var(--spacing-small);
     }
     > .desc p {
       margin: var(--spacing-tiny) 0;
@@ -120,6 +115,20 @@ import "../styles/global.css";
     > img {
       width: 50px;
       margin: var(--spacing-) 0;
+    }
+  }
+
+  .description_row {
+    display: flex;
+    flex-direction: column; /* default: stacked */
+    align-items: flex-start;
+  }
+
+  @media (min-width: 768px) {
+    .description_row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 </style>

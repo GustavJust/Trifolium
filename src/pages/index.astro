@@ -8,15 +8,7 @@ import EventCard from "../components/event_card.astro";
 <Layout>
   <section class="hero">
     <div class="hero_img_container">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="none"
-        poster="/assets/imgs/lazyload/index_lazyload.webp"
-        class="hero-video"
-      >
+      <video autoplay muted loop playsinline preload="none" poster="/assets/imgs/lazyload/index_lazyload.webp" class="hero-video">
         <source src="/assets/imgs/video/index_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -30,111 +22,68 @@ import EventCard from "../components/event_card.astro";
       </a>
     </div>
   </section>
+
   <div class="logo_divider" id="intro">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
+
   <section class="img_w_txt">
     <div class="txt_box">
-      <h1>
-        A professional production village for designers, developers, and
-        builders.
-      </h1>
-      <p>
-        With workspaces, advanced tools, and workshops under one roof, you can
-        create physical or digital products from concept to launch.
-      </p>
+      <h1>A professional production village for designers, developers, and builders.</h1>
+      <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
       <a href="/contact">
         <button class="large">Get a Tour</button>
       </a>
     </div>
-    <Image_container
-      src="/assets/imgs/index_bluearea.webp"
-      alt="Map of Trifolium"
-      labelLeft="Blue area"
-      labelRight="1st floor"
-    />
+    <Image_container src="/assets/imgs/index_bluearea.webp" alt="Map of Trifolium" labelLeft="Blue area" labelRight="1st floor" />
   </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
+
   <section>
     <h2>Explore our facilities</h2>
     <nav class="nav_card_container">
-      <NavCard
-        href="/offices"
-        title="Offices"
-        imgSrc="/assets/imgs/offices_intro.webp"
-        alt="image did not load"
-        aria-hidden="true"
-      />
-      <NavCard
-        href="/photostudio"
-        title="Photo-studio"
-        imgSrc="/assets/imgs/lazyload/photostudio_lazyload.webp"
-        alt="image did not load"
-        aria-hidden="true"
-      />
-      <NavCard
-        href="/workshops"
-        title="Workshops"
-        imgSrc="/assets/imgs/wrk_realwork.webp"
-        alt="image did not load"
-        aria-hidden="true"
-      />
-
-      <NavCard
-        href="/venues"
-        title="Venues"
-        imgSrc="/assets/imgs/lazyload/venues_lazyload.webp"
-        alt="image did not load"
-        aria-hidden="true"
-      />
+      <NavCard href="/offices" title="Offices" imgSrc="/assets/imgs/offices_intro.webp" alt="image did not load" aria-hidden="true" />
+      <NavCard href="/photostudio" title="Photo-studio" imgSrc="/assets/imgs/lazyload/photostudio_lazyload.webp" alt="image did not load" aria-hidden="true" />
+      <NavCard href="/workshops" title="Workshops" imgSrc="/assets/imgs/wrk_realwork.webp" alt="image did not load" aria-hidden="true" />
+      <NavCard href="/venues" title="Venues" imgSrc="/assets/imgs/lazyload/venues_lazyload.webp" alt="image did not load" aria-hidden="true" />
     </nav>
   </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
+
   <section class="img_w_txt">
-    <div class="img_frame">
-      <Image_container
-        src="/assets/imgs/d&p_intro.webp"
-        alt="D&P Thumbnail"
-        labelLeft="Material library"
-        labelRight="D&P office"
-      />
-    </div>
     <div class="txt_box">
       <h2>Design & Production</h2>
       <p>
-        At Trifolium, we understand that starting a business comes with plenty
-        of uncertainty. Your workspace shouldn’t be one of them. That’s why our
-        memberships are modular and based on how many people in your team need
-        access. You only pay for what you need.
+        At Trifolium, we understand that starting a business comes with plenty of uncertainty. Your workspace shouldn’t be one of them. That’s why our memberships are modular and based on how many people in your team need access. You only pay for
+        what you need.
       </p>
       <a href="/contact"> <button class="large"> Contact Trifolium</button></a>
     </div>
+    <div class="img_frame">
+      <Image_container src="/assets/imgs/d&p_intro.webp" alt="D&P Thumbnail" labelLeft="Material library" labelRight="D&P office" />
+    </div>
   </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
+
   <section class="img_w_txt left">
     <div class="txt_box">
       <h2>Where Innovation Meets Community</h2>
       <p>
-        At Trifolium, we offer state-of-the-art facilities designed to inspire
-        creativity, collaboration, and growth. Our vibrant culture is built on
-        openness, curiosity, and a shared commitment to making a positive impact
-        together. Whether you’re here to work, learn, or connect, you’ll find a
-        welcoming space that supports your journey.
+        At Trifolium, we offer state-of-the-art facilities designed to inspire creativity, collaboration, and growth. Our vibrant culture is built on openness, curiosity, and a shared commitment to making a positive impact together. Whether you’re
+        here to work, learn, or connect, you’ll find a welcoming space that supports your journey.
       </p>
       <a href="/contact"> <button class="medium">Get a Tour</button></a>
     </div>
-    <Image_container
-      src="/assets/imgs/index_kort.webp"
-      alt="Map of Trifolium"
-      labelLeft="bådehavnsgade 42K"
-      labelRight="2450 Sydhavnen"
-    />
+    <Image_container src="/assets/imgs/index_kort.webp" alt="Map of Trifolium" labelLeft="bådehavnsgade 42K" labelRight="2450 Sydhavnen" />
   </section>
 
   <div class="logo_divider">
@@ -144,27 +93,9 @@ import EventCard from "../components/event_card.astro";
   <section>
     <h2>Upcoming Events</h2>
     <div class="events">
-      <EventCard
-        imgSrc="/assets/imgs/event_posters/fridaybar_june.svg"
-        alt="Map of Trifolium"
-        date="15/6"
-        day="Friday 16-18"
-        desc="okeook deokeokd deokdeokde odkeodke odkeodke"
-      />
-      <EventCard
-        imgSrc="/assets/imgs/event_posters/fridaybar_july.svg"
-        alt="Map of Trifolium"
-        date="15/6"
-        day="Friday 16-18"
-        desc="okeook deokeokd deokdeokde odkeodke odkeodke"
-      />
-      <EventCard
-        imgSrc="/assets/imgs/event_posters/fridaybar_august.svg"
-        alt="Map of Trifolium"
-        date="15/6"
-        day="Friday 16-18"
-        desc="This Fridaybar is w. Hakami - You wouldnt want to miss this!"
-      />
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_june.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="okeook deokeokd deokdeokde odkeodke odkeodke" />
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_july.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="okeook deokeokd deokdeokde odkeodke odkeodke" />
+      <EventCard imgSrc="/assets/imgs/event_posters/fridaybar_august.svg" alt="Map of Trifolium" date="15/6" day="Friday 16-18" desc="This Fridaybar is w. Hakami - You wouldnt want to miss this!" />
     </div>
   </section>
 
@@ -174,10 +105,7 @@ import EventCard from "../components/event_card.astro";
 
   <section class="bottom_cta">
     <h2>Explore our facilities</h2>
-    <p>
-      With workspaces, advanced tools, and workshops under one roof, you can
-      create physical or digital products from concept to launch.
-    </p>
+    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
     <a href="/facilities">
       <button class="large"> Explore facilities</button>
     </a>
@@ -197,7 +125,7 @@ import EventCard from "../components/event_card.astro";
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    height: 90vh;
+    height: 92vh;
     overflow: hidden;
     > .hero_text,
     video,
@@ -211,7 +139,7 @@ import EventCard from "../components/event_card.astro";
       text-align: right;
     }
     > .hero_text h2 {
-      color: var(--primary-color-500);
+      color: white;
       font-family: var(--primary-font);
       text-transform: uppercase;
       /* text-shadow: 0px 0px 50px rgba(255, 255, 255, 0.862); */
@@ -231,7 +159,7 @@ import EventCard from "../components/event_card.astro";
       width: 10px;
       aspect-ratio: 1/1;
       position: absolute;
-      top: 90%;
+      top: 92%;
       left: 50%;
       transform: rotate(135deg);
     }
@@ -247,11 +175,11 @@ import EventCard from "../components/event_card.astro";
   @media (width > 800px) {
     .hero_text h2 {
       line-height: 1;
-      font-size: 6vw;
-      margin-top: 0.2em;
+      font-size: 10vw;
+      margin-top: 0.1em;
     }
     .arrow_container {
-      top: 90% !important;
+      top: 91% !important;
     }
 
     .events {
