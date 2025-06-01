@@ -55,11 +55,12 @@ const { src, alt, labelLeft, labelRight } = Astro.props;
   .text_frame p {
     margin: var(--spacing-tiny) 0;
     text-transform: uppercase;
+    font-size: 12px;
   }
 
   @media (width > 800px) {
     .image_container {
-      widthc: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       > .image_frame {
@@ -76,11 +77,7 @@ const { src, alt, labelLeft, labelRight } = Astro.props;
       > .text_frame p {
         margin-bottom: 0;
         line-height: 1;
-      }
-      > img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
+        font-size: 15px;
       }
     }
   }
