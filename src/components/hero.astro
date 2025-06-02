@@ -10,7 +10,8 @@ export interface Props {
   priceText?: string;
 }
 
-const { video, title, description, descLeft, descRight, poster, priceText } = Astro.props;
+const { video, title, description, descLeft, descRight, poster, priceText } =
+  Astro.props;
 import "../styles/global.css";
 ---
 
@@ -18,7 +19,15 @@ import "../styles/global.css";
   {
     video && (
       <div class="hero_video">
-        <video autoplay muted loop playsinline preload="none" class="hero-video" poster={poster}>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="none"
+          class="hero-video"
+          poster={poster}
+        >
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -40,7 +49,11 @@ import "../styles/global.css";
       <div class="header_type">
         <div class="header_group">
           {title && <h1>{title}</h1>}
-          <img src="../assets/imgs/arrow_icon_red.svg" alt="arrow icon" aria-hidden="true" />
+          <img
+            src="../assets/imgs/arrow_icon_red.svg"
+            alt="arrow icon"
+            aria-hidden="true"
+          />
         </div>
         <div class="description_row">
           {description && <p>{description}</p>}
@@ -50,7 +63,11 @@ import "../styles/global.css";
     )
   }
   <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
+    <img
+      src="../assets/imgs/logo_icon.svg"
+      alt="Section divider"
+      aria-hidden="true"
+    />
   </div>
 </section>
 
@@ -60,15 +77,15 @@ import "../styles/global.css";
     margin-right: var(--spacing-small);
     box-sizing: border-box;
     width: calc(100% - 32px);
-    > .desc {
-      display: flex;
-      justify-content: space-between;
-      font-size: var(--text-caption);
-    }
-    > .desc p {
-      margin: var(--spacing-tiny) 0;
-      text-transform: uppercase;
-    }
+  }
+  section.hero .desc {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-caption);
+  }
+  section.hero .desc p {
+    margin: var(--spacing-tiny) 0;
+    text-transform: uppercase;
   }
 
   .hero_video {
@@ -89,34 +106,36 @@ import "../styles/global.css";
     /* margin-left: 20px; */
     margin-top: var(--spacing-small);
     box-sizing: border-box;
-    > p {
-      max-width: calc(100vw - (2 * 20px));
-    }
+  }
+
+  .header_type p {
+    max-width: calc(100vw - (2 * 20px));
   }
 
   .header_group {
     display: flex;
     align-items: baseline;
     gap: var(--spacing-tiny);
-    > h1 {
-      text-transform: uppercase;
-      margin-bottom: var(--spacing-tiny);
-    }
-    > img {
-      width: 15px;
-      aspect-ratio: 1/1;
-      transform: rotate(135deg);
-    }
+  }
+  .header_group h1 {
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-tiny);
+  }
+  .header_group img {
+    width: 15px;
+    aspect-ratio: 1/1;
+    transform: rotate(135deg);
   }
   .logo_divider {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-    > img {
-      width: 50px;
-      margin: var(--spacing-) 0;
-    }
+  }
+
+  .logo_divider img {
+    width: 50px;
+    margin: var(--spacing-) 0;
   }
 
   .description_row {
