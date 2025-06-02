@@ -86,83 +86,84 @@ const theme = "about";
     display: flex;
     margin-bottom: var(--spacing-small);
     max-height: 500px;
-    > img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      margin: 0;
-      box-sizing: border-box;
-    }
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    box-sizing: border-box;
   }
   .header_container {
     margin-top: var(--spacing-tiny);
     display: flex;
     align-items: center;
-    > .arrow_container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 25px;
-      height: 25px;
-      overflow: hidden;
-      margin-left: var(--spacing-small);
-    }
-    > .arrow_container img {
-      width: 100%;
-      height: auto;
-      transform: scale(1.2) rotate(90deg);
-    }
-    h4 {
-      margin: 0;
-    }
+  }
+  .header_container .arrow_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    margin-left: var(--spacing-small);
+  }
+  .header_container .arrow_container img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.2) rotate(90deg);
+  }
+  .header_container h4 {
+    margin: 0;
   }
   .input_container {
     display: flex;
     flex-direction: column;
     justify-content: right;
-    > .input_wrapper {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr;
-      margin-top: var(--spacing-medium);
-    }
-    > .input_wrapper label {
-      font-weight: 800;
-      font-size: large;
-    }
-    > .input_wrapper input {
-      width: 100%;
-      padding: 0.75em 1em 0.75em 0;
-
-      font-size: large;
-
-      background-color: var(--color-white-100, #fff);
-      border: 1px solid var(--white-color-100);
-      border-bottom: 2px solid var(--black-color-100);
-
-      outline: none;
-      box-sizing: border-box;
-    }
-    > .input_wrapper textarea {
-      margin-top: var(--spacing-tiny);
-      width: 100%;
-      padding: 0.75em 0.5em 0.75em 0.5em;
-
-      font-size: large;
-
-      background-color: var(--color-white-100, #fff);
-      border: 1px solid var(--white-color-100);
-      border: 2px solid var(--black-color-100);
-
-      outline: none;
-      box-sizing: border-box;
-    }
-    > .input_wrapper input::placeholder,
-    .input_wrapper textarea::placeholder {
-      color: var(--color-gray-400, #999);
-      font-family: var(--secondary-font);
-    }
   }
+  .input_container .input_wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: var(--spacing-medium);
+  }
+  .input_container .input_wrapper label {
+    font-weight: 800;
+    font-size: large;
+  }
+  .input_container .input_wrapper input {
+    width: 100%;
+    padding: 0.75em 1em 0.75em 0;
+
+    font-size: large;
+
+    background-color: var(--color-white-100, #fff);
+    border: 1px solid var(--white-color-100);
+    border-bottom: 2px solid var(--black-color-100);
+
+    outline: none;
+    box-sizing: border-box;
+  }
+  .input_container .input_wrapper textarea {
+    margin-top: var(--spacing-tiny);
+    width: 100%;
+    padding: 0.75em 0.5em 0.75em 0.5em;
+
+    font-size: large;
+
+    background-color: var(--color-white-100, #fff);
+    border: 1px solid var(--white-color-100);
+    border: 2px solid var(--black-color-100);
+
+    outline: none;
+    box-sizing: border-box;
+  }
+  .input_container .input_wrapper input::placeholder,
+  .input_container .input_wrapper textarea::placeholder {
+    color: var(--color-gray-400, #999);
+    font-family: var(--secondary-font);
+  }
+
   .send_form {
     width: fit-content;
     height: fit-content;

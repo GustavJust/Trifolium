@@ -296,11 +296,12 @@ const theme = "dandp";
     align-items: center;
     display: flex;
     flex-grow: 1;
-    > img {
-      height: auto;
-      width: 100%;
-      object-fit: cover;
-    }
+  }
+
+  .partners_container div img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
   }
 
   .previous_productions h2 {
@@ -320,15 +321,16 @@ const theme = "dandp";
       overflow: hidden;
       overflow-x: auto;
       gap: var(--spacing-tiny);
-      > img {
-        height: 100%;
-        max-width: 100vw;
-        max-height: 600px;
-      }
-      > .image_container {
-        height: 100%;
-        width: 100vw;
-      }
+    }
+
+    .image_scroll_facilities img {
+      height: 100%;
+      max-width: 100vw;
+      max-height: 600px;
+    }
+    .image_scroll_facilities .image_container {
+      height: 100%;
+      width: 100vw;
     }
 
     .gallery_grid {
