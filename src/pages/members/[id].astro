@@ -38,12 +38,20 @@ const theme = "about";
 
     <div class="header_group1">
       <h1>{member.name}</h1>
-      <img src="/assets/imgs/arrow_icon_red.svg" alt="Arrow down" aria-hidden="true" />
+      <img
+        src="/assets/imgs/arrow_icon_red.svg"
+        alt="Arrow down"
+        aria-hidden="true"
+      />
     </div>
   </section>
 
   <div class="logo_divider">
-    <img src="/assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
+    <img
+      src="/assets/imgs/logo_icon.svg"
+      alt="Section divider"
+      aria-hidden="true"
+    />
   </div>
 
   <section class="img_w_txt">
@@ -106,14 +114,14 @@ const theme = "about";
     gap: var(--spacing-tiny);
     flex-direction: row;
     align-items: baseline;
-    > h1 {
-      text-transform: uppercase;
-    }
-    > img {
-      width: 15px;
-      aspect-ratio: 1/1;
-      transform: rotate(135deg);
-    }
+  }
+  .header_group1 h1 {
+    text-transform: uppercase;
+  }
+  .header_group1 img {
+    width: 15px;
+    aspect-ratio: 1/1;
+    transform: rotate(135deg);
   }
   section.hero {
     margin-bottom: 0;
@@ -194,9 +202,9 @@ const theme = "about";
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      > p {
-        font-size: 14px;
-      }
+    }
+    .contact_info p {
+      font-size: 14px;
     }
 
     .img_w_txt {
