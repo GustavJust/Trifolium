@@ -12,8 +12,10 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
 
 <div class="card">
   <div class="card-text">
-    <h3 class="card-date">{date}</h3>
-    <p class="card-day">{day}</p>
+    <div>
+      <h3 class="card-date">{date}</h3>
+      <p class="card-day">{day}</p>
+    </div>
     <p class="card-description">{desc}</p>
     <a href=""> <button class="medium">Go to event</button></a>
   </div>
@@ -35,7 +37,7 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
   .card-text {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: var(--spacing-large);
     align-self: flex-start;
   }
 
@@ -53,7 +55,6 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
 
   .card-description {
     color: white;
-    margin-top: 1em;
   }
 
   .card-image {

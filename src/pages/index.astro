@@ -81,7 +81,7 @@ import EventCard from "../components/event_card.astro";
         At Trifolium, we offer state-of-the-art facilities designed to inspire creativity, collaboration, and growth. Our vibrant culture is built on openness, curiosity, and a shared commitment to making a positive impact together. Whether you’re
         here to work, learn, or connect, you’ll find a welcoming space that supports your journey.
       </p>
-      <a href="/contact"> <button class="medium">Get a Tour</button></a>
+      <a href="/contact"> <button class="large">Get a Tour</button></a>
     </div>
     <Image_container src="/assets/imgs/index_kort.webp" alt="Map of Trifolium" labelLeft="bådehavnsgade 42K" labelRight="2450 Sydhavnen" />
   </section>
@@ -117,6 +117,10 @@ import EventCard from "../components/event_card.astro";
 </Layout>
 
 <style>
+  h2 {
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
   section {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
@@ -159,13 +163,10 @@ import EventCard from "../components/event_card.astro";
       width: 10px;
       aspect-ratio: 1/1;
       position: absolute;
-      top: 92%;
+      top: 93%;
       left: 50%;
       transform: rotate(135deg);
     }
-  }
-  button {
-    margin-bottom: var(--spacing-large);
   }
 
   .events {
@@ -179,7 +180,7 @@ import EventCard from "../components/event_card.astro";
       margin-top: 0.1em;
     }
     .arrow_container {
-      top: 91% !important;
+      top: 92% !important;
     }
 
     .events {
