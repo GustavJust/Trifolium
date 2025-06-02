@@ -375,48 +375,49 @@ const theme = "facilities";
       aria-hidden="true"
     />
   </div>
+
+  <script is:inline>
+    window.addEventListener("DOMContentLoaded", () => {
+      const floorButtons = document.querySelectorAll(".floor_btn");
+      const floorWrappers = document.querySelectorAll(".floor_wrapper");
+
+      function setActiveFloor(index) {
+        floorWrappers.forEach((wrapper, i) => {
+          wrapper.style.display = i === index ? "block" : "none";
+        });
+      }
+
+      floorButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const index = parseInt(btn.getAttribute("data-floor"), 10);
+          if (!isNaN(index)) setActiveFloor(index);
+        });
+      });
+
+      setActiveFloor(0);
+
+      const sectionButtons = document.querySelectorAll(".map_area_btn");
+      const sections = document.querySelectorAll(".explanation-section");
+
+      function showSection(sectionId) {
+        sections.forEach((section) => {
+          section.style.display =
+            section.dataset.section === sectionId ? "block" : "none";
+        });
+      }
+
+      sectionButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sectionId = btn.dataset.section;
+          if (sectionId) showSection(sectionId);
+        });
+      });
+
+      const first = sections[0];
+      if (first) showSection(first.dataset.section);
+    });
+  </script>
 </Layout>
-<script is:inline>
-  window.addEventListener("DOMContentLoaded", () => {
-    const floorButtons = document.querySelectorAll(".floor_btn");
-    const floorWrappers = document.querySelectorAll(".floor_wrapper");
-
-    function setActiveFloor(index) {
-      floorWrappers.forEach((wrapper, i) => {
-        wrapper.style.display = i === index ? "block" : "none";
-      });
-    }
-
-    floorButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const index = parseInt(btn.getAttribute("data-floor"), 10);
-        if (!isNaN(index)) setActiveFloor(index);
-      });
-    });
-
-    setActiveFloor(0);
-
-    const sectionButtons = document.querySelectorAll(".map_area_btn");
-    const sections = document.querySelectorAll(".explanation-section");
-
-    function showSection(sectionId) {
-      sections.forEach((section) => {
-        section.style.display =
-          section.dataset.section === sectionId ? "block" : "none";
-      });
-    }
-
-    sectionButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const sectionId = btn.dataset.section;
-        if (sectionId) showSection(sectionId);
-      });
-    });
-
-    const first = sections[0];
-    if (first) showSection(first.dataset.section);
-  });
-</script>
 
 <style>
   h2 {
