@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
 import Image_container from "../components/Image_container.astro";
-import Gallery from "../components/image_gallery.astro";
 
 const galleryImages = [
   { src: "/assets/imgs/placeholder.png", alt: "Image 1" },
@@ -75,68 +74,70 @@ const theme = "dandp";
     <img src="../assets/imgs/logo_icon.svg" alt="" />
   </div>
 
-  <section class="txt_only">
-    <h5>Bloom bar for Bloom festival 2024</h5>
-    <p>In collaboration with Studio Gestalt. Design, concept and fabrication by Studio Gestalt. Consulting and fabrication by D&P</p>
-  </section>
+  <div class="previous_productions">
+    <h2>Previous productions</h2>
+    <section class="txt_only">
+      <h4>Bloom bar for Bloom festival 2024</h4>
+      <p>In collaboration with Studio Gestalt. Design, concept and fabrication by Studio Gestalt. Consulting and fabrication by D&P</p>
+    </section>
 
-  <section>
-    <div class="gallery_grid">
-      <Image_container src="/assets/imgs/d&p_bloom1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_bloom2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_bloom3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-    </div>
-  </section>
+    <section>
+      <div class="gallery_grid">
+        <Image_container src="/assets/imgs/d&p_bloom1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_bloom2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_bloom3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+      </div>
+    </section>
 
-  <section class="txt_only">
-    <h5>Collaborative design & production with Unicef and Manyone 2023</h5>
-    <p>
-      Augmented reality installation, exhibited at AidEx2023.
-      <br /><br />
-      The immersive installation “Sounds of Forgotten Crises” reflefts the magnitude and emotional significance Unicef conducts in worlds emergency zones.
-    </p>
-  </section>
-  <section>
-    <div class="gallery_grid">
-      <Image_container src="/assets/imgs/d&p_manyone1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_manyone2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_manyone3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-    </div>
-  </section>
+    <section class="txt_only">
+      <h5>Collaborative design & production with Unicef and Manyone 2023</h5>
+      <p>
+        Augmented reality installation, exhibited at AidEx2023.
+        <br /><br />
+        The immersive installation “Sounds of Forgotten Crises” reflefts the magnitude and emotional significance Unicef conducts in worlds emergency zones.
+      </p>
+    </section>
+    <section>
+      <div class="gallery_grid">
+        <Image_container src="/assets/imgs/d&p_manyone1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_manyone2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_manyone3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+      </div>
+    </section>
 
-  <section class="txt_only">
-    <h5>Petal Pavillion Production for Chart 2023</h5>
-    <p>
-      PETAL PAVILION - CHART 2023. <br />
-      Made for Lasovsky Johansson
-      <br /><br />
-      Part production on our CNC plasma cutter, traditional welding plus guides and installation of electro-mechanic structure.
-    </p>
-  </section>
-  <section>
-    <div class="gallery_grid">
-      <Image_container src="/assets/imgs/d&p_pavillion1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_pavillion2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_pavillion3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-    </div>
-  </section>
+    <section class="txt_only">
+      <h5>Petal Pavillion Production for Chart 2023</h5>
+      <p>
+        PETAL PAVILION - CHART 2023. <br />
+        Made for Lasovsky Johansson
+        <br /><br />
+        Part production on our CNC plasma cutter, traditional welding plus guides and installation of electro-mechanic structure.
+      </p>
+    </section>
+    <section>
+      <div class="gallery_grid">
+        <Image_container src="/assets/imgs/d&p_pavillion1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_pavillion2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_pavillion3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+      </div>
+    </section>
 
-  <section class="txt_only">
-    <h5>Douglas stool and brass lamp base for Christian & Jade</h5>
-    <p>
-      Part-fabrication by D&P <br /><br />
+    <section class="txt_only">
+      <h5>Douglas stool and brass lamp base for Christian & Jade</h5>
+      <p>
+        Part-fabrication by D&P <br /><br />
 
-      Design, craft and photos by Christian&Jade
-    </p>
-  </section>
-
-  <section>
-    <div class="gallery_grid">
-      <Image_container src="/assets/imgs/d&p_cd1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_cd2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-      <Image_container src="/assets/imgs/d&p_cd3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
-    </div>
-  </section>
+        Design, craft and photos by Christian&Jade
+      </p>
+    </section>
+    <section>
+      <div class="gallery_grid">
+        <Image_container src="/assets/imgs/d&p_cd1.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_cd2.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+        <Image_container src="/assets/imgs/d&p_cd3.webp" alt="photo wall" labelLeft="Photo wall" labelRight="Photostudio" />
+      </div>
+    </section>
+  </div>
 
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="" />
@@ -163,10 +164,10 @@ const theme = "dandp";
   </div>
 
   <section class="bottom_cta">
-    <h2>Explore our facilities</h2>
-    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
-    <a href="/facilities">
-      <button class="large"> Explore facilities</button>
+    <h2>Bring your idea to life</h2>
+    <p>We help you move forward from your individual starting point and take pride in the fact that personal guidance and sparring create a safe and productive collaboration.</p>
+    <a href="/contact">
+      <button class="large"> Get in touch</button>
     </a>
   </section>
 
@@ -202,6 +203,10 @@ const theme = "dandp";
       width: 100%;
       object-fit: cover;
     }
+  }
+
+  .previous_productions h2 {
+    margin: var(--spacing-small);
   }
 
   @media (width > 800px) {

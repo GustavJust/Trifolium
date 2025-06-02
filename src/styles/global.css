@@ -40,12 +40,11 @@ html {
 
   --white-color-100: #ffffff;
 
-  --spacing-section: 6em;
-  --spacing-tiny: 0.5em;
-  --spacing-small: 1em;
-  --spacing-medium: 2em;
-  --spacing-large: 3em;
-
+  --spacing-section: 100px;
+  --spacing-tiny: 10px;
+  --spacing-small: 16px;
+  --spacing-medium: 24px;
+  --spacing-large: 24px;
   --text-caption: 14.4px;
 
   overflow-x: hidden !important;
@@ -77,6 +76,7 @@ h4,
 h5,
 button {
   font-family: var(--primary-font);
+  line-height: 1.2;
 }
 
 h1 {
@@ -104,6 +104,8 @@ h5 {
 p {
   max-width: 70ch !important;
   font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
 }
 
 a {
@@ -142,69 +144,97 @@ section {
 
 button {
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  color: white; /* or your preferred text color */
+  background-color: transparent;
+  transition: color 0.3s ease, border 0.3s ease;
+  z-index: 0;
+  border: none;
 }
 
 button.giant {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
-  border: 1px solid var(--primary-color-500);
   padding: 11px 35px;
   border-radius: 4px;
   font-size: 18px;
+  border: 1px solid var(--primary-color-500);
 }
 
 button.large {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
-  border: 1px solid var(--primary-color-500);
   padding: 9px 30px;
   border-radius: 4px;
   font-size: 16px;
+  border: 1px solid var(--primary-color-500);
 }
 button.medium {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
-  border: 1px solid var(--primary-color-500);
   padding: 8px 25px;
   border-radius: 4px;
   font-size: 14px;
+  border: 1px solid var(--primary-color-500);
 }
 
 button.medium_header {
   background-color: var(--tertiary-color-800);
   color: var(--white-color-100);
-  border: 1px solid var(--tertiary-color-800);
   padding: 8px 25px;
   border-radius: 4px;
+  border: 1px solid var(--tertiary-color-800);
 }
 
 button.small {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
-  border: 1px solid var(--primary-color-500);
   padding: 6px 20px;
   border-radius: 4px;
   font-size: 12px;
+  border: 1px solid var(--primary-color-500);
 }
 button.tiny {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
-  border: 1px solid var(--primary-color-500);
   padding: 5px 15px;
   border-radius: 4px;
   font-size: 10px;
 }
+
 button:hover {
-  background-color: var(--primary-color-300);
-  border: 1px solid var(--primary-color-300);
   cursor: url("/assets/imgs/fav_icon_white.svg") 16 7, pointer;
+  border: 1px solid var(--tertiary-color-800);
 }
-button:focus {
-  border: 3px solid var(--primary-color-300);
+
+button.medium_header:hover {
+  border: 1px solid var(--primary-color-500);
 }
+
 button:active {
-  border: 1px solid var(--primary-color-700);
   background-color: var(--primary-color-700);
+}
+
+button.medium_header::before {
+  background-color: var(--primary-color-500);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tertiary-color-800);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+}
+
+button:hover::before {
+  opacity: 1;
 }
 
 button.alt {
@@ -215,6 +245,7 @@ button.alt {
 
 button.alt:hover {
   background-color: var(--primary-color-100);
+  color: white;
 }
 
 button.alt:focus {
@@ -322,9 +353,21 @@ section.img_w_txt {
   gap: var(--spacing-small);
 
   > .txt_box {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     padding: var(--spacing-small);
     border: 1px solid var(--black-color-100);
+    gap: var(--spacing-small);
+    > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    button {
+      margin: 0;
+    }
   }
 }
 
@@ -426,6 +469,7 @@ section.txt_only {
   grid-template-columns: 1fr;
   padding: var(--spacing-small);
   gap: var(--spacing-tiny);
+  margin-bottom: var(--spacing-small);
   > h1,
   h2,
   h3,
@@ -512,7 +556,6 @@ section.txt_only {
 /* ---- */
 
 .arrow_container {
-  height: 100%;
   display: flex;
   align-items: center;
   transition: transform 0.2s ease;
@@ -529,6 +572,26 @@ section.txt_only {
 }
 /* hover slut */
 /* superbase slut */
+
+section.bottom_cta {
+  display: flex;
+  gap: var(--spacing-small);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  > h5,
+  h3,
+  h2,
+  p,
+  a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+  }
+}
 
 @media (width < 800px) {
   .member_info h4 {
@@ -601,7 +664,6 @@ section.txt_only {
     .txt_box h1 {
       margin-top: 0;
       line-height: 1;
-      margin-bottom: var(--spacing-tiny);
     }
     > .img_frame {
       box-sizing: border-box;
@@ -644,7 +706,7 @@ section.txt_only {
   }
   section.bottom_cta {
     display: flex;
-    gap: var(--spacing-medium);
+    gap: var(--spacing-small);
     flex-direction: column;
     justify-content: center;
     align-items: center;
