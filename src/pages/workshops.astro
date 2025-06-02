@@ -535,31 +535,32 @@ const theme = "facilities";
       display: flex;
       flex-direction: column;
       gap: var(--spacing-tiny);
-      > a {
-        display: flex;
-        justify-content: space-between;
-        border: 1px solid var(--primary-color-500);
-        font-weight: 700;
-        font-size: 1.5em;
-        padding: var(--spacing-tiny);
-      }
-      > a p {
-        padding: 0;
-        margin: 0;
-      }
-      > a:hover {
-        background-color: var(--primary-color-200);
-      }
-      > a img {
-        transition: 0.05s ease-in;
-      }
-      > a:hover img {
-        rotate: 45deg;
-      }
-      > a:active {
-        background-color: var(--primary-color-500);
-        color: white;
-      }
+    }
+
+    .hor_card a {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid var(--primary-color-500);
+      font-weight: 700;
+      font-size: 1.5em;
+      padding: var(--spacing-tiny);
+    }
+    .hor_card a p {
+      padding: 0;
+      margin: 0;
+    }
+    .hor_card a:hover {
+      background-color: var(--primary-color-200);
+    }
+    .hor_card a img {
+      transition: 0.05s ease-in;
+    }
+    .hor_card a:hover img {
+      rotate: 45deg;
+    }
+    .hor_card a:active {
+      background-color: var(--primary-color-500);
+      color: white;
     }
 
     @media (width > 800px) {
@@ -572,18 +573,19 @@ const theme = "facilities";
       .hor_card {
         flex-direction: row;
         width: 100%;
-        a {
-          width: 100%;
-        }
+      }
+      .hor_card a {
+        width: 100%;
       }
       .double_cta {
         display: flex;
         width: 100%;
         gap: var(--spacing-small);
         justify-content: center;
-        > a {
-          width: fit-content;
-        }
+      }
+
+      .double_cta a {
+        width: fit-content;
       }
     }
   </style>
