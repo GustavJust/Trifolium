@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
-import Image_container from "../components/Image_container.astro";
 
 const theme = "membership";
 ---
@@ -17,7 +16,10 @@ const theme = "membership";
   />
   <section class="txt_only">
     <h2>Our memberships</h2>
-    <p>Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events.</p>
+    <p>
+      Trifolium offers modern, flexible facilities designed to support
+      collaboration, innovation, and community across all activities and events.
+    </p>
   </section>
 
   <section>
@@ -40,7 +42,10 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/facilities"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a><a
+            href="/facilities"
+            class="button large alt">See Facilities</a
+          >
         </div>
       </div>
 
@@ -63,7 +68,10 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/offices#studio_village"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a><a
+            href="/offices#studio_village"
+            class="button large alt">See Facilities</a
+          >
         </div>
       </div>
 
@@ -86,7 +94,10 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/offices#closed_offices"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a><a
+            href="/offices#closed_offices"
+            class="button large alt">See Facilities</a
+          >
         </div>
       </div>
 
@@ -111,7 +122,8 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/workshops"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a>
+          <a href="/workshops" class="button large alt">See Facilities</a>
         </div>
       </div>
 
@@ -136,14 +148,19 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/workshops"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a>
+          <a href="/workshops" class="button large alt">See Facilities</a>
         </div>
       </div>
 
       <div class="membership_card">
         <h3>Storage Addon</h3>
         <div class="price_container">
-          <p class="currency">from</p><h4 class="price">320,-</h4><p class="currency">DKK/mth ex. VAT</p>
+          <p class="currency">from</p><h4 class="price">320,-</h4><p
+            class="currency"
+          >
+            DKK/mth ex. VAT
+          </p>
         </div>
         <div class="membership_included">
           <h5>Storage types</h5>
@@ -153,7 +170,10 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/workshops#storage"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a>
+          <a href="/workshops#storage" class="button large alt"
+            >See Facilities</a
+          >
         </div>
       </div>
 
@@ -177,14 +197,15 @@ const theme = "membership";
           </ul>
         </div>
         <div class="button_container">
-          <a href="/contact"><button class="large">Signup for a tour</button></a><a href="/photostudio" href="/photostudio"><button class="large alt">See Facilities</button> </a>
+          <a href="/contact" class="button large">Signup for a tour</a>
+          <a href="/photostudio" class="button large alt">See Facilities</a>
         </div>
       </div>
     </div>
   </section>
 
   <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="" />
+    <img src="/assets/imgs/logo_icon.svg" alt="" />
   </div>
 
   <section class="img_w_txt">
@@ -194,24 +215,29 @@ const theme = "membership";
     <div class="txt_box">
       <h2>How does it work?</h2>
       <p>
-        At Trifolium, we understand that starting a business comes with plenty of uncertainty. Your workspace shouldn’t be one of them. That’s why our memberships are modular and based on how many people in your team need access. You only pay for
-        what you need.
+        At Trifolium, we understand that starting a business comes with plenty
+        of uncertainty. Your workspace shouldn’t be one of them. That’s why our
+        memberships are modular and based on how many people in your team need
+        access. You only pay for what you need.
         <br /><br />
-        If things slow down, you can downgrade with just two months’ notice. And when business picks up, it’s easy to scale up again. Simple, flexible, and built to support your growth.
+        If things slow down, you can downgrade with just two months’ notice. And
+        when business picks up, it’s easy to scale up again. Simple, flexible, and
+        built to support your growth.
       </p>
     </div>
   </section>
 
   <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="" />
+    <img src="/assets/imgs/logo_icon.svg" alt="" />
   </div>
 
   <section class="bottom_cta">
     <h2>Explore our facilities</h2>
-    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
-    <a href="/facilities">
-      <button class="large"> Explore facilities</button>
-    </a>
+    <p>
+      With workspaces, advanced tools, and workshops under one roof, you can
+      create physical or digital products from concept to launch.
+    </p>
+    <a href="/facilities" class="button large"> Explore facilities</a>
   </section>
 
   <div class="logo_divider">
@@ -266,8 +292,9 @@ const theme = "membership";
     > .button_container a {
       flex-grow: 1;
     }
-    > .button_container a button {
+    > .button_container a.button {
       width: 100%;
+      font-size: 20px;
     }
     > ul {
       display: flex;

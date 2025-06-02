@@ -6,14 +6,21 @@ const theme = "about";
 
 <Layout theme={theme}>
   <section class="hero">
-    <img src="../assets/imgs/lazyload/positions_lazyload.webp" alt="People working outside" />
+    <img
+      src="../assets/imgs/lazyload/positions_lazyload.webp"
+      alt="People working outside"
+    />
   </section>
   <section>
     <h1>Contact</h1>
     <div class="header_container">
       <h4>Let's Talk</h4>
       <div class="arrow_container">
-        <img src="../assets/imgs/arrow_icon_red.svg" alt="arrow down" aria-hidden="true" />
+        <img
+          src="../assets/imgs/arrow_icon_red.svg"
+          alt="arrow down"
+          aria-hidden="true"
+        />
       </div>
     </div>
   </section>
@@ -41,11 +48,19 @@ const theme = "about";
       </div>
       <div class="input_wrapper">
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="7" placeholder="Briefly describe the reason for your message..."></textarea>
+        <textarea
+          id="message"
+          name="message"
+          rows="7"
+          placeholder="Briefly describe the reason for your message..."
+        ></textarea>
       </div>
     </div>
-    <p>Fill in the form above, and press send. We will get back to you as soon as possible.</p>
-    <a href="/form_sent" class="send_form"><button class="large alt">Send</button></a>
+    <p>
+      Fill in the form above, and press send. We will get back to you as soon as
+      possible.
+    </p>
+    <a href="/form_sent" class="send_form button large alt">Send</a>
   </section>
 </Layout>
 

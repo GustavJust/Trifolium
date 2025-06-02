@@ -74,7 +74,7 @@ h2,
 h3,
 h4,
 h5,
-button {
+.button {
   font-family: var(--primary-font);
   line-height: 1.2;
 }
@@ -141,7 +141,7 @@ section {
   display: inline-block;
 }
 
-button {
+.button {
   font-weight: 500;
   position: relative;
   overflow: hidden;
@@ -150,9 +150,10 @@ button {
   transition: color 0.3s ease, border 0.3s ease;
   z-index: 0;
   border: none;
+  width: fit-content !important;
 }
 
-button.giant {
+.button.giant {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
   padding: 11px 35px;
@@ -161,7 +162,7 @@ button.giant {
   border: 1px solid var(--primary-color-500);
 }
 
-button.large {
+.button.large {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
   padding: 9px 30px;
@@ -169,7 +170,7 @@ button.large {
   font-size: 16px;
   border: 1px solid var(--primary-color-500);
 }
-button.medium {
+.button.medium {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
   padding: 8px 25px;
@@ -178,7 +179,7 @@ button.medium {
   border: 1px solid var(--primary-color-500);
 }
 
-button.medium_header {
+.button.medium_header {
   background-color: var(--tertiary-color-800);
   color: var(--white-color-100);
   padding: 8px 25px;
@@ -186,7 +187,7 @@ button.medium_header {
   border: 1px solid var(--tertiary-color-800);
 }
 
-button.small {
+.button.small {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
   padding: 6px 20px;
@@ -194,7 +195,7 @@ button.small {
   font-size: 12px;
   border: 1px solid var(--primary-color-500);
 }
-button.tiny {
+.button.tiny {
   background-color: var(--primary-color-500);
   color: var(--white-color-100);
   padding: 5px 15px;
@@ -202,28 +203,28 @@ button.tiny {
   font-size: 10px;
 }
 
-button:hover {
+.button:hover {
   cursor: url("/assets/imgs/fav_icon_white.svg") 16 7, pointer;
   border: 1px solid var(--tertiary-color-800);
 }
 
-button.medium:hover {
+.button.medium:hover {
   border: 1px solid var(--primary-color-500);
 }
 
-button.medium_header:hover {
+.button.medium_header:hover {
   border: 1px solid var(--primary-color-500);
 }
 
-button:active {
+.button:active {
   background-color: var(--primary-color-700);
 }
 
-button.medium_header::before {
+.button.medium_header::before {
   background-color: var(--primary-color-500);
 }
 
-button::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -236,27 +237,27 @@ button::before {
   transition: opacity 0.2s ease;
 }
 
-button:hover::before {
+.button:hover::before {
   opacity: 1;
 }
 
-button.alt {
+.button.alt {
   font-weight: 700;
   background-color: var(--white-color-100);
   color: var(--black-color-100);
 }
 
-button.alt:hover {
+.button.alt:hover {
   background-color: var(--primary-color-100);
   color: white;
 }
 
-button.alt:focus {
+.button.alt:focus {
   background-color: var(--white-color-100);
   border: 3px solid var(--primary-color-500);
 }
 
-button.alt:active {
+.button.alt:active {
   background-color: var(--primary-color-300);
   border: 1px solid var(--primary-color-300);
 }
@@ -292,7 +293,7 @@ button.alt:active {
   pointer-events: none;
 }
 
-.gallery_container button {
+.gallery_container .button {
   height: 40px;
   width: 40px;
   border-radius: 999px;
@@ -304,15 +305,15 @@ button.alt:active {
   z-index: 2;
 }
 
-.gallery_container button:hover {
+.gallery_container .button:hover {
   background-color: var(--primary-color-200);
 }
 
-.gallery_container button img.left {
+.gallery_container .button img.left {
   transform: scale(0.7) rotate(-135deg);
 }
 
-.gallery_container button img.right {
+.gallery_container .button img.right {
   transform: scale(0.7) rotate(45deg);
 }
 
@@ -368,7 +369,7 @@ section.img_w_txt {
     h4,
     h5,
     p,
-    button {
+    .button {
       margin: 0;
     }
   }
@@ -630,23 +631,23 @@ section.bottom_cta {
     font-size: 24px;
   }
 
-  button.giant {
+  .button.giant {
     font-size: 24px;
   }
 
-  button.large {
+  .button.large {
     font-size: 22px;
   }
 
-  button.medium {
+  .button.medium {
     font-size: 20px;
   }
 
-  button.small {
+  .button.small {
     font-size: 18px;
   }
 
-  button.tiny {
+  .button.tiny {
     font-size: 16px;
   }
 
