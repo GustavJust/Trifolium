@@ -13,7 +13,7 @@ const theme = "facilities";
   <Hero
     video="/assets/imgs/video/wood_workshop_video.mp4"
     title="Workshops"
-    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    description="If you or your company need machines for production, construction projects, or prototyping, our workshops are the perfect place for you."
     poster="/assets/imgs/lazyload/workshops_lazyload.webp"
     priceText="From 2800 DKK / month ex. VAT"
   />
@@ -72,6 +72,7 @@ const theme = "facilities";
       <p>Our wood workshop is one of the central hubs of Trifolium. It’s set up to support everything from precision joinery and furniture to fast prototyping and custom installations.</p>
       <p>The space is laid out to keep things flowing—whether you're running a solo build or coordinating with a team. Workbenches, industrial machinery, and open layout make it easy to focus and execute at a professional level.</p>
       <p>It’s the go-to workshop for carpenters, designers, set builders, and anyone working seriously with timber and wood-based materials. Whether you work in rough cuts or refined details, you’ll find the tools and room to do it right.</p>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
     <div class="image_scroll_facilities">
       <img src="/assets/imgs/wrk_wood1.webp" alt="wood workshop preview 1" />
@@ -94,9 +95,8 @@ const theme = "facilities";
     <div class="txt_box">
       <p>The metal workshop is where structure, function, and fire come together. This space supports welding, cutting, bending, and light-to-medium fabrication work across various metals.</p><p>
         It’s a versatile environment for people working in furniture, installation design, mechanical structures, or prototyping that calls for more strength and precision.
-        <br /><br />
-        The layout makes it easy to move between tasks without friction. If your work involves steel, aluminum, or similar materials, this is where your build starts to take shape.
-      </p>
+      </p><p>The layout makes it easy to move between tasks without friction. If your work involves steel, aluminum, or similar materials, this is where your build starts to take shape.</p>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
     <div class="image_scroll_facilities">
       <img src="/assets/imgs/wrk_metal1.webp" alt="metal workshop preview 1" />
@@ -118,11 +118,9 @@ const theme = "facilities";
   <section class="img_w_txt">
     <div class="txt_box">
       <p>The model workshop is where ideas get tested, scaled, and shaped by hand. It’s set up for architectural models, material mockups, detailed prototypes, or anything in between.</p>
-      <p>
-        This is a quieter, more controlled space for professionals who work at smaller scales or need a clean environment for delicate processes.
-        <br /><br />
-        Architects, product designers, and concept developers use this workshop to bridge the gap between screen and object. It’s a space made for focus, detail, and experimentation.
-      </p>
+      <p>This is a quieter, more controlled space for professionals who work at smaller scales or need a clean environment for delicate processes.</p>
+      <p>Architects, product designers, and concept developers use this workshop to bridge the gap between screen and object. It’s a space made for focus, detail, and experimentation.</p>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
     <div class="image_scroll_facilities">
       <img src="/assets/imgs/wrk_model1.webp" alt="model workshop preview 1" />
@@ -147,6 +145,7 @@ const theme = "facilities";
         It’s a flexible, open space for professionals working with fabric and fibers in both creative and technical ways. Whether you're working with sewing machines or combining textile work with digital production or electronics, the space gives
         you the room and setup to take your project from first stitch to finished product.
       </p>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
     <div class="image_scroll_facilities">
       <img src="/assets/imgs/wrk_textile1.webp" alt="textile workshop preview 1" />
@@ -168,11 +167,10 @@ const theme = "facilities";
   <section class="img_w_txt">
     <div class="txt_box">
       <p>The electronics workshop is where hardware and circuits come to life. It’s geared toward prototyping, light assembly, and testing of electronics and embedded systems.</p>
-      <p>
-        Whether you’re building devices, modifying existing tech, or integrating electronics into physical products, this space offers the workbench and tools to get hands-on with your builds.
-        <br /><br />
+      <p>Whether you’re building devices, modifying existing tech, or integrating electronics into physical products, this space offers the workbench and tools to get hands-on with your builds.</p><p>
         Perfect for startups, engineers, or creatives working with sensors, IoT, robotics, or sound. It’s where physical meets digital—and where prototypes start proving themselves.
       </p>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
     <div class="image_scroll_facilities">
       <img src="/assets/imgs/wrk_electronic1.webp" alt="electronic workshop preview 1" />
@@ -201,6 +199,10 @@ const theme = "facilities";
       <Included number="09" header="On-site Support" desc={`A team ready to help with questions and safety guidance.`} />
     </div>
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
+  </div>
 
   <section id="storage" class="img_w_txt">
     <Image_container src="/assets/imgs/wrk_storage.webp" alt="image of storage cells" />
@@ -268,14 +270,12 @@ const theme = "facilities";
   </div>
 
   <section class="bottom_cta">
-    <h2>Join the Community</h2>
-    <p>
-      Whether you're looking for a full-time base or flexible access on evenings and weekends, we’d love to hear from you.
-      <br /><br />
-      Get in touch and let’s find the right setup for your work:
-    </p>
-    <a href="/membership"> <button class="medium">Prices</button></a>
-    <a href="/contact"> <button class="medium alt">Contact Trifolium</button></a>
+    <h2>Join The Community</h2>
+    <p>Whether you're looking for a full-time base or flexible access on evenings and weekends, we’d love to hear from you.</p>
+    <div class="double_cta">
+      <a href="/membership"> <button class="large">Prices</button></a>
+      <a href="/contact"> <button class="large alt">Contact Trifolium</button></a>
+    </div>
   </section>
 
   <div class="logo_divider">
@@ -283,6 +283,10 @@ const theme = "facilities";
   </div>
 
   <style>
+    h2 {
+      margin-top: var(--spacing-large);
+      margin-bottom: var(--spacing-large);
+    }
     section {
       margin-left: var(--spacing-small);
       margin-right: var(--spacing-small);
@@ -329,6 +333,7 @@ const theme = "facilities";
       .included_grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-large);
       }
 
       .hor_card {
@@ -336,6 +341,15 @@ const theme = "facilities";
         width: 100%;
         a {
           width: 100%;
+        }
+      }
+      .double_cta {
+        display: flex;
+        width: 100%;
+        gap: var(--spacing-small);
+        justify-content: center;
+        > a {
+          width: fit-content;
         }
       }
     }

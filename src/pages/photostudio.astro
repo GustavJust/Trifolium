@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero.astro";
 import Image_container from "../components/Image_container.astro";
 import Included from "../components/included.astro";
-import EquipmentItem from "../components/equipment_item.astro";
 import "../styles/facility.css";
 
 const theme = "photostudio";
@@ -13,7 +12,7 @@ const theme = "photostudio";
   <Hero
     video="/assets/imgs/video/photo_studio_video.mp4"
     title="Photo-Studio"
-    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    description="Trifolium’s photo studio in Copenhagen offers 200 sqm of professionally designed space, perfect for all types of photography. With high ceilings and large windows, it provides optimal lighting and an inspiring work environment."
     poster="/assets/imgs/lazyload/photostudio_lazyload.webp"
     priceText="From 2500 DKK / half day ex. VAT"
   />
@@ -21,8 +20,8 @@ const theme = "photostudio";
   <section class="txt_only">
     <h2>Spacious Daylight Studio for Focused, High-Quality Visual Work</h2>
     <p>
-      Nestled in our creative and professional community, Trifolium's 200 m² photo studio offers a spacious, daylight-filled environment tailored for photographers, videographers, and creative professionals. With high ceilings and expansive windows,
-      it provides the perfect setting for everything from product shoots to editorial sessions.
+      Our facilities include a fully equipped kitchen, a dedicated makeup room, and a spacious freight elevator for easy transport of large equipment to and from the studio. Rent also covers conveniences such as complimentary coffee and tea, free
+      parking, electric vehicle charging stations, and access to our rooftop terrace.
     </p>
   </section>
 
@@ -80,8 +79,8 @@ const theme = "photostudio";
     <Image_container src="/assets/imgs/photostudio_floorplan.svg" alt="floor plan of the photo studio" />
     <div class="txt_box">
       <h2>Floor plan</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quidem culpa minima itaque dolore officia vitae cumque, consequatur maiores mollitia molestiae dicta inventore nulla alias?</p>
-      <a href="/membership"> <button class="giant">Book a tour</button></a>
+      <p>Our photo studio is designed with comfort and functionality in mind, providing the perfect environment for a successful photoshoot.</p>
+      <a href="/memberships"> <button class="large">View Memberships</button></a>
     </div>
   </section>
 
@@ -95,43 +94,8 @@ const theme = "photostudio";
       <h3>Interested in booking the photostudio on a day-basis?</h3>
       <p>Our studio is open for dayrent from 8am - 18pm, at a daily price of 3900 DDK ex. VAT, and 2500 DDK ex. VAT for half a day. Call us on our main line +45 5455 1515, or contact us via the form below.</p>
       <a href="/contact">
-        <button class="medium">Contact Trifolium</button>
+        <button class="large">Get In Touch</button>
       </a>
-    </div>
-  </section>
-
-  <div class="logo_divider">
-    <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
-  </div>
-
-  <section>
-    <h2>Nice to know</h2>
-    <div class="included_grid">
-      <Included number="01" header="Lounge area with production overview" desc={`Our lounge is elevated, giving you a full overview of the entire photo studio. A perfect spot to relax, observe, and get inspired.`} />
-      <Included
-        number="02"
-        header="200 m² studio with daylight and high ceilings"
-        desc={`A bright and spacious 200 m² studio with high ceilings and beautiful natural daylight. Designed to spark creativity, the open layout offers plenty of room to build, shoot, and explore ideas from every angle.`}
-      />
-      <Included
-        number="03"
-        header="Large freight elevator for gear transport"
-        desc={`A spacious freight elevator ensures smooth and efficient transport of equipment, making it easy to move gear in and out of the studio. Ideal for professional productions of any scale.`}
-      />
-      <Included
-        number="04"
-        header="Private makeup room and restroom"
-        desc={`The studio includes a private makeup room and restroom, providing comfort and convenience for talent and crew—ideal for professional shoots and seamless preparation on set.`}
-      />
-      <Included number="05" header="High-speed WiFi and power access" desc={`Equipped with high-speed WiFi and multiple power access points, the studio supports a seamless workflow for both creative and technical teams.`} />
-      <Included number="06" header="Kitchenette with coffee and tea included" desc={`A fully equipped kitchenette with complimentary coffee and tea offers a comfortable break space for clients and crew throughout the day.`} />
-      <Included number="07" header="Free parking & EV charging" desc={`Complimentary parking and EV charging facilities are available on-site, ensuring convenient and sustainable access for all visitors.`} />
-      <Included number="08" header="Professional equipment rental available" desc={`On-site professional equipment rental offers a wide range of high-quality gear to enhance and streamline your production.`} />
-      <Included
-        number="09"
-        header="Custom set design on request"
-        desc={`Custom set design services are available upon request thanks to Trifolium’s extensive on-site facilities. With various companies working here, you can easily connect with experts who can build and assist with tailored solutions for your project.`}
-      />
     </div>
   </section>
 
@@ -144,7 +108,7 @@ const theme = "photostudio";
     <div class="txt_box">
       <h2>Want to become a part of a vibrant and creative community?</h2>
       <p>Our photo community offers special advantages regarding bookings and use of the photostudio, as well as access to a office spot in our professional photo community. Read more about memberships at Trifolum, or get in touch for a tour:</p>
-      <a href="/membership"> <button class="giant">Memberships</button></a>
+      <a href="/membership"> <button class="large">View Memberships</button></a>
     </div>
   </section>
 
@@ -165,13 +129,17 @@ const theme = "photostudio";
   </div>
 
   <style>
+    h2 {
+      margin-top: var(--spacing-large);
+      margin-bottom: var(--spacing-large);
+    }
     section {
       margin-left: var(--spacing-small);
       margin-right: var(--spacing-small);
     }
 
     .included_grid {
-      gap: 4rem;
+      gap: var(--spacing-large);
       margin-top: 2rem;
     }
 

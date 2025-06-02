@@ -11,7 +11,7 @@ const theme = "facilities";
   <Hero
     video="/assets/imgs/video/platform_office_video.mp4"
     title="Facilities"
-    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    description="Across 5,000+ m², we offer seven fully equipped workshops, office spaces, meeting and event facilities, a photo studio, a mobile container workshop, team-building activities, and more — all with flexible terms."
     poster="/assets/imgs/lazyload/facilities_lazyload.webp"
   />
   <section>
@@ -20,17 +20,23 @@ const theme = "facilities";
       <NavCard href="/offices" title="Offices" imgSrc="/assets/imgs/offices_intro.webp" alt="Office facilities section" aria-hidden="true" />
       <NavCard href="/photostudio" title="Photo-studio" imgSrc="/assets/imgs/lazyload/photostudio_lazyload.webp" alt="Photostudio facilities section" aria-hidden="true" />
       <NavCard href="/workshops" title="Workshops" imgSrc="/assets/imgs/wrk_realwork.webp" alt="Workshops facilities section" aria-hidden="true" />
-
       <NavCard href="/venues" title="Venues" imgSrc="/assets/imgs/lazyload/venues_lazyload.webp" alt="Venues facilities section" aria-hidden="true" />
     </nav>
   </section>
-  <section class="txt_only">
-    <h2>A professional production village for designers, developers, and builders.</h2>
-    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
-  </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
   </div>
+
+  <section class="txt_only">
+    <h2>We’re a strong, cross-disciplinary community built for professional production.</h2>
+    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
+  </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
+  </div>
+
   <section class="img_w_txt_map">
     <div class="map_container">
       <div class="floor_select">
@@ -236,10 +242,13 @@ const theme = "facilities";
   </div>
 
   <section class="bottom_cta">
-    <h2>Explore our facilities</h2>
-    <p>With workspaces, advanced tools, and workshops under one roof, you can create physical or digital products from concept to launch.</p>
+    <h2>Explore our memberships</h2>
+    <p>
+      We are a flexible, membership-based coworking community where you can create in the moment, learn from others, and enjoy a good work life alongside like-minded people. Trifolium offers complete freedom with responsibility within a structured
+      framework.
+    </p>
     <a href="/facilities">
-      <button class="large"> Explore facilities</button>
+      <button class="large"> Explore memberships</button>
     </a>
   </section>
   <div class="logo_divider">
@@ -288,6 +297,10 @@ const theme = "facilities";
 </script>
 
 <style>
+  h2 {
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+  }
   section:not(.hero) {
     margin-left: var(--spacing-small);
     margin-right: var(--spacing-small);
@@ -315,10 +328,12 @@ const theme = "facilities";
     font-size: 1.5em;
     cursor: pointer;
     z-index: 999;
+    color: black;
   }
 
   .floor_btn:hover {
     background-color: var(--primary-color-300);
+    color: white;
   }
 
   .floor_btn:active {
@@ -545,6 +560,10 @@ const theme = "facilities";
 
     .hor_card a {
       width: 100%;
+    }
+
+    .txt_only p {
+      margin-top: 10px;
     }
   }
 </style>

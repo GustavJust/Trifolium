@@ -12,7 +12,7 @@ const theme = "facilities";
   <Hero
     video="/assets/imgs/video/office_hallway_video.mp4"
     title="Offices"
-    description="Trifolium offers modern, flexible facilities designed to support collaboration, innovation, and community across all activities and events."
+    description="Trifolium offers flexible, inspiring office spaces designed for collaboration, focus, and professional growth."
     poster="/assets/imgs/lazyload/offices_lazyload.webp"
     priceText="From 900 DKK / month ex. VAT"
   />
@@ -27,6 +27,11 @@ const theme = "facilities";
     </div>
     <Image_container src="/assets/imgs/offices_intro.webp" alt="office hallway" labelLeft="Office hallway" labelRight="2nd Floor" />
   </section>
+
+  <div class="logo_divider">
+    <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
+  </div>
+
   <section id="closed_offices" class="img_w_txt">
     <div class="txt_box">
       <h2>Closed Offices for Focused Teams</h2>
@@ -55,7 +60,6 @@ const theme = "facilities";
       <img src="../assets/imgs/offices_open1.webp" alt="Open offices 1" />
       <img src="../assets/imgs/offices_open2.webp" alt="Open offices 2" />
       <img src="../assets/imgs/offices_open3.webp" alt="Open offices 3" />
-      <img src="../assets/imgs/offices_open4.webp" alt="Open offices 4" />
     </div>
   </section>
   <section class="img_w_txt">
@@ -101,19 +105,16 @@ const theme = "facilities";
         constant opportunities to connect. We believe the best work happens when people exchange ideas across industries, disciplines, and experiences.
       </p>
     </div>
-    <Image_container src="/assets/imgs/offices_comunity.webp" alt="Map of Trifolium" />
+    <Image_container src="/assets/imgs/index_bluearea.webp" alt="Map of Trifolium" labelLeft="Blue area" labelRight="1 floor" />
   </section>
+
   <div class="logo_divider">
     <img src="../assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
   </div>
+
   <section class="bottom_cta">
-    <div class="alternative">
-      <h2>Join the Community</h2>
-      <p>
-        Ready to become part of a professional workspace that supports real work, real tools, and real people? Whether you're looking for a desk, an office, or full access to our production village, we’d love to hear from you.
-        <br /><br />Get in touch and let’s find the setup that fits you:
-      </p>
-    </div>
+    <h2>Join the Community</h2>
+    <p>Ready to become part of a professional workspace that supports real work, real tools, and real people? Whether you're looking for a desk, an office, or full access to our production village, we’d love to hear from you.</p>
     <div class="double_cta">
       <a href="/membership"> <button class="medium">Prices</button></a>
       <a href="/contact"> <button class="medium alt">Contact Trifolium</button></a>
@@ -130,10 +131,16 @@ const theme = "facilities";
     margin-right: var(--spacing-small);
   }
 
+  h2 {
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+
   @media (width > 800px) {
     .included_grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-large);
     }
     .bottom_cta .alternative {
       width: fit-content;
