@@ -5,7 +5,7 @@ const { activeTheme } = Astro.props;
 
 <div class="flex header">
   <div class="nav_menu_mobile_container">
-    <img src="/assets/imgs/close_icon_white.svg" alt="" />
+    <img src="/assets/imgs/close_icon_white.svg" alt="Close menu" />
     <nav class="nav_menu_mobile">
       <a href="/facilities">Facilities</a>
       <a href="/membership">Membership</a>
@@ -13,7 +13,7 @@ const { activeTheme } = Astro.props;
       <a href="/dandp">Design & Production</a>
       <a href="/about">About</a>
       <a href="/contact" class="cta_mobile"><button class="giant">Signup for a tour</button></a>
-      <img src="/assets/imgs/logo_icon_white.svg" alt="" class="logo_icon" />
+      <img src="/assets/imgs/logo_icon_white.svg" alt="logo icon" class="logo_icon" />
     </nav>
   </div>
   <div class="left-group">
@@ -30,7 +30,7 @@ const { activeTheme } = Astro.props;
       <a href="/about" class={`underline-hover ${activeTheme === "about" ? "active" : ""}`}>About Trifolium</a>
     </nav>
     <button class="burger_icon">
-      <img src="/assets/imgs/burger_icon.svg" alt="" />
+      <img src="/assets/imgs/burger_icon.svg" alt="burger menu icon" />
     </button>
     <a href="/contact" class="cta_web"><button class="medium_header">Signup for a tour</button></a>
   </div>
