@@ -27,9 +27,10 @@ export async function getStaticPaths() {
 }
 
 const { member } = Astro.props;
+const theme = "about";
 ---
 
-<Layout>
+<Layout theme={theme}>
   <section class="hero_section">
     <div class="hero_img_container">
       <img src={member.picture} alt={member.name} />
@@ -37,20 +38,12 @@ const { member } = Astro.props;
 
     <div class="header_group1">
       <h1>{member.name}</h1>
-      <img
-        src="../../assets/imgs/arrow_icon_red.svg"
-        alt="Arrow down"
-        aria-hidden="true"
-      />
+      <img src="/assets/imgs/arrow_icon_red.svg" alt="Arrow down" aria-hidden="true" />
     </div>
   </section>
 
   <div class="logo_divider">
-    <img
-      src="../../assets/imgs/logo_icon.svg"
-      alt="Section divider"
-      aria-hidden="true"
-    />
+    <img src="/assets/imgs/logo_icon.svg" alt="Section divider" aria-hidden="true" />
   </div>
 
   <section class="img_w_txt">
