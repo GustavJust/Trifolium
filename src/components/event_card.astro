@@ -17,7 +17,13 @@ const { imgSrc, alt, date, day, desc } = Astro.props;
       <p class="card-day">{day}</p>
     </div>
     <p class="card-description">{desc}</p>
-    <a href="https://www.facebook.com/TrifoliumCPH" target="_blank"> <button class="medium">Go to event</button></a>
+    <a
+      href="https://www.facebook.com/TrifoliumCPH"
+      target="_blank"
+      class="button medium"
+    >
+      Go to event</a
+    >
   </div>
   <div class="card-image">
     <img src={imgSrc} alt={alt} />
